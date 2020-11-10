@@ -1,0 +1,4502 @@
+
+GSM.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000176  00800200  000013c2  00001456  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         000013c2  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .bss          0000046e  00800376  00800376  000015cc  2**0
+                  ALLOC
+  3 .comment      00000030  00000000  00000000  000015cc  2**0
+                  CONTENTS, READONLY
+  4 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  000015fc  2**2
+                  CONTENTS, READONLY
+  5 .debug_aranges 00000040  00000000  00000000  0000163c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_info   00003302  00000000  00000000  0000167c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_abbrev 00000f45  00000000  00000000  0000497e  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_line   00000ed7  00000000  00000000  000058c3  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_frame  00000158  00000000  00000000  0000679c  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_str    00000cf7  00000000  00000000  000068f4  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_loc    000028cd  00000000  00000000  000075eb  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_ranges 00000880  00000000  00000000  00009eb8  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+       0:	72 c0       	rjmp	.+228    	; 0xe6 <__ctors_end>
+       2:	00 00       	nop
+       4:	a0 c0       	rjmp	.+320    	; 0x146 <__bad_interrupt>
+       6:	00 00       	nop
+       8:	9e c0       	rjmp	.+316    	; 0x146 <__bad_interrupt>
+       a:	00 00       	nop
+       c:	9c c0       	rjmp	.+312    	; 0x146 <__bad_interrupt>
+       e:	00 00       	nop
+      10:	9a c0       	rjmp	.+308    	; 0x146 <__bad_interrupt>
+      12:	00 00       	nop
+      14:	98 c0       	rjmp	.+304    	; 0x146 <__bad_interrupt>
+      16:	00 00       	nop
+      18:	96 c0       	rjmp	.+300    	; 0x146 <__bad_interrupt>
+      1a:	00 00       	nop
+      1c:	94 c0       	rjmp	.+296    	; 0x146 <__bad_interrupt>
+      1e:	00 00       	nop
+      20:	92 c0       	rjmp	.+292    	; 0x146 <__bad_interrupt>
+      22:	00 00       	nop
+      24:	90 c0       	rjmp	.+288    	; 0x146 <__bad_interrupt>
+      26:	00 00       	nop
+      28:	8e c0       	rjmp	.+284    	; 0x146 <__bad_interrupt>
+      2a:	00 00       	nop
+      2c:	8c c0       	rjmp	.+280    	; 0x146 <__bad_interrupt>
+      2e:	00 00       	nop
+      30:	8a c0       	rjmp	.+276    	; 0x146 <__bad_interrupt>
+      32:	00 00       	nop
+      34:	88 c0       	rjmp	.+272    	; 0x146 <__bad_interrupt>
+      36:	00 00       	nop
+      38:	86 c0       	rjmp	.+268    	; 0x146 <__bad_interrupt>
+      3a:	00 00       	nop
+      3c:	84 c0       	rjmp	.+264    	; 0x146 <__bad_interrupt>
+      3e:	00 00       	nop
+      40:	82 c0       	rjmp	.+260    	; 0x146 <__bad_interrupt>
+      42:	00 00       	nop
+      44:	80 c0       	rjmp	.+256    	; 0x146 <__bad_interrupt>
+      46:	00 00       	nop
+      48:	7e c0       	rjmp	.+252    	; 0x146 <__bad_interrupt>
+      4a:	00 00       	nop
+      4c:	7c c0       	rjmp	.+248    	; 0x146 <__bad_interrupt>
+      4e:	00 00       	nop
+      50:	7a c0       	rjmp	.+244    	; 0x146 <__bad_interrupt>
+      52:	00 00       	nop
+      54:	78 c0       	rjmp	.+240    	; 0x146 <__bad_interrupt>
+      56:	00 00       	nop
+      58:	76 c0       	rjmp	.+236    	; 0x146 <__bad_interrupt>
+      5a:	00 00       	nop
+      5c:	74 c0       	rjmp	.+232    	; 0x146 <__bad_interrupt>
+      5e:	00 00       	nop
+      60:	72 c0       	rjmp	.+228    	; 0x146 <__bad_interrupt>
+      62:	00 00       	nop
+      64:	70 c0       	rjmp	.+224    	; 0x146 <__bad_interrupt>
+      66:	00 00       	nop
+      68:	6e c0       	rjmp	.+220    	; 0x146 <__bad_interrupt>
+      6a:	00 00       	nop
+      6c:	6c c0       	rjmp	.+216    	; 0x146 <__bad_interrupt>
+      6e:	00 00       	nop
+      70:	6a c0       	rjmp	.+212    	; 0x146 <__bad_interrupt>
+      72:	00 00       	nop
+      74:	68 c0       	rjmp	.+208    	; 0x146 <__bad_interrupt>
+      76:	00 00       	nop
+      78:	66 c0       	rjmp	.+204    	; 0x146 <__bad_interrupt>
+      7a:	00 00       	nop
+      7c:	64 c0       	rjmp	.+200    	; 0x146 <__bad_interrupt>
+      7e:	00 00       	nop
+      80:	62 c0       	rjmp	.+196    	; 0x146 <__bad_interrupt>
+      82:	00 00       	nop
+      84:	60 c0       	rjmp	.+192    	; 0x146 <__bad_interrupt>
+      86:	00 00       	nop
+      88:	5e c0       	rjmp	.+188    	; 0x146 <__bad_interrupt>
+      8a:	00 00       	nop
+      8c:	5c c0       	rjmp	.+184    	; 0x146 <__bad_interrupt>
+      8e:	00 00       	nop
+      90:	5a c0       	rjmp	.+180    	; 0x146 <__bad_interrupt>
+      92:	00 00       	nop
+      94:	58 c0       	rjmp	.+176    	; 0x146 <__bad_interrupt>
+      96:	00 00       	nop
+      98:	56 c0       	rjmp	.+172    	; 0x146 <__bad_interrupt>
+      9a:	00 00       	nop
+      9c:	54 c0       	rjmp	.+168    	; 0x146 <__bad_interrupt>
+      9e:	00 00       	nop
+      a0:	52 c0       	rjmp	.+164    	; 0x146 <__bad_interrupt>
+      a2:	00 00       	nop
+      a4:	50 c0       	rjmp	.+160    	; 0x146 <__bad_interrupt>
+      a6:	00 00       	nop
+      a8:	4e c0       	rjmp	.+156    	; 0x146 <__bad_interrupt>
+      aa:	00 00       	nop
+      ac:	4c c0       	rjmp	.+152    	; 0x146 <__bad_interrupt>
+      ae:	00 00       	nop
+      b0:	4a c0       	rjmp	.+148    	; 0x146 <__bad_interrupt>
+      b2:	00 00       	nop
+      b4:	48 c0       	rjmp	.+144    	; 0x146 <__bad_interrupt>
+      b6:	00 00       	nop
+      b8:	46 c0       	rjmp	.+140    	; 0x146 <__bad_interrupt>
+      ba:	00 00       	nop
+      bc:	44 c0       	rjmp	.+136    	; 0x146 <__bad_interrupt>
+      be:	00 00       	nop
+      c0:	42 c0       	rjmp	.+132    	; 0x146 <__bad_interrupt>
+      c2:	00 00       	nop
+      c4:	40 c0       	rjmp	.+128    	; 0x146 <__bad_interrupt>
+      c6:	00 00       	nop
+      c8:	3e c0       	rjmp	.+124    	; 0x146 <__bad_interrupt>
+      ca:	00 00       	nop
+      cc:	3c c0       	rjmp	.+120    	; 0x146 <__bad_interrupt>
+      ce:	00 00       	nop
+      d0:	3a c0       	rjmp	.+116    	; 0x146 <__bad_interrupt>
+      d2:	00 00       	nop
+      d4:	38 c0       	rjmp	.+112    	; 0x146 <__bad_interrupt>
+      d6:	00 00       	nop
+      d8:	d0 c1       	rjmp	.+928    	; 0x47a <__vector_54>
+      da:	00 00       	nop
+      dc:	34 c0       	rjmp	.+104    	; 0x146 <__bad_interrupt>
+      de:	00 00       	nop
+      e0:	32 c0       	rjmp	.+100    	; 0x146 <__bad_interrupt>
+	...
+
+000000e4 <__ctors_start>:
+      e4:	a4 09       	sbc	r26, r4
+
+000000e6 <__ctors_end>:
+      e6:	11 24       	eor	r1, r1
+      e8:	1f be       	out	0x3f, r1	; 63
+      ea:	cf ef       	ldi	r28, 0xFF	; 255
+      ec:	d1 e2       	ldi	r29, 0x21	; 33
+      ee:	de bf       	out	0x3e, r29	; 62
+      f0:	cd bf       	out	0x3d, r28	; 61
+      f2:	00 e0       	ldi	r16, 0x00	; 0
+      f4:	0c bf       	out	0x3c, r16	; 60
+
+000000f6 <__do_copy_data>:
+      f6:	13 e0       	ldi	r17, 0x03	; 3
+      f8:	a0 e0       	ldi	r26, 0x00	; 0
+      fa:	b2 e0       	ldi	r27, 0x02	; 2
+      fc:	e2 ec       	ldi	r30, 0xC2	; 194
+      fe:	f3 e1       	ldi	r31, 0x13	; 19
+     100:	00 e0       	ldi	r16, 0x00	; 0
+     102:	0b bf       	out	0x3b, r16	; 59
+     104:	02 c0       	rjmp	.+4      	; 0x10a <__do_copy_data+0x14>
+     106:	07 90       	elpm	r0, Z+
+     108:	0d 92       	st	X+, r0
+     10a:	a6 37       	cpi	r26, 0x76	; 118
+     10c:	b1 07       	cpc	r27, r17
+     10e:	d9 f7       	brne	.-10     	; 0x106 <__do_copy_data+0x10>
+
+00000110 <__do_clear_bss>:
+     110:	27 e0       	ldi	r18, 0x07	; 7
+     112:	a6 e7       	ldi	r26, 0x76	; 118
+     114:	b3 e0       	ldi	r27, 0x03	; 3
+     116:	01 c0       	rjmp	.+2      	; 0x11a <.do_clear_bss_start>
+
+00000118 <.do_clear_bss_loop>:
+     118:	1d 92       	st	X+, r1
+
+0000011a <.do_clear_bss_start>:
+     11a:	a4 3e       	cpi	r26, 0xE4	; 228
+     11c:	b2 07       	cpc	r27, r18
+     11e:	e1 f7       	brne	.-8      	; 0x118 <.do_clear_bss_loop>
+
+00000120 <__do_global_ctors>:
+     120:	10 e0       	ldi	r17, 0x00	; 0
+     122:	c3 e7       	ldi	r28, 0x73	; 115
+     124:	d0 e0       	ldi	r29, 0x00	; 0
+     126:	00 e0       	ldi	r16, 0x00	; 0
+     128:	06 c0       	rjmp	.+12     	; 0x136 <__do_global_ctors+0x16>
+     12a:	21 97       	sbiw	r28, 0x01	; 1
+     12c:	01 09       	sbc	r16, r1
+     12e:	80 2f       	mov	r24, r16
+     130:	fe 01       	movw	r30, r28
+     132:	0e 94 d0 09 	call	0x13a0	; 0x13a0 <__tablejump2__>
+     136:	c2 37       	cpi	r28, 0x72	; 114
+     138:	d1 07       	cpc	r29, r17
+     13a:	80 e0       	ldi	r24, 0x00	; 0
+     13c:	08 07       	cpc	r16, r24
+     13e:	a9 f7       	brne	.-22     	; 0x12a <__do_global_ctors+0xa>
+     140:	56 d4       	rcall	.+2220   	; 0x9ee <main>
+     142:	0c 94 df 09 	jmp	0x13be	; 0x13be <_exit>
+
+00000146 <__bad_interrupt>:
+     146:	5c cf       	rjmp	.-328    	; 0x0 <__vectors>
+
+00000148 <_ZN3SMSC1Ev>:
+			}
+			sei();
+		}
+	}
+public:
+	SMS(){setup(BAUD9600);}
+     148:	4f 92       	push	r4
+     14a:	5f 92       	push	r5
+     14c:	6f 92       	push	r6
+     14e:	7f 92       	push	r7
+     150:	8f 92       	push	r8
+     152:	9f 92       	push	r9
+     154:	af 92       	push	r10
+     156:	bf 92       	push	r11
+     158:	cf 92       	push	r12
+     15a:	df 92       	push	r13
+     15c:	ef 92       	push	r14
+     15e:	ff 92       	push	r15
+     160:	0f 93       	push	r16
+     162:	1f 93       	push	r17
+     164:	cf 93       	push	r28
+     166:	df 93       	push	r29
+     168:	cd b7       	in	r28, 0x3d	; 61
+     16a:	de b7       	in	r29, 0x3e	; 62
+     16c:	2e 97       	sbiw	r28, 0x0e	; 14
+     16e:	0f b6       	in	r0, 0x3f	; 63
+     170:	f8 94       	cli
+     172:	de bf       	out	0x3e, r29	; 62
+     174:	0f be       	out	0x3f, r0	; 63
+     176:	cd bf       	out	0x3d, r28	; 61
+     178:	8c 01       	movw	r16, r24
+		setBaudRate(rate);
+	}
+	void setBaudRate(BaudRate rate)
+	{
+		unsigned int BAUD_PRESCALLER = (((F_CPU / (rate * 16UL))) - 1);
+		UBRR0H = (unsigned int)(BAUD_PRESCALLER>>8);
+     17a:	0f 2e       	mov	r0, r31
+     17c:	f5 ec       	ldi	r31, 0xC5	; 197
+     17e:	6f 2e       	mov	r6, r31
+     180:	71 2c       	mov	r7, r1
+     182:	f0 2d       	mov	r31, r0
+     184:	d3 01       	movw	r26, r6
+     186:	1c 92       	st	X, r1
+		UBRR0L = (unsigned int)(BAUD_PRESCALLER);
+     188:	64 ec       	ldi	r22, 0xC4	; 196
+     18a:	70 e0       	ldi	r23, 0x00	; 0
+     18c:	0f 2e       	mov	r0, r31
+     18e:	f7 e6       	ldi	r31, 0x67	; 103
+     190:	ef 2e       	mov	r14, r31
+     192:	f0 2d       	mov	r31, r0
+     194:	fb 01       	movw	r30, r22
+     196:	e0 82       	st	Z, r14
+		UCSR0B = (1<<RXEN0)|(1<<TXEN0);//|(1<<RXCIE0);
+     198:	41 ec       	ldi	r20, 0xC1	; 193
+     19a:	50 e0       	ldi	r21, 0x00	; 0
+     19c:	0f 2e       	mov	r0, r31
+     19e:	f8 e1       	ldi	r31, 0x18	; 24
+     1a0:	bf 2e       	mov	r11, r31
+     1a2:	f0 2d       	mov	r31, r0
+     1a4:	da 01       	movw	r26, r20
+     1a6:	bc 92       	st	X, r11
+		UCSR0C = (3<<UCSZ00);
+     1a8:	22 ec       	ldi	r18, 0xC2	; 194
+     1aa:	30 e0       	ldi	r19, 0x00	; 0
+     1ac:	0f 2e       	mov	r0, r31
+     1ae:	f6 e0       	ldi	r31, 0x06	; 6
+     1b0:	ff 2e       	mov	r15, r31
+     1b2:	f0 2d       	mov	r31, r0
+     1b4:	f9 01       	movw	r30, r18
+     1b6:	f0 82       	st	Z, r15
+		
+		/***********************remove**************************/
+		UBRR3H = (unsigned int)(BAUD_PRESCALLER>>8);
+     1b8:	85 e3       	ldi	r24, 0x35	; 53
+     1ba:	91 e0       	ldi	r25, 0x01	; 1
+     1bc:	dc 01       	movw	r26, r24
+     1be:	1c 92       	st	X, r1
+		UBRR3L = (unsigned int)(BAUD_PRESCALLER);
+     1c0:	a4 e3       	ldi	r26, 0x34	; 52
+     1c2:	b1 e0       	ldi	r27, 0x01	; 1
+     1c4:	ec 92       	st	X, r14
+		UCSR3B = (1<<RXEN0)|(1<<TXEN0)|(1<<RXCIE0);
+     1c6:	0f 2e       	mov	r0, r31
+     1c8:	f8 e9       	ldi	r31, 0x98	; 152
+     1ca:	cf 2e       	mov	r12, r31
+     1cc:	f0 2d       	mov	r31, r0
+     1ce:	e1 e3       	ldi	r30, 0x31	; 49
+     1d0:	f1 e0       	ldi	r31, 0x01	; 1
+     1d2:	c0 82       	st	Z, r12
+		UCSR3C = (3<<UCSZ00);
+     1d4:	0f 2e       	mov	r0, r31
+     1d6:	f2 e3       	ldi	r31, 0x32	; 50
+     1d8:	8f 2e       	mov	r8, r31
+     1da:	99 24       	eor	r9, r9
+     1dc:	93 94       	inc	r9
+     1de:	f0 2d       	mov	r31, r0
+     1e0:	f4 01       	movw	r30, r8
+     1e2:	f0 82       	st	Z, r15
+	void setBaudRate(BaudRate baud){
+		gsmSMS.setBaudRate(baud);
+	}
+	bool setup(BaudRate BAUD = BAUD9600){
+		//_delay_ms(3000);
+		TCCR1B |= ((1 << CS10) | (1 << CS12)); // start the timer at 20MHz/1024
+     1e4:	0f 2e       	mov	r0, r31
+     1e6:	f1 e8       	ldi	r31, 0x81	; 129
+     1e8:	4f 2e       	mov	r4, r31
+     1ea:	51 2c       	mov	r5, r1
+     1ec:	f0 2d       	mov	r31, r0
+     1ee:	f2 01       	movw	r30, r4
+     1f0:	d0 80       	ld	r13, Z
+     1f2:	fd 2d       	mov	r31, r13
+     1f4:	f5 60       	ori	r31, 0x05	; 5
+     1f6:	df 2e       	mov	r13, r31
+     1f8:	f2 01       	movw	r30, r4
+     1fa:	d0 82       	st	Z, r13
+		setBaudRate(rate);
+	}
+	void setBaudRate(BaudRate rate)
+	{
+		unsigned int BAUD_PRESCALLER = (((F_CPU / (rate * 16UL))) - 1);
+		UBRR0H = (unsigned int)(BAUD_PRESCALLER>>8);
+     1fc:	f3 01       	movw	r30, r6
+     1fe:	10 82       	st	Z, r1
+		UBRR0L = (unsigned int)(BAUD_PRESCALLER);
+     200:	fb 01       	movw	r30, r22
+     202:	e0 82       	st	Z, r14
+		UCSR0B = (1<<RXEN0)|(1<<TXEN0);//|(1<<RXCIE0);
+     204:	fa 01       	movw	r30, r20
+     206:	b0 82       	st	Z, r11
+		UCSR0C = (3<<UCSZ00);
+     208:	f9 01       	movw	r30, r18
+     20a:	f0 82       	st	Z, r15
+		
+		/***********************remove**************************/
+		UBRR3H = (unsigned int)(BAUD_PRESCALLER>>8);
+     20c:	fc 01       	movw	r30, r24
+     20e:	10 82       	st	Z, r1
+		UBRR3L = (unsigned int)(BAUD_PRESCALLER);
+     210:	ec 92       	st	X, r14
+		UCSR3B = (1<<RXEN0)|(1<<TXEN0)|(1<<RXCIE0);
+     212:	a1 e3       	ldi	r26, 0x31	; 49
+     214:	b1 e0       	ldi	r27, 0x01	; 1
+     216:	cc 92       	st	X, r12
+		UCSR3C = (3<<UCSZ00);
+     218:	f4 01       	movw	r30, r8
+     21a:	f0 82       	st	Z, r15
+	}
+	bool setup(BaudRate BAUD = BAUD9600){
+		//_delay_ms(3000);
+		TCCR1B |= ((1 << CS10) | (1 << CS12)); // start the timer at 20MHz/1024
+		gsmSMS.setBaudRate(BAUD);
+		char ptr[] = {'A','T','+','C','S','C','S','=','"','G','S','M','"',0};
+     21c:	8e e0       	ldi	r24, 0x0E	; 14
+     21e:	e0 e0       	ldi	r30, 0x00	; 0
+     220:	f2 e0       	ldi	r31, 0x02	; 2
+     222:	de 01       	movw	r26, r28
+     224:	11 96       	adiw	r26, 0x01	; 1
+     226:	01 90       	ld	r0, Z+
+     228:	0d 92       	st	X+, r0
+     22a:	8a 95       	dec	r24
+     22c:	e1 f7       	brne	.-8      	; 0x226 <_ZN3SMSC1Ev+0xde>
+	int _SMSindex;
+	bool _flagRXC;
+	char _RXackValue;
+	bool sendCommand(const char ptr[], bool state = false){
+		int condition;
+		strcpy(_sendPacket,ptr);
+     22e:	78 01       	movw	r14, r16
+     230:	f2 e8       	ldi	r31, 0x82	; 130
+     232:	ef 0e       	add	r14, r31
+     234:	f1 1c       	adc	r15, r1
+     236:	be 01       	movw	r22, r28
+     238:	6f 5f       	subi	r22, 0xFF	; 255
+     23a:	7f 4f       	sbci	r23, 0xFF	; 255
+     23c:	c7 01       	movw	r24, r14
+     23e:	0e 94 d8 09 	call	0x13b0	; 0x13b0 <strcpy>
+	{
+		if (space)
+		{
+			UARTsend3((const char)*" ");
+		}
+		while(*StringPtr != 0)
+     242:	d7 01       	movw	r26, r14
+     244:	9c 91       	ld	r25, X
+     246:	99 23       	and	r25, r25
+     248:	89 f0       	breq	.+34     	; 0x26c <_ZN3SMSC1Ev+0x124>
+     24a:	a8 01       	movw	r20, r16
+     24c:	4d 57       	subi	r20, 0x7D	; 125
+     24e:	5f 4f       	sbci	r21, 0xFF	; 255
+	{
+		return UDR3;
+	}
+	void UARTsend3( unsigned char data)
+	{
+		while(!(UCSR3A & (1<<UDRE3)));
+     250:	e0 e3       	ldi	r30, 0x30	; 48
+     252:	f1 e0       	ldi	r31, 0x01	; 1
+		UDR3 = data;
+     254:	26 e3       	ldi	r18, 0x36	; 54
+     256:	31 e0       	ldi	r19, 0x01	; 1
+	{
+		return UDR3;
+	}
+	void UARTsend3( unsigned char data)
+	{
+		while(!(UCSR3A & (1<<UDRE3)));
+     258:	80 81       	ld	r24, Z
+     25a:	85 ff       	sbrs	r24, 5
+     25c:	fd cf       	rjmp	.-6      	; 0x258 <_ZN3SMSC1Ev+0x110>
+		UDR3 = data;
+     25e:	d9 01       	movw	r26, r18
+     260:	9c 93       	st	X, r25
+	{
+		if (space)
+		{
+			UARTsend3((const char)*" ");
+		}
+		while(*StringPtr != 0)
+     262:	da 01       	movw	r26, r20
+     264:	9d 91       	ld	r25, X+
+     266:	ad 01       	movw	r20, r26
+     268:	91 11       	cpse	r25, r1
+     26a:	f6 cf       	rjmp	.-20     	; 0x258 <_ZN3SMSC1Ev+0x110>
+	{
+		return UDR3;
+	}
+	void UARTsend3( unsigned char data)
+	{
+		while(!(UCSR3A & (1<<UDRE3)));
+     26c:	e0 e3       	ldi	r30, 0x30	; 48
+     26e:	f1 e0       	ldi	r31, 0x01	; 1
+     270:	80 81       	ld	r24, Z
+     272:	85 ff       	sbrs	r24, 5
+     274:	fd cf       	rjmp	.-6      	; 0x270 <_ZN3SMSC1Ev+0x128>
+		UDR3 = data;
+     276:	8d e0       	ldi	r24, 0x0D	; 13
+     278:	80 93 36 01 	sts	0x0136, r24	; 0x800136 <__TEXT_REGION_LENGTH__+0x700136>
+     27c:	a8 01       	movw	r20, r16
+     27e:	4a 58       	subi	r20, 0x8A	; 138
+     280:	5d 4f       	sbci	r21, 0xFD	; 253
+     282:	5a 01       	movw	r10, r20
+     284:	60 e0       	ldi	r22, 0x00	; 0
+     286:	70 e0       	ldi	r23, 0x00	; 0
+	}
+	unsigned char UARTreceive3(void)
+	{
+		while(!(UCSR3A & (1<<RXC3)));
+     288:	e0 e3       	ldi	r30, 0x30	; 48
+     28a:	f1 e0       	ldi	r31, 0x01	; 1
+		return UDR3;
+     28c:	0f 2e       	mov	r0, r31
+     28e:	f6 e3       	ldi	r31, 0x36	; 54
+     290:	cf 2e       	mov	r12, r31
+     292:	dd 24       	eor	r13, r13
+     294:	d3 94       	inc	r13
+     296:	f0 2d       	mov	r31, r0
+		while(!(UCSR3A & (1<<UDRE3)));
+		UDR3 = data;
+	}
+	unsigned char UARTreceive3(void)
+	{
+		while(!(UCSR3A & (1<<RXC3)));
+     298:	80 81       	ld	r24, Z
+     29a:	88 23       	and	r24, r24
+     29c:	ec f7       	brge	.-6      	; 0x298 <_ZN3SMSC1Ev+0x150>
+		return UDR3;
+     29e:	d6 01       	movw	r26, r12
+     2a0:	8c 91       	ld	r24, X
+		int i = 0;
+		char data = 0;
+		do 
+		{
+			data = gsmSMS.UARTreceive3();
+			_recievedPack[i++] = data;
+     2a2:	6f 5f       	subi	r22, 0xFF	; 255
+     2a4:	7f 4f       	sbci	r23, 0xFF	; 255
+     2a6:	d5 01       	movw	r26, r10
+     2a8:	8d 93       	st	X+, r24
+     2aa:	5d 01       	movw	r10, r26
+	}
+	char checkForData3()
+	{
+		for(int i = 0; i < 500; i++)
+		{
+			if ((UCSR3A & (1<<RXC3)))
+     2ac:	80 81       	ld	r24, Z
+     2ae:	88 23       	and	r24, r24
+     2b0:	0c f0       	brlt	.+2      	; 0x2b4 <_ZN3SMSC1Ev+0x16c>
+     2b2:	bd c0       	rjmp	.+378    	; 0x42e <__LOCK_REGION_LENGTH__+0x2e>
+     2b4:	f1 cf       	rjmp	.-30     	; 0x298 <_ZN3SMSC1Ev+0x150>
+     2b6:	20 81       	ld	r18, Z
+     2b8:	22 23       	and	r18, r18
+     2ba:	74 f3       	brlt	.-36     	; 0x298 <_ZN3SMSC1Ev+0x150>
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+     2bc:	a7 e5       	ldi	r26, 0x57	; 87
+     2be:	b2 e0       	ldi	r27, 0x02	; 2
+     2c0:	11 97       	sbiw	r26, 0x01	; 1
+     2c2:	f1 f7       	brne	.-4      	; 0x2c0 <_ZN3SMSC1Ev+0x178>
+     2c4:	00 c0       	rjmp	.+0      	; 0x2c6 <_ZN3SMSC1Ev+0x17e>
+     2c6:	00 00       	nop
+     2c8:	01 97       	sbiw	r24, 0x01	; 1
+	{
+		return UDR0;
+	}
+	char checkForData3()
+	{
+		for(int i = 0; i < 500; i++)
+     2ca:	a9 f7       	brne	.-22     	; 0x2b6 <_ZN3SMSC1Ev+0x16e>
+     2cc:	8a c0       	rjmp	.+276    	; 0x3e2 <_ZN3SMSC1Ev+0x29a>
+		gsmSMS.UARTstring3(_sendPacket,0);
+		gsmSMS.UARTsend3(13);
+		if (state)
+		{
+			condition = checkForACkPacket();
+			return (condition > 0) ? compWordInArr(_recievedPack,"OK",2,condition): condition;
+     2ce:	d8 01       	movw	r26, r16
+     2d0:	aa 58       	subi	r26, 0x8A	; 138
+     2d2:	bd 4f       	sbci	r27, 0xFD	; 253
+     2d4:	77 27       	eor	r23, r23
+		return 0;
+	}
+	bool compWordInArr(const char *arr,const char *word, char wordSize, char arrMaxSize) const
+	{
+		bool status = true;
+		for(int i = 0; i < arrMaxSize; i++)
+     2d6:	16 16       	cp	r1, r22
+     2d8:	17 06       	cpc	r1, r23
+     2da:	c4 f4       	brge	.+48     	; 0x30c <_ZN3SMSC1Ev+0x1c4>
+     2dc:	31 e0       	ldi	r19, 0x01	; 1
+     2de:	80 e0       	ldi	r24, 0x00	; 0
+     2e0:	90 e0       	ldi	r25, 0x00	; 0
+		{
+			if (arr[i] == *word)
+			{
+				for (int j = 0; j < wordSize; j++,i++)
+				{
+					if (!(arr[i] == word[j]))
+     2e2:	d1 2c       	mov	r13, r1
+	bool compWordInArr(const char *arr,const char *word, char wordSize, char arrMaxSize) const
+	{
+		bool status = true;
+		for(int i = 0; i < arrMaxSize; i++)
+		{
+			if (arr[i] == *word)
+     2e4:	fd 01       	movw	r30, r26
+     2e6:	e8 0f       	add	r30, r24
+     2e8:	f9 1f       	adc	r31, r25
+     2ea:	20 81       	ld	r18, Z
+     2ec:	2f 34       	cpi	r18, 0x4F	; 79
+     2ee:	51 f4       	brne	.+20     	; 0x304 <_ZN3SMSC1Ev+0x1bc>
+			{
+				for (int j = 0; j < wordSize; j++,i++)
+				{
+					if (!(arr[i] == word[j]))
+     2f0:	fd 01       	movw	r30, r26
+     2f2:	e8 0f       	add	r30, r24
+     2f4:	f9 1f       	adc	r31, r25
+     2f6:	21 81       	ldd	r18, Z+1	; 0x01
+     2f8:	2b 34       	cpi	r18, 0x4B	; 75
+     2fa:	09 f0       	breq	.+2      	; 0x2fe <_ZN3SMSC1Ev+0x1b6>
+     2fc:	a1 c0       	rjmp	.+322    	; 0x440 <__LOCK_REGION_LENGTH__+0x40>
+     2fe:	02 96       	adiw	r24, 0x02	; 2
+					{
+						status = false;
+					}
+				}
+				if (status)
+     300:	31 11       	cpse	r19, r1
+     302:	04 c0       	rjmp	.+8      	; 0x30c <_ZN3SMSC1Ev+0x1c4>
+		return 0;
+	}
+	bool compWordInArr(const char *arr,const char *word, char wordSize, char arrMaxSize) const
+	{
+		bool status = true;
+		for(int i = 0; i < arrMaxSize; i++)
+     304:	01 96       	adiw	r24, 0x01	; 1
+     306:	86 17       	cp	r24, r22
+     308:	97 07       	cpc	r25, r23
+     30a:	64 f3       	brlt	.-40     	; 0x2e4 <_ZN3SMSC1Ev+0x19c>
+	int _SMSindex;
+	bool _flagRXC;
+	char _RXackValue;
+	bool sendCommand(const char ptr[], bool state = false){
+		int condition;
+		strcpy(_sendPacket,ptr);
+     30c:	8a e0       	ldi	r24, 0x0A	; 10
+     30e:	ee e0       	ldi	r30, 0x0E	; 14
+     310:	f2 e0       	ldi	r31, 0x02	; 2
+     312:	d7 01       	movw	r26, r14
+     314:	01 90       	ld	r0, Z+
+     316:	0d 92       	st	X+, r0
+     318:	8a 95       	dec	r24
+     31a:	e1 f7       	brne	.-8      	; 0x314 <_ZN3SMSC1Ev+0x1cc>
+	{
+		if (space)
+		{
+			UARTsend3((const char)*" ");
+		}
+		while(*StringPtr != 0)
+     31c:	f8 01       	movw	r30, r16
+     31e:	ee 57       	subi	r30, 0x7E	; 126
+     320:	ff 4f       	sbci	r31, 0xFF	; 255
+     322:	90 81       	ld	r25, Z
+     324:	99 23       	and	r25, r25
+     326:	89 f0       	breq	.+34     	; 0x34a <_ZN3SMSC1Ev+0x202>
+     328:	b8 01       	movw	r22, r16
+     32a:	6d 57       	subi	r22, 0x7D	; 125
+     32c:	7f 4f       	sbci	r23, 0xFF	; 255
+	{
+		return UDR3;
+	}
+	void UARTsend3( unsigned char data)
+	{
+		while(!(UCSR3A & (1<<UDRE3)));
+     32e:	e0 e3       	ldi	r30, 0x30	; 48
+     330:	f1 e0       	ldi	r31, 0x01	; 1
+		UDR3 = data;
+     332:	26 e3       	ldi	r18, 0x36	; 54
+     334:	31 e0       	ldi	r19, 0x01	; 1
+	{
+		return UDR3;
+	}
+	void UARTsend3( unsigned char data)
+	{
+		while(!(UCSR3A & (1<<UDRE3)));
+     336:	80 81       	ld	r24, Z
+     338:	85 ff       	sbrs	r24, 5
+     33a:	fd cf       	rjmp	.-6      	; 0x336 <_ZN3SMSC1Ev+0x1ee>
+		UDR3 = data;
+     33c:	d9 01       	movw	r26, r18
+     33e:	9c 93       	st	X, r25
+	{
+		if (space)
+		{
+			UARTsend3((const char)*" ");
+		}
+		while(*StringPtr != 0)
+     340:	db 01       	movw	r26, r22
+     342:	9d 91       	ld	r25, X+
+     344:	bd 01       	movw	r22, r26
+     346:	91 11       	cpse	r25, r1
+     348:	f6 cf       	rjmp	.-20     	; 0x336 <_ZN3SMSC1Ev+0x1ee>
+	{
+		return UDR3;
+	}
+	void UARTsend3( unsigned char data)
+	{
+		while(!(UCSR3A & (1<<UDRE3)));
+     34a:	e0 e3       	ldi	r30, 0x30	; 48
+     34c:	f1 e0       	ldi	r31, 0x01	; 1
+     34e:	80 81       	ld	r24, Z
+     350:	85 ff       	sbrs	r24, 5
+     352:	fd cf       	rjmp	.-6      	; 0x34e <_ZN3SMSC1Ev+0x206>
+		UDR3 = data;
+     354:	8d e0       	ldi	r24, 0x0D	; 13
+     356:	80 93 36 01 	sts	0x0136, r24	; 0x800136 <__TEXT_REGION_LENGTH__+0x700136>
+     35a:	60 e0       	ldi	r22, 0x00	; 0
+     35c:	70 e0       	ldi	r23, 0x00	; 0
+	}
+	unsigned char UARTreceive3(void)
+	{
+		while(!(UCSR3A & (1<<RXC3)));
+     35e:	e0 e3       	ldi	r30, 0x30	; 48
+     360:	f1 e0       	ldi	r31, 0x01	; 1
+		return UDR3;
+     362:	0f 2e       	mov	r0, r31
+     364:	f6 e3       	ldi	r31, 0x36	; 54
+     366:	ef 2e       	mov	r14, r31
+     368:	ff 24       	eor	r15, r15
+     36a:	f3 94       	inc	r15
+     36c:	f0 2d       	mov	r31, r0
+		while(!(UCSR3A & (1<<UDRE3)));
+		UDR3 = data;
+	}
+	unsigned char UARTreceive3(void)
+	{
+		while(!(UCSR3A & (1<<RXC3)));
+     36e:	80 81       	ld	r24, Z
+     370:	88 23       	and	r24, r24
+     372:	ec f7       	brge	.-6      	; 0x36e <_ZN3SMSC1Ev+0x226>
+		return UDR3;
+     374:	d7 01       	movw	r26, r14
+     376:	8c 91       	ld	r24, X
+		int i = 0;
+		char data = 0;
+		do 
+		{
+			data = gsmSMS.UARTreceive3();
+			_recievedPack[i++] = data;
+     378:	6f 5f       	subi	r22, 0xFF	; 255
+     37a:	7f 4f       	sbci	r23, 0xFF	; 255
+     37c:	da 01       	movw	r26, r20
+     37e:	8d 93       	st	X+, r24
+     380:	ad 01       	movw	r20, r26
+	}
+	char checkForData3()
+	{
+		for(int i = 0; i < 500; i++)
+		{
+			if ((UCSR3A & (1<<RXC3)))
+     382:	80 81       	ld	r24, Z
+     384:	88 23       	and	r24, r24
+     386:	0c f0       	brlt	.+2      	; 0x38a <_ZN3SMSC1Ev+0x242>
+     388:	49 c0       	rjmp	.+146    	; 0x41c <__LOCK_REGION_LENGTH__+0x1c>
+     38a:	f1 cf       	rjmp	.-30     	; 0x36e <_ZN3SMSC1Ev+0x226>
+     38c:	20 81       	ld	r18, Z
+     38e:	22 23       	and	r18, r18
+     390:	74 f3       	brlt	.-36     	; 0x36e <_ZN3SMSC1Ev+0x226>
+     392:	a7 e5       	ldi	r26, 0x57	; 87
+     394:	b2 e0       	ldi	r27, 0x02	; 2
+     396:	11 97       	sbiw	r26, 0x01	; 1
+     398:	f1 f7       	brne	.-4      	; 0x396 <_ZN3SMSC1Ev+0x24e>
+     39a:	00 c0       	rjmp	.+0      	; 0x39c <_ZN3SMSC1Ev+0x254>
+     39c:	00 00       	nop
+     39e:	01 97       	sbiw	r24, 0x01	; 1
+	{
+		return UDR0;
+	}
+	char checkForData3()
+	{
+		for(int i = 0; i < 500; i++)
+     3a0:	a9 f7       	brne	.-22     	; 0x38c <_ZN3SMSC1Ev+0x244>
+     3a2:	2e c0       	rjmp	.+92     	; 0x400 <__LOCK_REGION_LENGTH__>
+		gsmSMS.UARTstring3(_sendPacket,0);
+		gsmSMS.UARTsend3(13);
+		if (state)
+		{
+			condition = checkForACkPacket();
+			return (condition > 0) ? compWordInArr(_recievedPack,"OK",2,condition): condition;
+     3a4:	0a 58       	subi	r16, 0x8A	; 138
+     3a6:	1d 4f       	sbci	r17, 0xFD	; 253
+     3a8:	77 27       	eor	r23, r23
+		return 0;
+	}
+	bool compWordInArr(const char *arr,const char *word, char wordSize, char arrMaxSize) const
+	{
+		bool status = true;
+		for(int i = 0; i < arrMaxSize; i++)
+     3aa:	16 16       	cp	r1, r22
+     3ac:	17 06       	cpc	r1, r23
+     3ae:	0c f0       	brlt	.+2      	; 0x3b2 <_ZN3SMSC1Ev+0x26a>
+     3b0:	4d c0       	rjmp	.+154    	; 0x44c <__LOCK_REGION_LENGTH__+0x4c>
+     3b2:	31 e0       	ldi	r19, 0x01	; 1
+     3b4:	80 e0       	ldi	r24, 0x00	; 0
+     3b6:	90 e0       	ldi	r25, 0x00	; 0
+		{
+			if (arr[i] == *word)
+			{
+				for (int j = 0; j < wordSize; j++,i++)
+				{
+					if (!(arr[i] == word[j]))
+     3b8:	40 e0       	ldi	r20, 0x00	; 0
+	bool compWordInArr(const char *arr,const char *word, char wordSize, char arrMaxSize) const
+	{
+		bool status = true;
+		for(int i = 0; i < arrMaxSize; i++)
+		{
+			if (arr[i] == *word)
+     3ba:	f8 01       	movw	r30, r16
+     3bc:	e8 0f       	add	r30, r24
+     3be:	f9 1f       	adc	r31, r25
+     3c0:	20 81       	ld	r18, Z
+     3c2:	2f 34       	cpi	r18, 0x4F	; 79
+     3c4:	49 f4       	brne	.+18     	; 0x3d8 <_ZN3SMSC1Ev+0x290>
+			{
+				for (int j = 0; j < wordSize; j++,i++)
+				{
+					if (!(arr[i] == word[j]))
+     3c6:	f8 01       	movw	r30, r16
+     3c8:	e8 0f       	add	r30, r24
+     3ca:	f9 1f       	adc	r31, r25
+     3cc:	21 81       	ldd	r18, Z+1	; 0x01
+     3ce:	2b 34       	cpi	r18, 0x4B	; 75
+     3d0:	d1 f5       	brne	.+116    	; 0x446 <__LOCK_REGION_LENGTH__+0x46>
+     3d2:	02 96       	adiw	r24, 0x02	; 2
+					{
+						status = false;
+					}
+				}
+				if (status)
+     3d4:	31 11       	cpse	r19, r1
+     3d6:	3a c0       	rjmp	.+116    	; 0x44c <__LOCK_REGION_LENGTH__+0x4c>
+		return 0;
+	}
+	bool compWordInArr(const char *arr,const char *word, char wordSize, char arrMaxSize) const
+	{
+		bool status = true;
+		for(int i = 0; i < arrMaxSize; i++)
+     3d8:	01 96       	adiw	r24, 0x01	; 1
+     3da:	86 17       	cp	r24, r22
+     3dc:	97 07       	cpc	r25, r23
+     3de:	6c f3       	brlt	.-38     	; 0x3ba <_ZN3SMSC1Ev+0x272>
+     3e0:	35 c0       	rjmp	.+106    	; 0x44c <__LOCK_REGION_LENGTH__+0x4c>
+		{
+			data = gsmSMS.UARTreceive3();
+			_recievedPack[i++] = data;
+		}while(gsmSMS.checkForData3());
+		
+		_recievedPack[i] = 0;
+     3e2:	f8 01       	movw	r30, r16
+     3e4:	e6 0f       	add	r30, r22
+     3e6:	f7 1f       	adc	r31, r23
+     3e8:	ea 58       	subi	r30, 0x8A	; 138
+     3ea:	fd 4f       	sbci	r31, 0xFD	; 253
+     3ec:	10 82       	st	Z, r1
+		return i > 0 ? i: 0;
+     3ee:	77 23       	and	r23, r23
+     3f0:	14 f4       	brge	.+4      	; 0x3f6 <_ZN3SMSC1Ev+0x2ae>
+     3f2:	60 e0       	ldi	r22, 0x00	; 0
+     3f4:	70 e0       	ldi	r23, 0x00	; 0
+		gsmSMS.UARTstring3(_sendPacket,0);
+		gsmSMS.UARTsend3(13);
+		if (state)
+		{
+			condition = checkForACkPacket();
+			return (condition > 0) ? compWordInArr(_recievedPack,"OK",2,condition): condition;
+     3f6:	16 16       	cp	r1, r22
+     3f8:	17 06       	cpc	r1, r23
+     3fa:	0c f4       	brge	.+2      	; 0x3fe <_ZN3SMSC1Ev+0x2b6>
+     3fc:	68 cf       	rjmp	.-304    	; 0x2ce <_ZN3SMSC1Ev+0x186>
+     3fe:	86 cf       	rjmp	.-244    	; 0x30c <_ZN3SMSC1Ev+0x1c4>
+		{
+			data = gsmSMS.UARTreceive3();
+			_recievedPack[i++] = data;
+		}while(gsmSMS.checkForData3());
+		
+		_recievedPack[i] = 0;
+     400:	f8 01       	movw	r30, r16
+     402:	e6 0f       	add	r30, r22
+     404:	f7 1f       	adc	r31, r23
+     406:	ea 58       	subi	r30, 0x8A	; 138
+     408:	fd 4f       	sbci	r31, 0xFD	; 253
+     40a:	10 82       	st	Z, r1
+		return i > 0 ? i: 0;
+     40c:	77 23       	and	r23, r23
+     40e:	14 f4       	brge	.+4      	; 0x414 <__LOCK_REGION_LENGTH__+0x14>
+     410:	60 e0       	ldi	r22, 0x00	; 0
+     412:	70 e0       	ldi	r23, 0x00	; 0
+		gsmSMS.UARTstring3(_sendPacket,0);
+		gsmSMS.UARTsend3(13);
+		if (state)
+		{
+			condition = checkForACkPacket();
+			return (condition > 0) ? compWordInArr(_recievedPack,"OK",2,condition): condition;
+     414:	16 16       	cp	r1, r22
+     416:	17 06       	cpc	r1, r23
+     418:	2c f2       	brlt	.-118    	; 0x3a4 <_ZN3SMSC1Ev+0x25c>
+     41a:	18 c0       	rjmp	.+48     	; 0x44c <__LOCK_REGION_LENGTH__+0x4c>
+     41c:	87 e5       	ldi	r24, 0x57	; 87
+     41e:	92 e0       	ldi	r25, 0x02	; 2
+     420:	01 97       	sbiw	r24, 0x01	; 1
+     422:	f1 f7       	brne	.-4      	; 0x420 <__LOCK_REGION_LENGTH__+0x20>
+     424:	00 c0       	rjmp	.+0      	; 0x426 <__LOCK_REGION_LENGTH__+0x26>
+     426:	00 00       	nop
+     428:	83 ef       	ldi	r24, 0xF3	; 243
+     42a:	91 e0       	ldi	r25, 0x01	; 1
+     42c:	af cf       	rjmp	.-162    	; 0x38c <_ZN3SMSC1Ev+0x244>
+     42e:	a7 e5       	ldi	r26, 0x57	; 87
+     430:	b2 e0       	ldi	r27, 0x02	; 2
+     432:	11 97       	sbiw	r26, 0x01	; 1
+     434:	f1 f7       	brne	.-4      	; 0x432 <__LOCK_REGION_LENGTH__+0x32>
+     436:	00 c0       	rjmp	.+0      	; 0x438 <__LOCK_REGION_LENGTH__+0x38>
+     438:	00 00       	nop
+     43a:	83 ef       	ldi	r24, 0xF3	; 243
+     43c:	91 e0       	ldi	r25, 0x01	; 1
+     43e:	3b cf       	rjmp	.-394    	; 0x2b6 <_ZN3SMSC1Ev+0x16e>
+     440:	02 96       	adiw	r24, 0x02	; 2
+		{
+			if (arr[i] == *word)
+			{
+				for (int j = 0; j < wordSize; j++,i++)
+				{
+					if (!(arr[i] == word[j]))
+     442:	3d 2d       	mov	r19, r13
+     444:	5f cf       	rjmp	.-322    	; 0x304 <_ZN3SMSC1Ev+0x1bc>
+     446:	02 96       	adiw	r24, 0x02	; 2
+     448:	34 2f       	mov	r19, r20
+     44a:	c6 cf       	rjmp	.-116    	; 0x3d8 <_ZN3SMSC1Ev+0x290>
+			}
+			sei();
+		}
+	}
+public:
+	SMS(){setup(BAUD9600);}
+     44c:	2e 96       	adiw	r28, 0x0e	; 14
+     44e:	0f b6       	in	r0, 0x3f	; 63
+     450:	f8 94       	cli
+     452:	de bf       	out	0x3e, r29	; 62
+     454:	0f be       	out	0x3f, r0	; 63
+     456:	cd bf       	out	0x3d, r28	; 61
+     458:	df 91       	pop	r29
+     45a:	cf 91       	pop	r28
+     45c:	1f 91       	pop	r17
+     45e:	0f 91       	pop	r16
+     460:	ff 90       	pop	r15
+     462:	ef 90       	pop	r14
+     464:	df 90       	pop	r13
+     466:	cf 90       	pop	r12
+     468:	bf 90       	pop	r11
+     46a:	af 90       	pop	r10
+     46c:	9f 90       	pop	r9
+     46e:	8f 90       	pop	r8
+     470:	7f 90       	pop	r7
+     472:	6f 90       	pop	r6
+     474:	5f 90       	pop	r5
+     476:	4f 90       	pop	r4
+     478:	08 95       	ret
+
+0000047a <__vector_54>:
+	}
+};
+
+SMS test;
+ISR(USART3_RX_vect)
+{
+     47a:	1f 92       	push	r1
+     47c:	0f 92       	push	r0
+     47e:	0f b6       	in	r0, 0x3f	; 63
+     480:	0f 92       	push	r0
+     482:	11 24       	eor	r1, r1
+     484:	0b b6       	in	r0, 0x3b	; 59
+     486:	0f 92       	push	r0
+     488:	6f 92       	push	r6
+     48a:	7f 92       	push	r7
+     48c:	8f 92       	push	r8
+     48e:	9f 92       	push	r9
+     490:	af 92       	push	r10
+     492:	bf 92       	push	r11
+     494:	cf 92       	push	r12
+     496:	df 92       	push	r13
+     498:	ef 92       	push	r14
+     49a:	ff 92       	push	r15
+     49c:	0f 93       	push	r16
+     49e:	1f 93       	push	r17
+     4a0:	2f 93       	push	r18
+     4a2:	3f 93       	push	r19
+     4a4:	4f 93       	push	r20
+     4a6:	5f 93       	push	r21
+     4a8:	6f 93       	push	r22
+     4aa:	7f 93       	push	r23
+     4ac:	8f 93       	push	r24
+     4ae:	9f 93       	push	r25
+     4b0:	af 93       	push	r26
+     4b2:	bf 93       	push	r27
+     4b4:	cf 93       	push	r28
+     4b6:	df 93       	push	r29
+     4b8:	ef 93       	push	r30
+     4ba:	ff 93       	push	r31
+	{
+		return _RXackValue != 0 ? true : false;
+	}
+	friend void flagDataReceived(SMS& flag)
+	{
+		cli();
+     4bc:	f8 94       	cli
+     4be:	0f 2e       	mov	r0, r31
+     4c0:	fc ee       	ldi	r31, 0xEC	; 236
+     4c2:	ef 2e       	mov	r14, r31
+     4c4:	f5 e0       	ldi	r31, 0x05	; 5
+     4c6:	ff 2e       	mov	r15, r31
+     4c8:	f0 2d       	mov	r31, r0
+     4ca:	d7 01       	movw	r26, r14
+		sei();
+		return sendCommand(_sendPacket);							//send the CTRL-Z
+	return false;
+	}
+	void checkStatus(){
+		int i = 0;
+     4cc:	40 e0       	ldi	r20, 0x00	; 0
+     4ce:	50 e0       	ldi	r21, 0x00	; 0
+	}
+	char checkForData3()
+	{
+		for(int i = 0; i < 500; i++)
+		{
+			if ((UCSR3A & (1<<RXC3)))
+     4d0:	e0 e3       	ldi	r30, 0x30	; 48
+     4d2:	f1 e0       	ldi	r31, 0x01	; 1
+		}
+		return 0;
+	}
+	char getData3()
+	{
+		return UDR3;
+     4d4:	66 e3       	ldi	r22, 0x36	; 54
+     4d6:	71 e0       	ldi	r23, 0x01	; 1
+	}
+	char checkForData3()
+	{
+		for(int i = 0; i < 500; i++)
+		{
+			if ((UCSR3A & (1<<RXC3)))
+     4d8:	80 81       	ld	r24, Z
+     4da:	88 23       	and	r24, r24
+     4dc:	0c f0       	brlt	.+2      	; 0x4e0 <__vector_54+0x66>
+     4de:	52 c2       	rjmp	.+1188   	; 0x984 <__vector_54+0x50a>
+     4e0:	1c c2       	rjmp	.+1080   	; 0x91a <__vector_54+0x4a0>
+     4e2:	20 81       	ld	r18, Z
+     4e4:	22 23       	and	r18, r18
+     4e6:	0c f4       	brge	.+2      	; 0x4ea <__vector_54+0x70>
+     4e8:	18 c2       	rjmp	.+1072   	; 0x91a <__vector_54+0x4a0>
+     4ea:	c7 e5       	ldi	r28, 0x57	; 87
+     4ec:	d2 e0       	ldi	r29, 0x02	; 2
+     4ee:	21 97       	sbiw	r28, 0x01	; 1
+     4f0:	f1 f7       	brne	.-4      	; 0x4ee <__vector_54+0x74>
+     4f2:	00 c0       	rjmp	.+0      	; 0x4f4 <__vector_54+0x7a>
+     4f4:	00 00       	nop
+     4f6:	01 97       	sbiw	r24, 0x01	; 1
+	{
+		return UDR0;
+	}
+	char checkForData3()
+	{
+		for(int i = 0; i < 500; i++)
+     4f8:	a1 f7       	brne	.-24     	; 0x4e2 <__vector_54+0x68>
+     4fa:	15 c2       	rjmp	.+1066   	; 0x926 <__vector_54+0x4ac>
+     4fc:	55 27       	eor	r21, r21
+		return 0;
+	}
+	bool compWordInArr(const char *arr,const char *word, char wordSize, char arrMaxSize) const
+	{
+		bool status = true;
+		for(int i = 0; i < arrMaxSize; i++)
+     4fe:	14 16       	cp	r1, r20
+     500:	15 06       	cpc	r1, r21
+     502:	0c f0       	brlt	.+2      	; 0x506 <__vector_54+0x8c>
+     504:	00 c2       	rjmp	.+1024   	; 0x906 <__vector_54+0x48c>
+     506:	31 e0       	ldi	r19, 0x01	; 1
+     508:	80 e0       	ldi	r24, 0x00	; 0
+     50a:	90 e0       	ldi	r25, 0x00	; 0
+		{
+			if (arr[i] == *word)
+			{
+				for (int j = 0; j < wordSize; j++,i++)
+				{
+					if (!(arr[i] == word[j]))
+     50c:	60 e0       	ldi	r22, 0x00	; 0
+	bool compWordInArr(const char *arr,const char *word, char wordSize, char arrMaxSize) const
+	{
+		bool status = true;
+		for(int i = 0; i < arrMaxSize; i++)
+		{
+			if (arr[i] == *word)
+     50e:	fc 01       	movw	r30, r24
+     510:	e4 51       	subi	r30, 0x14	; 20
+     512:	fa 4f       	sbci	r31, 0xFA	; 250
+     514:	20 81       	ld	r18, Z
+     516:	2f 34       	cpi	r18, 0x4F	; 79
+     518:	51 f4       	brne	.+20     	; 0x52e <__vector_54+0xb4>
+			{
+				for (int j = 0; j < wordSize; j++,i++)
+				{
+					if (!(arr[i] == word[j]))
+     51a:	fc 01       	movw	r30, r24
+     51c:	e3 51       	subi	r30, 0x13	; 19
+     51e:	fa 4f       	sbci	r31, 0xFA	; 250
+     520:	20 81       	ld	r18, Z
+     522:	2b 34       	cpi	r18, 0x4B	; 75
+     524:	09 f0       	breq	.+2      	; 0x528 <__vector_54+0xae>
+     526:	37 c2       	rjmp	.+1134   	; 0x996 <__vector_54+0x51c>
+     528:	02 96       	adiw	r24, 0x02	; 2
+					{
+						status = false;
+					}
+				}
+				if (status)
+     52a:	31 11       	cpse	r19, r1
+     52c:	05 c2       	rjmp	.+1034   	; 0x938 <__vector_54+0x4be>
+		return 0;
+	}
+	bool compWordInArr(const char *arr,const char *word, char wordSize, char arrMaxSize) const
+	{
+		bool status = true;
+		for(int i = 0; i < arrMaxSize; i++)
+     52e:	01 96       	adiw	r24, 0x01	; 1
+     530:	84 17       	cp	r24, r20
+     532:	95 07       	cpc	r25, r21
+     534:	64 f3       	brlt	.-40     	; 0x50e <__vector_54+0x94>
+     536:	32 c2       	rjmp	.+1124   	; 0x99c <__vector_54+0x522>
+		{
+			if (arr[i] == *word)
+     538:	fc 01       	movw	r30, r24
+     53a:	e4 51       	subi	r30, 0x14	; 20
+     53c:	fa 4f       	sbci	r31, 0xFA	; 250
+     53e:	20 81       	ld	r18, Z
+     540:	2e 33       	cpi	r18, 0x3E	; 62
+     542:	19 f4       	brne	.+6      	; 0x54a <__vector_54+0xd0>
+			{
+				for (int j = 0; j < wordSize; j++,i++)
+     544:	01 96       	adiw	r24, 0x01	; 1
+					if (!(arr[i] == word[j]))
+					{
+						status = false;
+					}
+				}
+				if (status)
+     546:	31 11       	cpse	r19, r1
+     548:	fb c1       	rjmp	.+1014   	; 0x940 <__vector_54+0x4c6>
+		return 0;
+	}
+	bool compWordInArr(const char *arr,const char *word, char wordSize, char arrMaxSize) const
+	{
+		bool status = true;
+		for(int i = 0; i < arrMaxSize; i++)
+     54a:	01 96       	adiw	r24, 0x01	; 1
+     54c:	84 17       	cp	r24, r20
+     54e:	95 07       	cpc	r25, r21
+     550:	9c f3       	brlt	.-26     	; 0x538 <__vector_54+0xbe>
+     552:	c1 e0       	ldi	r28, 0x01	; 1
+     554:	80 e0       	ldi	r24, 0x00	; 0
+     556:	90 e0       	ldi	r25, 0x00	; 0
+     558:	6d e1       	ldi	r22, 0x1D	; 29
+     55a:	72 e0       	ldi	r23, 0x02	; 2
+			{
+				for (int j = 0; j < wordSize; j++,i++)
+				{
+					if (!(arr[i] == word[j]))
+					{
+						status = false;
+     55c:	d0 e0       	ldi	r29, 0x00	; 0
+	bool compWordInArr(const char *arr,const char *word, char wordSize, char arrMaxSize) const
+	{
+		bool status = true;
+		for(int i = 0; i < arrMaxSize; i++)
+		{
+			if (arr[i] == *word)
+     55e:	fc 01       	movw	r30, r24
+     560:	e4 51       	subi	r30, 0x14	; 20
+     562:	fa 4f       	sbci	r31, 0xFA	; 250
+     564:	20 81       	ld	r18, Z
+     566:	25 34       	cpi	r18, 0x45	; 69
+     568:	69 f4       	brne	.+26     	; 0x584 <__vector_54+0x10a>
+     56a:	df 01       	movw	r26, r30
+     56c:	e8 e1       	ldi	r30, 0x18	; 24
+     56e:	f2 e0       	ldi	r31, 0x02	; 2
+			{
+				for (int j = 0; j < wordSize; j++,i++)
+				{
+					if (!(arr[i] == word[j]))
+     570:	3d 91       	ld	r19, X+
+     572:	21 91       	ld	r18, Z+
+     574:	32 13       	cpse	r19, r18
+					{
+						status = false;
+     576:	cd 2f       	mov	r28, r29
+		bool status = true;
+		for(int i = 0; i < arrMaxSize; i++)
+		{
+			if (arr[i] == *word)
+			{
+				for (int j = 0; j < wordSize; j++,i++)
+     578:	6e 17       	cp	r22, r30
+     57a:	7f 07       	cpc	r23, r31
+     57c:	c9 f7       	brne	.-14     	; 0x570 <__vector_54+0xf6>
+     57e:	05 96       	adiw	r24, 0x05	; 5
+					if (!(arr[i] == word[j]))
+					{
+						status = false;
+					}
+				}
+				if (status)
+     580:	c1 11       	cpse	r28, r1
+     582:	e2 c1       	rjmp	.+964    	; 0x948 <__vector_54+0x4ce>
+		return 0;
+	}
+	bool compWordInArr(const char *arr,const char *word, char wordSize, char arrMaxSize) const
+	{
+		bool status = true;
+		for(int i = 0; i < arrMaxSize; i++)
+     584:	01 96       	adiw	r24, 0x01	; 1
+     586:	84 17       	cp	r24, r20
+     588:	95 07       	cpc	r25, r21
+     58a:	4c f3       	brlt	.-46     	; 0x55e <__vector_54+0xe4>
+     58c:	21 e0       	ldi	r18, 0x01	; 1
+     58e:	80 e0       	ldi	r24, 0x00	; 0
+     590:	90 e0       	ldi	r25, 0x00	; 0
+     592:	c2 e2       	ldi	r28, 0x22	; 34
+     594:	d2 e0       	ldi	r29, 0x02	; 2
+			{
+				for (int j = 0; j < wordSize; j++,i++)
+				{
+					if (!(arr[i] == word[j]))
+					{
+						status = false;
+     596:	70 e0       	ldi	r23, 0x00	; 0
+	bool compWordInArr(const char *arr,const char *word, char wordSize, char arrMaxSize) const
+	{
+		bool status = true;
+		for(int i = 0; i < arrMaxSize; i++)
+		{
+			if (arr[i] == *word)
+     598:	fc 01       	movw	r30, r24
+     59a:	e4 51       	subi	r30, 0x14	; 20
+     59c:	fa 4f       	sbci	r31, 0xFA	; 250
+     59e:	30 81       	ld	r19, Z
+     5a0:	32 35       	cpi	r19, 0x52	; 82
+     5a2:	69 f4       	brne	.+26     	; 0x5be <__vector_54+0x144>
+     5a4:	df 01       	movw	r26, r30
+     5a6:	ee e1       	ldi	r30, 0x1E	; 30
+     5a8:	f2 e0       	ldi	r31, 0x02	; 2
+			{
+				for (int j = 0; j < wordSize; j++,i++)
+				{
+					if (!(arr[i] == word[j]))
+     5aa:	6d 91       	ld	r22, X+
+     5ac:	31 91       	ld	r19, Z+
+     5ae:	63 13       	cpse	r22, r19
+					{
+						status = false;
+     5b0:	27 2f       	mov	r18, r23
+		bool status = true;
+		for(int i = 0; i < arrMaxSize; i++)
+		{
+			if (arr[i] == *word)
+			{
+				for (int j = 0; j < wordSize; j++,i++)
+     5b2:	ce 17       	cp	r28, r30
+     5b4:	df 07       	cpc	r29, r31
+     5b6:	c9 f7       	brne	.-14     	; 0x5aa <__vector_54+0x130>
+     5b8:	04 96       	adiw	r24, 0x04	; 4
+					if (!(arr[i] == word[j]))
+					{
+						status = false;
+					}
+				}
+				if (status)
+     5ba:	21 11       	cpse	r18, r1
+     5bc:	c9 c1       	rjmp	.+914    	; 0x950 <__vector_54+0x4d6>
+		return 0;
+	}
+	bool compWordInArr(const char *arr,const char *word, char wordSize, char arrMaxSize) const
+	{
+		bool status = true;
+		for(int i = 0; i < arrMaxSize; i++)
+     5be:	01 96       	adiw	r24, 0x01	; 1
+     5c0:	84 17       	cp	r24, r20
+     5c2:	95 07       	cpc	r25, r21
+     5c4:	4c f3       	brlt	.-46     	; 0x598 <__vector_54+0x11e>
+     5c6:	c1 e0       	ldi	r28, 0x01	; 1
+     5c8:	80 e0       	ldi	r24, 0x00	; 0
+     5ca:	90 e0       	ldi	r25, 0x00	; 0
+     5cc:	68 e2       	ldi	r22, 0x28	; 40
+     5ce:	72 e0       	ldi	r23, 0x02	; 2
+			{
+				for (int j = 0; j < wordSize; j++,i++)
+				{
+					if (!(arr[i] == word[j]))
+					{
+						status = false;
+     5d0:	d0 e0       	ldi	r29, 0x00	; 0
+	bool compWordInArr(const char *arr,const char *word, char wordSize, char arrMaxSize) const
+	{
+		bool status = true;
+		for(int i = 0; i < arrMaxSize; i++)
+		{
+			if (arr[i] == *word)
+     5d2:	fc 01       	movw	r30, r24
+     5d4:	e4 51       	subi	r30, 0x14	; 20
+     5d6:	fa 4f       	sbci	r31, 0xFA	; 250
+     5d8:	20 81       	ld	r18, Z
+     5da:	2b 32       	cpi	r18, 0x2B	; 43
+     5dc:	69 f4       	brne	.+26     	; 0x5f8 <__vector_54+0x17e>
+     5de:	df 01       	movw	r26, r30
+     5e0:	e3 e2       	ldi	r30, 0x23	; 35
+     5e2:	f2 e0       	ldi	r31, 0x02	; 2
+			{
+				for (int j = 0; j < wordSize; j++,i++)
+				{
+					if (!(arr[i] == word[j]))
+     5e4:	3d 91       	ld	r19, X+
+     5e6:	21 91       	ld	r18, Z+
+     5e8:	32 13       	cpse	r19, r18
+					{
+						status = false;
+     5ea:	cd 2f       	mov	r28, r29
+		bool status = true;
+		for(int i = 0; i < arrMaxSize; i++)
+		{
+			if (arr[i] == *word)
+			{
+				for (int j = 0; j < wordSize; j++,i++)
+     5ec:	e6 17       	cp	r30, r22
+     5ee:	f7 07       	cpc	r31, r23
+     5f0:	c9 f7       	brne	.-14     	; 0x5e4 <__vector_54+0x16a>
+     5f2:	05 96       	adiw	r24, 0x05	; 5
+					if (!(arr[i] == word[j]))
+					{
+						status = false;
+					}
+				}
+				if (status)
+     5f4:	c1 11       	cpse	r28, r1
+     5f6:	24 c0       	rjmp	.+72     	; 0x640 <__vector_54+0x1c6>
+		return 0;
+	}
+	bool compWordInArr(const char *arr,const char *word, char wordSize, char arrMaxSize) const
+	{
+		bool status = true;
+		for(int i = 0; i < arrMaxSize; i++)
+     5f8:	01 96       	adiw	r24, 0x01	; 1
+     5fa:	84 17       	cp	r24, r20
+     5fc:	95 07       	cpc	r25, r21
+     5fe:	4c f3       	brlt	.-46     	; 0x5d2 <__vector_54+0x158>
+     600:	21 e0       	ldi	r18, 0x01	; 1
+     602:	80 e0       	ldi	r24, 0x00	; 0
+     604:	90 e0       	ldi	r25, 0x00	; 0
+     606:	6d e2       	ldi	r22, 0x2D	; 45
+     608:	72 e0       	ldi	r23, 0x02	; 2
+			{
+				for (int j = 0; j < wordSize; j++,i++)
+				{
+					if (!(arr[i] == word[j]))
+					{
+						status = false;
+     60a:	30 e0       	ldi	r19, 0x00	; 0
+	bool compWordInArr(const char *arr,const char *word, char wordSize, char arrMaxSize) const
+	{
+		bool status = true;
+		for(int i = 0; i < arrMaxSize; i++)
+		{
+			if (arr[i] == *word)
+     60c:	fc 01       	movw	r30, r24
+     60e:	e4 51       	subi	r30, 0x14	; 20
+     610:	fa 4f       	sbci	r31, 0xFA	; 250
+     612:	e0 81       	ld	r30, Z
+     614:	e3 35       	cpi	r30, 0x53	; 83
+     616:	79 f4       	brne	.+30     	; 0x636 <__vector_54+0x1bc>
+     618:	dc 01       	movw	r26, r24
+     61a:	a4 51       	subi	r26, 0x14	; 20
+     61c:	ba 4f       	sbci	r27, 0xFA	; 250
+     61e:	e9 e2       	ldi	r30, 0x29	; 41
+     620:	f2 e0       	ldi	r31, 0x02	; 2
+			{
+				for (int j = 0; j < wordSize; j++,i++)
+				{
+					if (!(arr[i] == word[j]))
+     622:	dd 91       	ld	r29, X+
+     624:	c1 91       	ld	r28, Z+
+     626:	dc 13       	cpse	r29, r28
+					{
+						status = false;
+     628:	23 2f       	mov	r18, r19
+		bool status = true;
+		for(int i = 0; i < arrMaxSize; i++)
+		{
+			if (arr[i] == *word)
+			{
+				for (int j = 0; j < wordSize; j++,i++)
+     62a:	e6 17       	cp	r30, r22
+     62c:	f7 07       	cpc	r31, r23
+     62e:	c9 f7       	brne	.-14     	; 0x622 <__vector_54+0x1a8>
+     630:	04 96       	adiw	r24, 0x04	; 4
+					if (!(arr[i] == word[j]))
+					{
+						status = false;
+					}
+				}
+				if (status)
+     632:	21 11       	cpse	r18, r1
+     634:	05 c0       	rjmp	.+10     	; 0x640 <__vector_54+0x1c6>
+		return 0;
+	}
+	bool compWordInArr(const char *arr,const char *word, char wordSize, char arrMaxSize) const
+	{
+		bool status = true;
+		for(int i = 0; i < arrMaxSize; i++)
+     636:	01 96       	adiw	r24, 0x01	; 1
+     638:	84 17       	cp	r24, r20
+     63a:	95 07       	cpc	r25, r21
+     63c:	3c f3       	brlt	.-50     	; 0x60c <__vector_54+0x192>
+     63e:	dd c0       	rjmp	.+442    	; 0x7fa <__vector_54+0x380>
+     640:	ef ee       	ldi	r30, 0xEF	; 239
+     642:	f5 e0       	ldi	r31, 0x05	; 5
+			{
+				for (int j = 0; j < wordSize; j++,i++)
+				{
+					if (!(arr[i] == word[j]))
+					{
+						status = false;
+     644:	23 e0       	ldi	r18, 0x03	; 3
+     646:	30 e0       	ldi	r19, 0x00	; 0
+     648:	01 c0       	rjmp	.+2      	; 0x64c <__vector_54+0x1d2>
+		return false;
+	}
+	void setSMSindex()
+	{
+		int index = 3;
+		while(_recievedPack[index++] != ',');
+     64a:	9c 01       	movw	r18, r24
+     64c:	c9 01       	movw	r24, r18
+     64e:	01 96       	adiw	r24, 0x01	; 1
+     650:	41 91       	ld	r20, Z+
+     652:	4c 32       	cpi	r20, 0x2C	; 44
+     654:	d1 f7       	brne	.-12     	; 0x64a <__vector_54+0x1d0>
+		_SMSindex = _recievedPack[index++] - '0';
+     656:	fc 01       	movw	r30, r24
+     658:	e4 51       	subi	r30, 0x14	; 20
+     65a:	fa 4f       	sbci	r31, 0xFA	; 250
+     65c:	80 81       	ld	r24, Z
+     65e:	90 e0       	ldi	r25, 0x00	; 0
+     660:	c0 97       	sbiw	r24, 0x30	; 48
+     662:	90 93 e1 07 	sts	0x07E1, r25	; 0x8007e1 <__data_end+0x46b>
+     666:	80 93 e0 07 	sts	0x07E0, r24	; 0x8007e0 <__data_end+0x46a>
+		if (_recievedPack[index]-'0' >= 0 && _recievedPack[index]-'0' <= 9)
+     66a:	f9 01       	movw	r30, r18
+     66c:	e2 51       	subi	r30, 0x12	; 18
+     66e:	fa 4f       	sbci	r31, 0xFA	; 250
+     670:	20 81       	ld	r18, Z
+     672:	30 e0       	ldi	r19, 0x00	; 0
+     674:	20 53       	subi	r18, 0x30	; 48
+     676:	31 09       	sbc	r19, r1
+     678:	2a 30       	cpi	r18, 0x0A	; 10
+     67a:	31 05       	cpc	r19, r1
+     67c:	88 f4       	brcc	.+34     	; 0x6a0 <__vector_54+0x226>
+		{
+			_SMSindex *= 10;
+			_SMSindex += _recievedPack[index] - '0';
+     67e:	ac 01       	movw	r20, r24
+     680:	44 0f       	add	r20, r20
+     682:	55 1f       	adc	r21, r21
+     684:	88 0f       	add	r24, r24
+     686:	99 1f       	adc	r25, r25
+     688:	88 0f       	add	r24, r24
+     68a:	99 1f       	adc	r25, r25
+     68c:	88 0f       	add	r24, r24
+     68e:	99 1f       	adc	r25, r25
+     690:	84 0f       	add	r24, r20
+     692:	95 1f       	adc	r25, r21
+     694:	82 0f       	add	r24, r18
+     696:	93 1f       	adc	r25, r19
+     698:	90 93 e1 07 	sts	0x07E1, r25	; 0x8007e1 <__data_end+0x46b>
+     69c:	80 93 e0 07 	sts	0x07E0, r24	; 0x8007e0 <__data_end+0x46a>
+		}
+		if (_SMSindex > 20)
+     6a0:	80 91 e0 07 	lds	r24, 0x07E0	; 0x8007e0 <__data_end+0x46a>
+     6a4:	90 91 e1 07 	lds	r25, 0x07E1	; 0x8007e1 <__data_end+0x46b>
+     6a8:	45 97       	sbiw	r24, 0x15	; 21
+     6aa:	0c f4       	brge	.+2      	; 0x6ae <__vector_54+0x234>
+     6ac:	a2 c0       	rjmp	.+324    	; 0x7f2 <__vector_54+0x378>
+		{
+			cli();
+     6ae:	f8 94       	cli
+			while(_SMSindex != 0)
+     6b0:	00 ee       	ldi	r16, 0xE0	; 224
+     6b2:	17 e0       	ldi	r17, 0x07	; 7
+			_sendPacket[8] = SMSindex+'0';
+		}
+		else
+		{
+			strcpy(_sendPacket,"AT+CMGD=  ");
+			_sendPacket[8] = SMSindex/10+'0';
+     6b4:	60 e0       	ldi	r22, 0x00	; 0
+     6b6:	74 e0       	ldi	r23, 0x04	; 4
+     6b8:	0f 2e       	mov	r0, r31
+     6ba:	fd ec       	ldi	r31, 0xCD	; 205
+     6bc:	8f 2e       	mov	r8, r31
+     6be:	f0 2d       	mov	r31, r0
+			_sendPacket[9] = SMSindex%10+'0';
+     6c0:	0f 2e       	mov	r0, r31
+     6c2:	f1 e0       	ldi	r31, 0x01	; 1
+     6c4:	6f 2e       	mov	r6, r31
+     6c6:	f4 e0       	ldi	r31, 0x04	; 4
+     6c8:	7f 2e       	mov	r7, r31
+     6ca:	f0 2d       	mov	r31, r0
+	{
+		return UDR3;
+	}
+	void UARTsend3( unsigned char data)
+	{
+		while(!(UCSR3A & (1<<UDRE3)));
+     6cc:	c0 e3       	ldi	r28, 0x30	; 48
+     6ce:	d1 e0       	ldi	r29, 0x01	; 1
+		UDR3 = data;
+     6d0:	46 e3       	ldi	r20, 0x36	; 54
+     6d2:	51 e0       	ldi	r21, 0x01	; 1
+     6d4:	0f 2e       	mov	r0, r31
+     6d6:	fd e0       	ldi	r31, 0x0D	; 13
+     6d8:	9f 2e       	mov	r9, r31
+     6da:	f0 2d       	mov	r31, r0
+			data = gsmSMS.UARTreceive3();
+			_recievedPack[i++] = data;
+		}while(gsmSMS.checkForData3());
+		
+		_recievedPack[i] = 0;
+		return i > 0 ? i: 0;
+     6dc:	a1 2c       	mov	r10, r1
+     6de:	b1 2c       	mov	r11, r1
+		return 0;
+	}
+	bool compWordInArr(const char *arr,const char *word, char wordSize, char arrMaxSize) const
+	{
+		bool status = true;
+		for(int i = 0; i < arrMaxSize; i++)
+     6e0:	cc 24       	eor	r12, r12
+     6e2:	c3 94       	inc	r12
+		{
+			if (arr[i] == *word)
+			{
+				for (int j = 0; j < wordSize; j++,i++)
+				{
+					if (!(arr[i] == word[j]))
+     6e4:	d1 2c       	mov	r13, r1
+			_SMSindex += _recievedPack[index] - '0';
+		}
+		if (_SMSindex > 20)
+		{
+			cli();
+			while(_SMSindex != 0)
+     6e6:	f8 01       	movw	r30, r16
+     6e8:	80 81       	ld	r24, Z
+     6ea:	91 81       	ldd	r25, Z+1	; 0x01
+     6ec:	00 97       	sbiw	r24, 0x00	; 0
+     6ee:	09 f4       	brne	.+2      	; 0x6f2 <__vector_54+0x278>
+     6f0:	7f c0       	rjmp	.+254    	; 0x7f0 <__vector_54+0x376>
+			{
+				deleteSMS(_SMSindex--);	
+     6f2:	9c 01       	movw	r18, r24
+     6f4:	21 50       	subi	r18, 0x01	; 1
+     6f6:	31 09       	sbc	r19, r1
+     6f8:	31 83       	std	Z+1, r19	; 0x01
+     6fa:	20 83       	st	Z, r18
+			return _recievedPack;
+		}
+		return 0;
+	}
+	bool deleteSMS(char SMSindex = 1){
+		if (SMSindex < 10)
+     6fc:	8a 30       	cpi	r24, 0x0A	; 10
+     6fe:	68 f4       	brcc	.+26     	; 0x71a <__vector_54+0x2a0>
+		{
+			strcpy(_sendPacket,"AT+CMGD= ");
+     700:	9a e0       	ldi	r25, 0x0A	; 10
+     702:	ec e2       	ldi	r30, 0x2C	; 44
+     704:	f2 e0       	ldi	r31, 0x02	; 2
+     706:	a8 ef       	ldi	r26, 0xF8	; 248
+     708:	b3 e0       	ldi	r27, 0x03	; 3
+     70a:	01 90       	ld	r0, Z+
+     70c:	0d 92       	st	X+, r0
+     70e:	9a 95       	dec	r25
+     710:	e1 f7       	brne	.-8      	; 0x70a <__vector_54+0x290>
+			_sendPacket[8] = SMSindex+'0';
+     712:	80 5d       	subi	r24, 0xD0	; 208
+     714:	db 01       	movw	r26, r22
+     716:	8c 93       	st	X, r24
+     718:	1c c0       	rjmp	.+56     	; 0x752 <__vector_54+0x2d8>
+		}
+		else
+		{
+			strcpy(_sendPacket,"AT+CMGD=  ");
+     71a:	9b e0       	ldi	r25, 0x0B	; 11
+     71c:	e6 e3       	ldi	r30, 0x36	; 54
+     71e:	f2 e0       	ldi	r31, 0x02	; 2
+     720:	a8 ef       	ldi	r26, 0xF8	; 248
+     722:	b3 e0       	ldi	r27, 0x03	; 3
+     724:	01 90       	ld	r0, Z+
+     726:	0d 92       	st	X+, r0
+     728:	9a 95       	dec	r25
+     72a:	e1 f7       	brne	.-8      	; 0x724 <__vector_54+0x2aa>
+			_sendPacket[8] = SMSindex/10+'0';
+     72c:	88 9d       	mul	r24, r8
+     72e:	91 2d       	mov	r25, r1
+     730:	11 24       	eor	r1, r1
+     732:	96 95       	lsr	r25
+     734:	96 95       	lsr	r25
+     736:	96 95       	lsr	r25
+     738:	20 e3       	ldi	r18, 0x30	; 48
+     73a:	29 0f       	add	r18, r25
+     73c:	fb 01       	movw	r30, r22
+     73e:	20 83       	st	Z, r18
+			_sendPacket[9] = SMSindex%10+'0';
+     740:	99 0f       	add	r25, r25
+     742:	29 2f       	mov	r18, r25
+     744:	22 0f       	add	r18, r18
+     746:	22 0f       	add	r18, r18
+     748:	92 0f       	add	r25, r18
+     74a:	89 1b       	sub	r24, r25
+     74c:	80 5d       	subi	r24, 0xD0	; 208
+     74e:	d3 01       	movw	r26, r6
+     750:	8c 93       	st	X, r24
+	{
+		if (space)
+		{
+			UARTsend3((const char)*" ");
+		}
+		while(*StringPtr != 0)
+     752:	90 91 f8 03 	lds	r25, 0x03F8	; 0x8003f8 <__data_end+0x82>
+     756:	99 23       	and	r25, r25
+     758:	51 f0       	breq	.+20     	; 0x76e <__vector_54+0x2f4>
+     75a:	e9 ef       	ldi	r30, 0xF9	; 249
+     75c:	f3 e0       	ldi	r31, 0x03	; 3
+	{
+		return UDR3;
+	}
+	void UARTsend3( unsigned char data)
+	{
+		while(!(UCSR3A & (1<<UDRE3)));
+     75e:	88 81       	ld	r24, Y
+     760:	85 ff       	sbrs	r24, 5
+     762:	fd cf       	rjmp	.-6      	; 0x75e <__vector_54+0x2e4>
+		UDR3 = data;
+     764:	da 01       	movw	r26, r20
+     766:	9c 93       	st	X, r25
+	{
+		if (space)
+		{
+			UARTsend3((const char)*" ");
+		}
+		while(*StringPtr != 0)
+     768:	91 91       	ld	r25, Z+
+     76a:	91 11       	cpse	r25, r1
+     76c:	f8 cf       	rjmp	.-16     	; 0x75e <__vector_54+0x2e4>
+	{
+		return UDR3;
+	}
+	void UARTsend3( unsigned char data)
+	{
+		while(!(UCSR3A & (1<<UDRE3)));
+     76e:	88 81       	ld	r24, Y
+     770:	85 ff       	sbrs	r24, 5
+     772:	fd cf       	rjmp	.-6      	; 0x76e <__vector_54+0x2f4>
+		UDR3 = data;
+     774:	fa 01       	movw	r30, r20
+     776:	90 82       	st	Z, r9
+     778:	f7 01       	movw	r30, r14
+     77a:	20 e0       	ldi	r18, 0x00	; 0
+     77c:	30 e0       	ldi	r19, 0x00	; 0
+	}
+	unsigned char UARTreceive3(void)
+	{
+		while(!(UCSR3A & (1<<RXC3)));
+     77e:	88 81       	ld	r24, Y
+     780:	88 23       	and	r24, r24
+     782:	ec f7       	brge	.-6      	; 0x77e <__vector_54+0x304>
+		return UDR3;
+     784:	da 01       	movw	r26, r20
+     786:	8c 91       	ld	r24, X
+		int i = 0;
+		char data = 0;
+		do 
+		{
+			data = gsmSMS.UARTreceive3();
+			_recievedPack[i++] = data;
+     788:	2f 5f       	subi	r18, 0xFF	; 255
+     78a:	3f 4f       	sbci	r19, 0xFF	; 255
+     78c:	81 93       	st	Z+, r24
+	}
+	char checkForData3()
+	{
+		for(int i = 0; i < 500; i++)
+		{
+			if ((UCSR3A & (1<<RXC3)))
+     78e:	88 81       	ld	r24, Y
+     790:	88 23       	and	r24, r24
+     792:	0c f0       	brlt	.+2      	; 0x796 <__vector_54+0x31c>
+     794:	ee c0       	rjmp	.+476    	; 0x972 <__vector_54+0x4f8>
+     796:	f3 cf       	rjmp	.-26     	; 0x77e <__vector_54+0x304>
+     798:	a8 81       	ld	r26, Y
+     79a:	aa 23       	and	r26, r26
+     79c:	84 f3       	brlt	.-32     	; 0x77e <__vector_54+0x304>
+     79e:	a7 e5       	ldi	r26, 0x57	; 87
+     7a0:	b2 e0       	ldi	r27, 0x02	; 2
+     7a2:	11 97       	sbiw	r26, 0x01	; 1
+     7a4:	f1 f7       	brne	.-4      	; 0x7a2 <__vector_54+0x328>
+     7a6:	00 c0       	rjmp	.+0      	; 0x7a8 <__vector_54+0x32e>
+     7a8:	00 00       	nop
+     7aa:	01 97       	sbiw	r24, 0x01	; 1
+	{
+		return UDR0;
+	}
+	char checkForData3()
+	{
+		for(int i = 0; i < 500; i++)
+     7ac:	a9 f7       	brne	.-22     	; 0x798 <__vector_54+0x31e>
+     7ae:	d4 c0       	rjmp	.+424    	; 0x958 <__vector_54+0x4de>
+     7b0:	c9 01       	movw	r24, r18
+     7b2:	99 27       	eor	r25, r25
+		return 0;
+	}
+	bool compWordInArr(const char *arr,const char *word, char wordSize, char arrMaxSize) const
+	{
+		bool status = true;
+		for(int i = 0; i < arrMaxSize; i++)
+     7b4:	18 16       	cp	r1, r24
+     7b6:	19 06       	cpc	r1, r25
+     7b8:	0c f0       	brlt	.+2      	; 0x7bc <__vector_54+0x342>
+     7ba:	95 cf       	rjmp	.-214    	; 0x6e6 <__vector_54+0x26c>
+     7bc:	ac 2d       	mov	r26, r12
+     7be:	20 e0       	ldi	r18, 0x00	; 0
+     7c0:	30 e0       	ldi	r19, 0x00	; 0
+		{
+			if (arr[i] == *word)
+     7c2:	f9 01       	movw	r30, r18
+     7c4:	e4 51       	subi	r30, 0x14	; 20
+     7c6:	fa 4f       	sbci	r31, 0xFA	; 250
+     7c8:	e0 81       	ld	r30, Z
+     7ca:	ef 34       	cpi	r30, 0x4F	; 79
+     7cc:	59 f4       	brne	.+22     	; 0x7e4 <__vector_54+0x36a>
+			{
+				for (int j = 0; j < wordSize; j++,i++)
+				{
+					if (!(arr[i] == word[j]))
+     7ce:	f9 01       	movw	r30, r18
+     7d0:	e3 51       	subi	r30, 0x13	; 19
+     7d2:	fa 4f       	sbci	r31, 0xFA	; 250
+     7d4:	e0 81       	ld	r30, Z
+     7d6:	eb 34       	cpi	r30, 0x4B	; 75
+     7d8:	09 f0       	breq	.+2      	; 0x7dc <__vector_54+0x362>
+     7da:	e4 c0       	rjmp	.+456    	; 0x9a4 <__vector_54+0x52a>
+     7dc:	2e 5f       	subi	r18, 0xFE	; 254
+     7de:	3f 4f       	sbci	r19, 0xFF	; 255
+					{
+						status = false;
+					}
+				}
+				if (status)
+     7e0:	a1 11       	cpse	r26, r1
+     7e2:	81 cf       	rjmp	.-254    	; 0x6e6 <__vector_54+0x26c>
+		return 0;
+	}
+	bool compWordInArr(const char *arr,const char *word, char wordSize, char arrMaxSize) const
+	{
+		bool status = true;
+		for(int i = 0; i < arrMaxSize; i++)
+     7e4:	2f 5f       	subi	r18, 0xFF	; 255
+     7e6:	3f 4f       	sbci	r19, 0xFF	; 255
+     7e8:	28 17       	cp	r18, r24
+     7ea:	39 07       	cpc	r19, r25
+     7ec:	54 f3       	brlt	.-44     	; 0x7c2 <__vector_54+0x348>
+     7ee:	7b cf       	rjmp	.-266    	; 0x6e6 <__vector_54+0x26c>
+			cli();
+			while(_SMSindex != 0)
+			{
+				deleteSMS(_SMSindex--);	
+			}
+			sei();
+     7f0:	78 94       	sei
+				_RXackValue = 3;
+			}
+			else if (compWordInArr(_recievedPack,"+CMTI",5,i)||compWordInArr(_recievedPack,"SM",4,i))
+			{
+				setSMSindex();
+				_RXackValue = 4;
+     7f2:	84 e0       	ldi	r24, 0x04	; 4
+     7f4:	80 93 e3 07 	sts	0x07E3, r24	; 0x8007e3 <__data_end+0x46d>
+     7f8:	8b c0       	rjmp	.+278    	; 0x910 <__vector_54+0x496>
+		return 0;
+	}
+	bool compWordInArr(const char *arr,const char *word, char wordSize, char arrMaxSize) const
+	{
+		bool status = true;
+		for(int i = 0; i < arrMaxSize; i++)
+     7fa:	21 e0       	ldi	r18, 0x01	; 1
+     7fc:	80 e0       	ldi	r24, 0x00	; 0
+     7fe:	90 e0       	ldi	r25, 0x00	; 0
+     800:	66 e4       	ldi	r22, 0x46	; 70
+     802:	72 e0       	ldi	r23, 0x02	; 2
+			{
+				for (int j = 0; j < wordSize; j++,i++)
+				{
+					if (!(arr[i] == word[j]))
+					{
+						status = false;
+     804:	30 e0       	ldi	r19, 0x00	; 0
+	bool compWordInArr(const char *arr,const char *word, char wordSize, char arrMaxSize) const
+	{
+		bool status = true;
+		for(int i = 0; i < arrMaxSize; i++)
+		{
+			if (arr[i] == *word)
+     806:	fc 01       	movw	r30, r24
+     808:	e4 51       	subi	r30, 0x14	; 20
+     80a:	fa 4f       	sbci	r31, 0xFA	; 250
+     80c:	e0 81       	ld	r30, Z
+     80e:	eb 32       	cpi	r30, 0x2B	; 43
+     810:	79 f4       	brne	.+30     	; 0x830 <__vector_54+0x3b6>
+     812:	dc 01       	movw	r26, r24
+     814:	a4 51       	subi	r26, 0x14	; 20
+     816:	ba 4f       	sbci	r27, 0xFA	; 250
+     818:	e1 e4       	ldi	r30, 0x41	; 65
+     81a:	f2 e0       	ldi	r31, 0x02	; 2
+			{
+				for (int j = 0; j < wordSize; j++,i++)
+				{
+					if (!(arr[i] == word[j]))
+     81c:	dd 91       	ld	r29, X+
+     81e:	c1 91       	ld	r28, Z+
+     820:	dc 13       	cpse	r29, r28
+					{
+						status = false;
+     822:	23 2f       	mov	r18, r19
+		bool status = true;
+		for(int i = 0; i < arrMaxSize; i++)
+		{
+			if (arr[i] == *word)
+			{
+				for (int j = 0; j < wordSize; j++,i++)
+     824:	e6 17       	cp	r30, r22
+     826:	f7 07       	cpc	r31, r23
+     828:	c9 f7       	brne	.-14     	; 0x81c <__vector_54+0x3a2>
+     82a:	05 96       	adiw	r24, 0x05	; 5
+					if (!(arr[i] == word[j]))
+					{
+						status = false;
+					}
+				}
+				if (status)
+     82c:	21 11       	cpse	r18, r1
+     82e:	24 c0       	rjmp	.+72     	; 0x878 <__vector_54+0x3fe>
+		return 0;
+	}
+	bool compWordInArr(const char *arr,const char *word, char wordSize, char arrMaxSize) const
+	{
+		bool status = true;
+		for(int i = 0; i < arrMaxSize; i++)
+     830:	01 96       	adiw	r24, 0x01	; 1
+     832:	84 17       	cp	r24, r20
+     834:	95 07       	cpc	r25, r21
+     836:	3c f3       	brlt	.-50     	; 0x806 <__vector_54+0x38c>
+     838:	21 e0       	ldi	r18, 0x01	; 1
+     83a:	80 e0       	ldi	r24, 0x00	; 0
+     83c:	90 e0       	ldi	r25, 0x00	; 0
+     83e:	66 e4       	ldi	r22, 0x46	; 70
+     840:	72 e0       	ldi	r23, 0x02	; 2
+			{
+				for (int j = 0; j < wordSize; j++,i++)
+				{
+					if (!(arr[i] == word[j]))
+					{
+						status = false;
+     842:	30 e0       	ldi	r19, 0x00	; 0
+	bool compWordInArr(const char *arr,const char *word, char wordSize, char arrMaxSize) const
+	{
+		bool status = true;
+		for(int i = 0; i < arrMaxSize; i++)
+		{
+			if (arr[i] == *word)
+     844:	fc 01       	movw	r30, r24
+     846:	e4 51       	subi	r30, 0x14	; 20
+     848:	fa 4f       	sbci	r31, 0xFA	; 250
+     84a:	e0 81       	ld	r30, Z
+     84c:	e3 34       	cpi	r30, 0x43	; 67
+     84e:	79 f4       	brne	.+30     	; 0x86e <__vector_54+0x3f4>
+     850:	dc 01       	movw	r26, r24
+     852:	a4 51       	subi	r26, 0x14	; 20
+     854:	ba 4f       	sbci	r27, 0xFA	; 250
+     856:	e2 e4       	ldi	r30, 0x42	; 66
+     858:	f2 e0       	ldi	r31, 0x02	; 2
+			{
+				for (int j = 0; j < wordSize; j++,i++)
+				{
+					if (!(arr[i] == word[j]))
+     85a:	dd 91       	ld	r29, X+
+     85c:	c1 91       	ld	r28, Z+
+     85e:	dc 13       	cpse	r29, r28
+					{
+						status = false;
+     860:	23 2f       	mov	r18, r19
+		bool status = true;
+		for(int i = 0; i < arrMaxSize; i++)
+		{
+			if (arr[i] == *word)
+			{
+				for (int j = 0; j < wordSize; j++,i++)
+     862:	e6 17       	cp	r30, r22
+     864:	f7 07       	cpc	r31, r23
+     866:	c9 f7       	brne	.-14     	; 0x85a <__vector_54+0x3e0>
+     868:	04 96       	adiw	r24, 0x04	; 4
+					if (!(arr[i] == word[j]))
+					{
+						status = false;
+					}
+				}
+				if (status)
+     86a:	21 11       	cpse	r18, r1
+     86c:	05 c0       	rjmp	.+10     	; 0x878 <__vector_54+0x3fe>
+		return 0;
+	}
+	bool compWordInArr(const char *arr,const char *word, char wordSize, char arrMaxSize) const
+	{
+		bool status = true;
+		for(int i = 0; i < arrMaxSize; i++)
+     86e:	01 96       	adiw	r24, 0x01	; 1
+     870:	84 17       	cp	r24, r20
+     872:	95 07       	cpc	r25, r21
+     874:	3c f3       	brlt	.-50     	; 0x844 <__vector_54+0x3ca>
+     876:	04 c0       	rjmp	.+8      	; 0x880 <__vector_54+0x406>
+				setSMSindex();
+				_RXackValue = 4;
+			}
+			else if(compWordInArr(_recievedPack,"+CMGS",5,i)||compWordInArr(_recievedPack,"CMGS",4,i))
+			{
+				_RXackValue = 5;
+     878:	85 e0       	ldi	r24, 0x05	; 5
+     87a:	80 93 e3 07 	sts	0x07E3, r24	; 0x8007e3 <__data_end+0x46d>
+     87e:	48 c0       	rjmp	.+144    	; 0x910 <__vector_54+0x496>
+		return 0;
+	}
+	bool compWordInArr(const char *arr,const char *word, char wordSize, char arrMaxSize) const
+	{
+		bool status = true;
+		for(int i = 0; i < arrMaxSize; i++)
+     880:	21 e0       	ldi	r18, 0x01	; 1
+     882:	80 e0       	ldi	r24, 0x00	; 0
+     884:	90 e0       	ldi	r25, 0x00	; 0
+     886:	6c e4       	ldi	r22, 0x4C	; 76
+     888:	72 e0       	ldi	r23, 0x02	; 2
+			{
+				for (int j = 0; j < wordSize; j++,i++)
+				{
+					if (!(arr[i] == word[j]))
+					{
+						status = false;
+     88a:	30 e0       	ldi	r19, 0x00	; 0
+	bool compWordInArr(const char *arr,const char *word, char wordSize, char arrMaxSize) const
+	{
+		bool status = true;
+		for(int i = 0; i < arrMaxSize; i++)
+		{
+			if (arr[i] == *word)
+     88c:	fc 01       	movw	r30, r24
+     88e:	e4 51       	subi	r30, 0x14	; 20
+     890:	fa 4f       	sbci	r31, 0xFA	; 250
+     892:	e0 81       	ld	r30, Z
+     894:	eb 32       	cpi	r30, 0x2B	; 43
+     896:	79 f4       	brne	.+30     	; 0x8b6 <__vector_54+0x43c>
+     898:	dc 01       	movw	r26, r24
+     89a:	a4 51       	subi	r26, 0x14	; 20
+     89c:	ba 4f       	sbci	r27, 0xFA	; 250
+     89e:	e7 e4       	ldi	r30, 0x47	; 71
+     8a0:	f2 e0       	ldi	r31, 0x02	; 2
+			{
+				for (int j = 0; j < wordSize; j++,i++)
+				{
+					if (!(arr[i] == word[j]))
+     8a2:	dd 91       	ld	r29, X+
+     8a4:	c1 91       	ld	r28, Z+
+     8a6:	dc 13       	cpse	r29, r28
+					{
+						status = false;
+     8a8:	23 2f       	mov	r18, r19
+		bool status = true;
+		for(int i = 0; i < arrMaxSize; i++)
+		{
+			if (arr[i] == *word)
+			{
+				for (int j = 0; j < wordSize; j++,i++)
+     8aa:	e6 17       	cp	r30, r22
+     8ac:	f7 07       	cpc	r31, r23
+     8ae:	c9 f7       	brne	.-14     	; 0x8a2 <__vector_54+0x428>
+     8b0:	05 96       	adiw	r24, 0x05	; 5
+					if (!(arr[i] == word[j]))
+					{
+						status = false;
+					}
+				}
+				if (status)
+     8b2:	21 11       	cpse	r18, r1
+     8b4:	24 c0       	rjmp	.+72     	; 0x8fe <__vector_54+0x484>
+		return 0;
+	}
+	bool compWordInArr(const char *arr,const char *word, char wordSize, char arrMaxSize) const
+	{
+		bool status = true;
+		for(int i = 0; i < arrMaxSize; i++)
+     8b6:	01 96       	adiw	r24, 0x01	; 1
+     8b8:	84 17       	cp	r24, r20
+     8ba:	95 07       	cpc	r25, r21
+     8bc:	3c f3       	brlt	.-50     	; 0x88c <__vector_54+0x412>
+     8be:	21 e0       	ldi	r18, 0x01	; 1
+     8c0:	80 e0       	ldi	r24, 0x00	; 0
+     8c2:	90 e0       	ldi	r25, 0x00	; 0
+     8c4:	62 e5       	ldi	r22, 0x52	; 82
+     8c6:	72 e0       	ldi	r23, 0x02	; 2
+			{
+				for (int j = 0; j < wordSize; j++,i++)
+				{
+					if (!(arr[i] == word[j]))
+					{
+						status = false;
+     8c8:	30 e0       	ldi	r19, 0x00	; 0
+	bool compWordInArr(const char *arr,const char *word, char wordSize, char arrMaxSize) const
+	{
+		bool status = true;
+		for(int i = 0; i < arrMaxSize; i++)
+		{
+			if (arr[i] == *word)
+     8ca:	fc 01       	movw	r30, r24
+     8cc:	e4 51       	subi	r30, 0x14	; 20
+     8ce:	fa 4f       	sbci	r31, 0xFA	; 250
+     8d0:	e0 81       	ld	r30, Z
+     8d2:	eb 32       	cpi	r30, 0x2B	; 43
+     8d4:	79 f4       	brne	.+30     	; 0x8f4 <__vector_54+0x47a>
+     8d6:	dc 01       	movw	r26, r24
+     8d8:	a4 51       	subi	r26, 0x14	; 20
+     8da:	ba 4f       	sbci	r27, 0xFA	; 250
+     8dc:	ed e4       	ldi	r30, 0x4D	; 77
+     8de:	f2 e0       	ldi	r31, 0x02	; 2
+			{
+				for (int j = 0; j < wordSize; j++,i++)
+				{
+					if (!(arr[i] == word[j]))
+     8e0:	dd 91       	ld	r29, X+
+     8e2:	c1 91       	ld	r28, Z+
+     8e4:	dc 13       	cpse	r29, r28
+					{
+						status = false;
+     8e6:	23 2f       	mov	r18, r19
+		bool status = true;
+		for(int i = 0; i < arrMaxSize; i++)
+		{
+			if (arr[i] == *word)
+			{
+				for (int j = 0; j < wordSize; j++,i++)
+     8e8:	e6 17       	cp	r30, r22
+     8ea:	f7 07       	cpc	r31, r23
+     8ec:	c9 f7       	brne	.-14     	; 0x8e0 <__vector_54+0x466>
+     8ee:	05 96       	adiw	r24, 0x05	; 5
+					if (!(arr[i] == word[j]))
+					{
+						status = false;
+					}
+				}
+				if (status)
+     8f0:	21 11       	cpse	r18, r1
+     8f2:	05 c0       	rjmp	.+10     	; 0x8fe <__vector_54+0x484>
+		return 0;
+	}
+	bool compWordInArr(const char *arr,const char *word, char wordSize, char arrMaxSize) const
+	{
+		bool status = true;
+		for(int i = 0; i < arrMaxSize; i++)
+     8f4:	01 96       	adiw	r24, 0x01	; 1
+     8f6:	84 17       	cp	r24, r20
+     8f8:	95 07       	cpc	r25, r21
+     8fa:	3c f3       	brlt	.-50     	; 0x8ca <__vector_54+0x450>
+     8fc:	04 c0       	rjmp	.+8      	; 0x906 <__vector_54+0x48c>
+			{
+				_RXackValue = 5;
+			}
+			else if(compWordInArr(_recievedPack,"+CPIN",5,i)||compWordInArr(_recievedPack,"+CFUN",5,i))
+			{
+				_RXackValue = 6;
+     8fe:	86 e0       	ldi	r24, 0x06	; 6
+     900:	80 93 e3 07 	sts	0x07E3, r24	; 0x8007e3 <__data_end+0x46d>
+     904:	05 c0       	rjmp	.+10     	; 0x910 <__vector_54+0x496>
+			}
+			else
+			{
+				_RXackValue = 0;
+     906:	10 92 e3 07 	sts	0x07E3, r1	; 0x8007e3 <__data_end+0x46d>
+     90a:	02 c0       	rjmp	.+4      	; 0x910 <__vector_54+0x496>
+				_flagRXC = false;
+			}
+		}
+		else
+		{
+			_RXackValue = 0;
+     90c:	10 92 e3 07 	sts	0x07E3, r1	; 0x8007e3 <__data_end+0x46d>
+	}
+	friend void flagDataReceived(SMS& flag)
+	{
+		cli();
+		flag.checkStatus();
+		flag._flagRXC = true;
+     910:	81 e0       	ldi	r24, 0x01	; 1
+     912:	80 93 e2 07 	sts	0x07E2, r24	; 0x8007e2 <__data_end+0x46c>
+		sei();
+     916:	78 94       	sei
+
+SMS test;
+ISR(USART3_RX_vect)
+{
+	flagDataReceived(test);
+}
+     918:	49 c0       	rjmp	.+146    	; 0x9ac <__vector_54+0x532>
+	}
+	void checkStatus(){
+		int i = 0;
+		while(gsmSMS.checkForData3())
+		{
+			_recievedPack[i++] = gsmSMS.getData3();
+     91a:	4f 5f       	subi	r20, 0xFF	; 255
+     91c:	5f 4f       	sbci	r21, 0xFF	; 255
+		}
+		return 0;
+	}
+	char getData3()
+	{
+		return UDR3;
+     91e:	eb 01       	movw	r28, r22
+     920:	88 81       	ld	r24, Y
+	}
+	void checkStatus(){
+		int i = 0;
+		while(gsmSMS.checkForData3())
+		{
+			_recievedPack[i++] = gsmSMS.getData3();
+     922:	8d 93       	st	X+, r24
+     924:	d9 cd       	rjmp	.-1102   	; 0x4d8 <__vector_54+0x5e>
+		}
+		_recievedPack[i] = 0;
+     926:	fa 01       	movw	r30, r20
+     928:	e4 51       	subi	r30, 0x14	; 20
+     92a:	fa 4f       	sbci	r31, 0xFA	; 250
+     92c:	10 82       	st	Z, r1
+		if (i > 0)
+     92e:	14 16       	cp	r1, r20
+     930:	15 06       	cpc	r1, r21
+     932:	0c f4       	brge	.+2      	; 0x936 <__vector_54+0x4bc>
+     934:	e3 cd       	rjmp	.-1082   	; 0x4fc <__vector_54+0x82>
+     936:	ea cf       	rjmp	.-44     	; 0x90c <__vector_54+0x492>
+		{
+			if(compWordInArr(_recievedPack,"OK",2,i))
+			{
+				_RXackValue = 1;
+     938:	81 e0       	ldi	r24, 0x01	; 1
+     93a:	80 93 e3 07 	sts	0x07E3, r24	; 0x8007e3 <__data_end+0x46d>
+     93e:	2e c0       	rjmp	.+92     	; 0x99c <__vector_54+0x522>
+			}
+			if(compWordInArr(_recievedPack,">",1,i))
+			{
+				_RXackValue = 1;
+     940:	81 e0       	ldi	r24, 0x01	; 1
+     942:	80 93 e3 07 	sts	0x07E3, r24	; 0x8007e3 <__data_end+0x46d>
+     946:	e4 cf       	rjmp	.-56     	; 0x910 <__vector_54+0x496>
+			}
+			else if (compWordInArr(_recievedPack,"ERROR",5,i))
+			{
+				_RXackValue = 2;
+     948:	82 e0       	ldi	r24, 0x02	; 2
+     94a:	80 93 e3 07 	sts	0x07E3, r24	; 0x8007e3 <__data_end+0x46d>
+     94e:	e0 cf       	rjmp	.-64     	; 0x910 <__vector_54+0x496>
+			}
+			else if (compWordInArr(_recievedPack,"RING",4,i))
+			{
+				_RXackValue = 3;
+     950:	83 e0       	ldi	r24, 0x03	; 3
+     952:	80 93 e3 07 	sts	0x07E3, r24	; 0x8007e3 <__data_end+0x46d>
+     956:	dc cf       	rjmp	.-72     	; 0x910 <__vector_54+0x496>
+		{
+			data = gsmSMS.UARTreceive3();
+			_recievedPack[i++] = data;
+		}while(gsmSMS.checkForData3());
+		
+		_recievedPack[i] = 0;
+     958:	f9 01       	movw	r30, r18
+     95a:	e4 51       	subi	r30, 0x14	; 20
+     95c:	fa 4f       	sbci	r31, 0xFA	; 250
+     95e:	10 82       	st	Z, r1
+		return i > 0 ? i: 0;
+     960:	33 23       	and	r19, r19
+     962:	14 f4       	brge	.+4      	; 0x968 <__vector_54+0x4ee>
+     964:	2a 2d       	mov	r18, r10
+     966:	3b 2d       	mov	r19, r11
+		gsmSMS.UARTstring3(_sendPacket,0);
+		gsmSMS.UARTsend3(13);
+		if (state)
+		{
+			condition = checkForACkPacket();
+			return (condition > 0) ? compWordInArr(_recievedPack,"OK",2,condition): condition;
+     968:	12 16       	cp	r1, r18
+     96a:	13 06       	cpc	r1, r19
+     96c:	0c f4       	brge	.+2      	; 0x970 <__vector_54+0x4f6>
+     96e:	20 cf       	rjmp	.-448    	; 0x7b0 <__vector_54+0x336>
+     970:	ba ce       	rjmp	.-652    	; 0x6e6 <__vector_54+0x26c>
+     972:	87 e5       	ldi	r24, 0x57	; 87
+     974:	92 e0       	ldi	r25, 0x02	; 2
+     976:	01 97       	sbiw	r24, 0x01	; 1
+     978:	f1 f7       	brne	.-4      	; 0x976 <__vector_54+0x4fc>
+     97a:	00 c0       	rjmp	.+0      	; 0x97c <__vector_54+0x502>
+     97c:	00 00       	nop
+     97e:	83 ef       	ldi	r24, 0xF3	; 243
+     980:	91 e0       	ldi	r25, 0x01	; 1
+     982:	0a cf       	rjmp	.-492    	; 0x798 <__vector_54+0x31e>
+     984:	c7 e5       	ldi	r28, 0x57	; 87
+     986:	d2 e0       	ldi	r29, 0x02	; 2
+     988:	21 97       	sbiw	r28, 0x01	; 1
+     98a:	f1 f7       	brne	.-4      	; 0x988 <__vector_54+0x50e>
+     98c:	00 c0       	rjmp	.+0      	; 0x98e <__vector_54+0x514>
+     98e:	00 00       	nop
+     990:	83 ef       	ldi	r24, 0xF3	; 243
+     992:	91 e0       	ldi	r25, 0x01	; 1
+     994:	a6 cd       	rjmp	.-1204   	; 0x4e2 <__vector_54+0x68>
+     996:	02 96       	adiw	r24, 0x02	; 2
+		{
+			if (arr[i] == *word)
+			{
+				for (int j = 0; j < wordSize; j++,i++)
+				{
+					if (!(arr[i] == word[j]))
+     998:	36 2f       	mov	r19, r22
+     99a:	c9 cd       	rjmp	.-1134   	; 0x52e <__vector_54+0xb4>
+     99c:	31 e0       	ldi	r19, 0x01	; 1
+     99e:	80 e0       	ldi	r24, 0x00	; 0
+     9a0:	90 e0       	ldi	r25, 0x00	; 0
+     9a2:	ca cd       	rjmp	.-1132   	; 0x538 <__vector_54+0xbe>
+     9a4:	2e 5f       	subi	r18, 0xFE	; 254
+     9a6:	3f 4f       	sbci	r19, 0xFF	; 255
+     9a8:	ad 2d       	mov	r26, r13
+     9aa:	1c cf       	rjmp	.-456    	; 0x7e4 <__vector_54+0x36a>
+
+SMS test;
+ISR(USART3_RX_vect)
+{
+	flagDataReceived(test);
+}
+     9ac:	ff 91       	pop	r31
+     9ae:	ef 91       	pop	r30
+     9b0:	df 91       	pop	r29
+     9b2:	cf 91       	pop	r28
+     9b4:	bf 91       	pop	r27
+     9b6:	af 91       	pop	r26
+     9b8:	9f 91       	pop	r25
+     9ba:	8f 91       	pop	r24
+     9bc:	7f 91       	pop	r23
+     9be:	6f 91       	pop	r22
+     9c0:	5f 91       	pop	r21
+     9c2:	4f 91       	pop	r20
+     9c4:	3f 91       	pop	r19
+     9c6:	2f 91       	pop	r18
+     9c8:	1f 91       	pop	r17
+     9ca:	0f 91       	pop	r16
+     9cc:	ff 90       	pop	r15
+     9ce:	ef 90       	pop	r14
+     9d0:	df 90       	pop	r13
+     9d2:	cf 90       	pop	r12
+     9d4:	bf 90       	pop	r11
+     9d6:	af 90       	pop	r10
+     9d8:	9f 90       	pop	r9
+     9da:	8f 90       	pop	r8
+     9dc:	7f 90       	pop	r7
+     9de:	6f 90       	pop	r6
+     9e0:	0f 90       	pop	r0
+     9e2:	0b be       	out	0x3b, r0	; 59
+     9e4:	0f 90       	pop	r0
+     9e6:	0f be       	out	0x3f, r0	; 63
+     9e8:	0f 90       	pop	r0
+     9ea:	1f 90       	pop	r1
+     9ec:	18 95       	reti
+
+000009ee <main>:
+int main(void)
+{
+     9ee:	cf 93       	push	r28
+     9f0:	df 93       	push	r29
+     9f2:	1f 92       	push	r1
+     9f4:	1f 92       	push	r1
+     9f6:	cd b7       	in	r28, 0x3d	; 61
+     9f8:	de b7       	in	r29, 0x3e	; 62
+		setBaudRate(rate);
+	}
+	void setBaudRate(BaudRate rate)
+	{
+		unsigned int BAUD_PRESCALLER = (((F_CPU / (rate * 16UL))) - 1);
+		UBRR0H = (unsigned int)(BAUD_PRESCALLER>>8);
+     9fa:	0f 2e       	mov	r0, r31
+     9fc:	f5 ec       	ldi	r31, 0xC5	; 197
+     9fe:	af 2e       	mov	r10, r31
+     a00:	b1 2c       	mov	r11, r1
+     a02:	f0 2d       	mov	r31, r0
+     a04:	d5 01       	movw	r26, r10
+     a06:	1c 92       	st	X, r1
+		UBRR0L = (unsigned int)(BAUD_PRESCALLER);
+     a08:	0f 2e       	mov	r0, r31
+     a0a:	f4 ec       	ldi	r31, 0xC4	; 196
+     a0c:	cf 2e       	mov	r12, r31
+     a0e:	d1 2c       	mov	r13, r1
+     a10:	f0 2d       	mov	r31, r0
+     a12:	97 e6       	ldi	r25, 0x67	; 103
+     a14:	f6 01       	movw	r30, r12
+     a16:	90 83       	st	Z, r25
+		UCSR0B = (1<<RXEN0)|(1<<TXEN0);//|(1<<RXCIE0);
+     a18:	0f 2e       	mov	r0, r31
+     a1a:	f1 ec       	ldi	r31, 0xC1	; 193
+     a1c:	ef 2e       	mov	r14, r31
+     a1e:	f1 2c       	mov	r15, r1
+     a20:	f0 2d       	mov	r31, r0
+     a22:	0f 2e       	mov	r0, r31
+     a24:	f8 e1       	ldi	r31, 0x18	; 24
+     a26:	8f 2e       	mov	r8, r31
+     a28:	f0 2d       	mov	r31, r0
+     a2a:	d7 01       	movw	r26, r14
+     a2c:	8c 92       	st	X, r8
+		UCSR0C = (3<<UCSZ00);
+     a2e:	02 ec       	ldi	r16, 0xC2	; 194
+     a30:	10 e0       	ldi	r17, 0x00	; 0
+     a32:	86 e0       	ldi	r24, 0x06	; 6
+     a34:	f8 01       	movw	r30, r16
+     a36:	80 83       	st	Z, r24
+		
+		/***********************remove**************************/
+		UBRR3H = (unsigned int)(BAUD_PRESCALLER>>8);
+     a38:	65 e3       	ldi	r22, 0x35	; 53
+     a3a:	71 e0       	ldi	r23, 0x01	; 1
+     a3c:	db 01       	movw	r26, r22
+     a3e:	1c 92       	st	X, r1
+		UBRR3L = (unsigned int)(BAUD_PRESCALLER);
+     a40:	44 e3       	ldi	r20, 0x34	; 52
+     a42:	51 e0       	ldi	r21, 0x01	; 1
+     a44:	fa 01       	movw	r30, r20
+     a46:	90 83       	st	Z, r25
+		UCSR3B = (1<<RXEN0)|(1<<TXEN0)|(1<<RXCIE0);
+     a48:	21 e3       	ldi	r18, 0x31	; 49
+     a4a:	31 e0       	ldi	r19, 0x01	; 1
+     a4c:	0f 2e       	mov	r0, r31
+     a4e:	f8 e9       	ldi	r31, 0x98	; 152
+     a50:	9f 2e       	mov	r9, r31
+     a52:	f0 2d       	mov	r31, r0
+     a54:	d9 01       	movw	r26, r18
+     a56:	9c 92       	st	X, r9
+		UCSR3C = (3<<UCSZ00);
+     a58:	e2 e3       	ldi	r30, 0x32	; 50
+     a5a:	f1 e0       	ldi	r31, 0x01	; 1
+     a5c:	80 83       	st	Z, r24
+	flagDataReceived(test);
+}
+int main(void)
+{
+	Uart check;
+	sei();
+     a5e:	78 94       	sei
+			_sendPacket[9] = SMSindex%10+'0';
+		}
+		return sendCommand(_sendPacket,true);
+	}
+	void setNewNum(const char *ptr,int index = 0){
+		strcpy(_phoneBook[index],ptr);
+     a60:	0f 2e       	mov	r0, r31
+     a62:	fb e0       	ldi	r31, 0x0B	; 11
+     a64:	7f 2e       	mov	r7, r31
+     a66:	f0 2d       	mov	r31, r0
+     a68:	e4 e5       	ldi	r30, 0x54	; 84
+     a6a:	f3 e0       	ldi	r31, 0x03	; 3
+     a6c:	aa e8       	ldi	r26, 0x8A	; 138
+     a6e:	b3 e0       	ldi	r27, 0x03	; 3
+     a70:	01 90       	ld	r0, Z+
+     a72:	0d 92       	st	X+, r0
+     a74:	7a 94       	dec	r7
+     a76:	e1 f7       	brne	.-8      	; 0xa70 <main+0x82>
+     a78:	0f 2e       	mov	r0, r31
+     a7a:	fb e0       	ldi	r31, 0x0B	; 11
+     a7c:	7f 2e       	mov	r7, r31
+     a7e:	f0 2d       	mov	r31, r0
+     a80:	ef e5       	ldi	r30, 0x5F	; 95
+     a82:	f3 e0       	ldi	r31, 0x03	; 3
+     a84:	a5 e9       	ldi	r26, 0x95	; 149
+     a86:	b3 e0       	ldi	r27, 0x03	; 3
+     a88:	01 90       	ld	r0, Z+
+     a8a:	0d 92       	st	X+, r0
+     a8c:	7a 94       	dec	r7
+     a8e:	e1 f7       	brne	.-8      	; 0xa88 <main+0x9a>
+     a90:	0f 2e       	mov	r0, r31
+     a92:	fb e0       	ldi	r31, 0x0B	; 11
+     a94:	7f 2e       	mov	r7, r31
+     a96:	f0 2d       	mov	r31, r0
+     a98:	ea e6       	ldi	r30, 0x6A	; 106
+     a9a:	f3 e0       	ldi	r31, 0x03	; 3
+     a9c:	a0 ea       	ldi	r26, 0xA0	; 160
+     a9e:	b3 e0       	ldi	r27, 0x03	; 3
+     aa0:	01 90       	ld	r0, Z+
+     aa2:	0d 92       	st	X+, r0
+     aa4:	7a 94       	dec	r7
+     aa6:	e1 f7       	brne	.-8      	; 0xaa0 <main+0xb2>
+		setBaudRate(rate);
+	}
+	void setBaudRate(BaudRate rate)
+	{
+		unsigned int BAUD_PRESCALLER = (((F_CPU / (rate * 16UL))) - 1);
+		UBRR0H = (unsigned int)(BAUD_PRESCALLER>>8);
+     aa8:	d5 01       	movw	r26, r10
+     aaa:	1c 92       	st	X, r1
+		UBRR0L = (unsigned int)(BAUD_PRESCALLER);
+     aac:	f6 01       	movw	r30, r12
+     aae:	90 83       	st	Z, r25
+		UCSR0B = (1<<RXEN0)|(1<<TXEN0);//|(1<<RXCIE0);
+     ab0:	d7 01       	movw	r26, r14
+     ab2:	8c 92       	st	X, r8
+		UCSR0C = (3<<UCSZ00);
+     ab4:	f8 01       	movw	r30, r16
+     ab6:	80 83       	st	Z, r24
+		
+		/***********************remove**************************/
+		UBRR3H = (unsigned int)(BAUD_PRESCALLER>>8);
+     ab8:	db 01       	movw	r26, r22
+     aba:	1c 92       	st	X, r1
+		UBRR3L = (unsigned int)(BAUD_PRESCALLER);
+     abc:	fa 01       	movw	r30, r20
+     abe:	90 83       	st	Z, r25
+		UCSR3B = (1<<RXEN0)|(1<<TXEN0)|(1<<RXCIE0);
+     ac0:	d9 01       	movw	r26, r18
+     ac2:	9c 92       	st	X, r9
+		UCSR3C = (3<<UCSZ00);
+     ac4:	e2 e3       	ldi	r30, 0x32	; 50
+     ac6:	f1 e0       	ldi	r31, 0x01	; 1
+     ac8:	80 83       	st	Z, r24
+		flag.checkStatus();
+		flag._flagRXC = true;
+		sei();
+	}
+	bool flagStatus(){
+		return _flagRXC;
+     aca:	0f 2e       	mov	r0, r31
+     acc:	f2 ee       	ldi	r31, 0xE2	; 226
+     ace:	8f 2e       	mov	r8, r31
+     ad0:	f7 e0       	ldi	r31, 0x07	; 7
+     ad2:	9f 2e       	mov	r9, r31
+     ad4:	f0 2d       	mov	r31, r0
+		_Str[i] = 0;
+		return _Str;
+	}
+	void UARTsend( unsigned char data)
+	{
+		while(!(UCSR0A & (1<<UDRE0)));
+     ad6:	0f 2e       	mov	r0, r31
+     ad8:	f0 ec       	ldi	r31, 0xC0	; 192
+     ada:	ef 2e       	mov	r14, r31
+     adc:	f1 2c       	mov	r15, r1
+     ade:	f0 2d       	mov	r31, r0
+ISR(USART3_RX_vect)
+{
+	flagDataReceived(test);
+}
+int main(void)
+{
+     ae0:	84 e6       	ldi	r24, 0x64	; 100
+     ae2:	90 e0       	ldi	r25, 0x00	; 0
+     ae4:	01 97       	sbiw	r24, 0x01	; 1
+    {
+		//check.UARTstring("\n",0);
+		
+		//__enable_interrupt();
+		//RESET ARR
+		for(int j = 0;j < 100; j++)
+     ae6:	f1 f7       	brne	.-4      	; 0xae4 <main+0xf6>
+		{
+			arr[j] = 0;
+		}
+		if (test.flagStatus())
+     ae8:	d4 01       	movw	r26, r8
+     aea:	8c 91       	ld	r24, X
+     aec:	88 23       	and	r24, r24
+     aee:	09 f4       	brne	.+2      	; 0xaf2 <main+0x104>
+     af0:	0c c1       	rjmp	.+536    	; 0xd0a <main+0x31c>
+	}
+	bool flagStatus(){
+		return _flagRXC;
+	}
+	int getRXackID(){
+		int ack = (int)_RXackValue;
+     af2:	e3 ee       	ldi	r30, 0xE3	; 227
+     af4:	f7 e0       	ldi	r31, 0x07	; 7
+     af6:	80 81       	ld	r24, Z
+		_flagRXC = false;
+     af8:	1c 92       	st	X, r1
+		_RXackValue = 0;
+     afa:	10 82       	st	Z, r1
+		{
+			arr[j] = 0;
+		}
+		if (test.flagStatus())
+		{
+			switch(test.getRXackID())
+     afc:	84 30       	cpi	r24, 0x04	; 4
+     afe:	41 f1       	breq	.+80     	; 0xb50 <main+0x162>
+     b00:	18 f4       	brcc	.+6      	; 0xb08 <main+0x11a>
+     b02:	83 30       	cpi	r24, 0x03	; 3
+     b04:	41 f0       	breq	.+16     	; 0xb16 <main+0x128>
+     b06:	01 c1       	rjmp	.+514    	; 0xd0a <main+0x31c>
+     b08:	85 30       	cpi	r24, 0x05	; 5
+     b0a:	09 f4       	brne	.+2      	; 0xb0e <main+0x120>
+     b0c:	05 c1       	rjmp	.+522    	; 0xd18 <main+0x32a>
+     b0e:	86 30       	cpi	r24, 0x06	; 6
+     b10:	09 f4       	brne	.+2      	; 0xb14 <main+0x126>
+     b12:	1f c1       	rjmp	.+574    	; 0xd52 <main+0x364>
+     b14:	fa c0       	rjmp	.+500    	; 0xd0a <main+0x31c>
+		_Str[i] = 0;
+		return _Str;
+	}
+	void UARTsend( unsigned char data)
+	{
+		while(!(UCSR0A & (1<<UDRE0)));
+     b16:	f7 01       	movw	r30, r14
+     b18:	80 81       	ld	r24, Z
+     b1a:	85 ff       	sbrs	r24, 5
+     b1c:	fc cf       	rjmp	.-8      	; 0xb16 <main+0x128>
+		UDR0 = data;
+     b1e:	80 e2       	ldi	r24, 0x20	; 32
+     b20:	80 93 c6 00 	sts	0x00C6, r24	; 0x8000c6 <__TEXT_REGION_LENGTH__+0x7000c6>
+     b24:	e4 e5       	ldi	r30, 0x54	; 84
+     b26:	f2 e0       	ldi	r31, 0x02	; 2
+     b28:	82 e7       	ldi	r24, 0x72	; 114
+     b2a:	26 ec       	ldi	r18, 0xC6	; 198
+     b2c:	30 e0       	ldi	r19, 0x00	; 0
+		_Str[i] = 0;
+		return _Str;
+	}
+	void UARTsend( unsigned char data)
+	{
+		while(!(UCSR0A & (1<<UDRE0)));
+     b2e:	d7 01       	movw	r26, r14
+     b30:	9c 91       	ld	r25, X
+     b32:	95 ff       	sbrs	r25, 5
+     b34:	fc cf       	rjmp	.-8      	; 0xb2e <main+0x140>
+		UDR0 = data;
+     b36:	d9 01       	movw	r26, r18
+     b38:	8c 93       	st	X, r24
+	{
+		if (space)
+		{
+			UARTsend((const char)*" ");
+		}
+		while(*StringPtr != 0)
+     b3a:	81 91       	ld	r24, Z+
+     b3c:	81 11       	cpse	r24, r1
+     b3e:	f7 cf       	rjmp	.-18     	; 0xb2e <main+0x140>
+		_Str[i] = 0;
+		return _Str;
+	}
+	void UARTsend( unsigned char data)
+	{
+		while(!(UCSR0A & (1<<UDRE0)));
+     b40:	f7 01       	movw	r30, r14
+     b42:	80 81       	ld	r24, Z
+     b44:	85 ff       	sbrs	r24, 5
+     b46:	fc cf       	rjmp	.-8      	; 0xb40 <main+0x152>
+		UDR0 = data;
+     b48:	80 e2       	ldi	r24, 0x20	; 32
+     b4a:	80 93 c6 00 	sts	0x00C6, r24	; 0x8000c6 <__TEXT_REGION_LENGTH__+0x7000c6>
+     b4e:	dd c0       	rjmp	.+442    	; 0xd0a <main+0x31c>
+		_Str[i] = 0;
+		return _Str;
+	}
+	void UARTsend( unsigned char data)
+	{
+		while(!(UCSR0A & (1<<UDRE0)));
+     b50:	d7 01       	movw	r26, r14
+     b52:	8c 91       	ld	r24, X
+     b54:	85 ff       	sbrs	r24, 5
+     b56:	fc cf       	rjmp	.-8      	; 0xb50 <main+0x162>
+		UDR0 = data;
+     b58:	80 e2       	ldi	r24, 0x20	; 32
+     b5a:	80 93 c6 00 	sts	0x00C6, r24	; 0x8000c6 <__TEXT_REGION_LENGTH__+0x7000c6>
+     b5e:	e4 e6       	ldi	r30, 0x64	; 100
+     b60:	f2 e0       	ldi	r31, 0x02	; 2
+     b62:	83 e5       	ldi	r24, 0x53	; 83
+     b64:	26 ec       	ldi	r18, 0xC6	; 198
+     b66:	30 e0       	ldi	r19, 0x00	; 0
+		_Str[i] = 0;
+		return _Str;
+	}
+	void UARTsend( unsigned char data)
+	{
+		while(!(UCSR0A & (1<<UDRE0)));
+     b68:	d7 01       	movw	r26, r14
+     b6a:	9c 91       	ld	r25, X
+     b6c:	95 ff       	sbrs	r25, 5
+     b6e:	fc cf       	rjmp	.-8      	; 0xb68 <main+0x17a>
+		UDR0 = data;
+     b70:	d9 01       	movw	r26, r18
+     b72:	8c 93       	st	X, r24
+	{
+		if (space)
+		{
+			UARTsend((const char)*" ");
+		}
+		while(*StringPtr != 0)
+     b74:	81 91       	ld	r24, Z+
+     b76:	81 11       	cpse	r24, r1
+     b78:	f7 cf       	rjmp	.-18     	; 0xb68 <main+0x17a>
+		_Str[i] = 0;
+		return _Str;
+	}
+	void UARTsend( unsigned char data)
+	{
+		while(!(UCSR0A & (1<<UDRE0)));
+     b7a:	f7 01       	movw	r30, r14
+     b7c:	80 81       	ld	r24, Z
+     b7e:	85 ff       	sbrs	r24, 5
+     b80:	fc cf       	rjmp	.-8      	; 0xb7a <main+0x18c>
+		UDR0 = data;
+     b82:	80 e2       	ldi	r24, 0x20	; 32
+     b84:	80 93 c6 00 	sts	0x00C6, r24	; 0x8000c6 <__TEXT_REGION_LENGTH__+0x7000c6>
+		sendCommand(ptr,true);
+		return sendCommand("AT+CMGF=1",true);
+	}
+	bool sendSMS(const char *ptr,int index){
+		int massageSize = 0;
+		cli();
+     b88:	f8 94       	cli
+		strcpy(_sendPacket,"AT+CMGS=");								//copy command
+     b8a:	89 e0       	ldi	r24, 0x09	; 9
+     b8c:	e4 e7       	ldi	r30, 0x74	; 116
+     b8e:	f2 e0       	ldi	r31, 0x02	; 2
+     b90:	a8 ef       	ldi	r26, 0xF8	; 248
+     b92:	b3 e0       	ldi	r27, 0x03	; 3
+     b94:	01 90       	ld	r0, Z+
+     b96:	0d 92       	st	X+, r0
+     b98:	8a 95       	dec	r24
+     b9a:	e1 f7       	brne	.-8      	; 0xb94 <main+0x1a6>
+		_sendPacket[8] ='"';										//set <"> for phone number
+     b9c:	12 e2       	ldi	r17, 0x22	; 34
+     b9e:	10 93 00 04 	sts	0x0400, r17	; 0x800400 <__data_end+0x8a>
+		strcpy(_sendPacket+9,"+972");								//copy state code
+     ba2:	85 e0       	ldi	r24, 0x05	; 5
+     ba4:	ed e7       	ldi	r30, 0x7D	; 125
+     ba6:	f2 e0       	ldi	r31, 0x02	; 2
+     ba8:	a1 e0       	ldi	r26, 0x01	; 1
+     baa:	b4 e0       	ldi	r27, 0x04	; 4
+     bac:	01 90       	ld	r0, Z+
+     bae:	0d 92       	st	X+, r0
+     bb0:	8a 95       	dec	r24
+     bb2:	e1 f7       	brne	.-8      	; 0xbac <main+0x1be>
+		strcpy(_sendPacket+13,_phoneBook[index]+1);					//copy phone number
+     bb4:	61 ea       	ldi	r22, 0xA1	; 161
+     bb6:	73 e0       	ldi	r23, 0x03	; 3
+     bb8:	85 e0       	ldi	r24, 0x05	; 5
+     bba:	94 e0       	ldi	r25, 0x04	; 4
+     bbc:	f9 d3       	rcall	.+2034   	; 0x13b0 <strcpy>
+		_sendPacket[22] ='"';										//put end of string NULL by adding dummy char
+     bbe:	10 93 0e 04 	sts	0x040E, r17	; 0x80040e <__data_end+0x98>
+		_sendPacket[23] = 0;										//close number with <">, run over the dummy char
+     bc2:	10 92 0f 04 	sts	0x040F, r1	; 0x80040f <__data_end+0x99>
+	{
+		if (space)
+		{
+			UARTsend3((const char)*" ");
+		}
+		while(*StringPtr != 0)
+     bc6:	80 91 f8 03 	lds	r24, 0x03F8	; 0x8003f8 <__data_end+0x82>
+     bca:	88 23       	and	r24, r24
+     bcc:	71 f0       	breq	.+28     	; 0xbea <main+0x1fc>
+     bce:	e9 ef       	ldi	r30, 0xF9	; 249
+     bd0:	f3 e0       	ldi	r31, 0x03	; 3
+		return UDR3;
+	}
+	void UARTsend3( unsigned char data)
+	{
+		while(!(UCSR3A & (1<<UDRE3)));
+		UDR3 = data;
+     bd2:	26 e3       	ldi	r18, 0x36	; 54
+     bd4:	31 e0       	ldi	r19, 0x01	; 1
+	{
+		return UDR3;
+	}
+	void UARTsend3( unsigned char data)
+	{
+		while(!(UCSR3A & (1<<UDRE3)));
+     bd6:	a0 e3       	ldi	r26, 0x30	; 48
+     bd8:	b1 e0       	ldi	r27, 0x01	; 1
+     bda:	9c 91       	ld	r25, X
+     bdc:	95 ff       	sbrs	r25, 5
+     bde:	fb cf       	rjmp	.-10     	; 0xbd6 <main+0x1e8>
+		UDR3 = data;
+     be0:	d9 01       	movw	r26, r18
+     be2:	8c 93       	st	X, r24
+	{
+		if (space)
+		{
+			UARTsend3((const char)*" ");
+		}
+		while(*StringPtr != 0)
+     be4:	81 91       	ld	r24, Z+
+     be6:	81 11       	cpse	r24, r1
+     be8:	f6 cf       	rjmp	.-20     	; 0xbd6 <main+0x1e8>
+	{
+		return UDR3;
+	}
+	void UARTsend3( unsigned char data)
+	{
+		while(!(UCSR3A & (1<<UDRE3)));
+     bea:	e0 e3       	ldi	r30, 0x30	; 48
+     bec:	f1 e0       	ldi	r31, 0x01	; 1
+     bee:	80 81       	ld	r24, Z
+     bf0:	85 ff       	sbrs	r24, 5
+     bf2:	fb cf       	rjmp	.-10     	; 0xbea <main+0x1fc>
+		UDR3 = data;
+     bf4:	8d e0       	ldi	r24, 0x0D	; 13
+     bf6:	80 93 36 01 	sts	0x0136, r24	; 0x800136 <__TEXT_REGION_LENGTH__+0x700136>
+     bfa:	ec ee       	ldi	r30, 0xEC	; 236
+     bfc:	f5 e0       	ldi	r31, 0x05	; 5
+     bfe:	40 e0       	ldi	r20, 0x00	; 0
+     c00:	50 e0       	ldi	r21, 0x00	; 0
+	}
+	unsigned char UARTreceive3(void)
+	{
+		while(!(UCSR3A & (1<<RXC3)));
+		return UDR3;
+     c02:	66 e3       	ldi	r22, 0x36	; 54
+     c04:	71 e0       	ldi	r23, 0x01	; 1
+		while(!(UCSR3A & (1<<UDRE3)));
+		UDR3 = data;
+	}
+	unsigned char UARTreceive3(void)
+	{
+		while(!(UCSR3A & (1<<RXC3)));
+     c06:	a0 e3       	ldi	r26, 0x30	; 48
+     c08:	b1 e0       	ldi	r27, 0x01	; 1
+     c0a:	8c 91       	ld	r24, X
+     c0c:	88 23       	and	r24, r24
+     c0e:	dc f7       	brge	.-10     	; 0xc06 <main+0x218>
+		return UDR3;
+     c10:	db 01       	movw	r26, r22
+     c12:	8c 91       	ld	r24, X
+		int i = 0;
+		char data = 0;
+		do 
+		{
+			data = gsmSMS.UARTreceive3();
+			_recievedPack[i++] = data;
+     c14:	4f 5f       	subi	r20, 0xFF	; 255
+     c16:	5f 4f       	sbci	r21, 0xFF	; 255
+     c18:	81 93       	st	Z+, r24
+	}
+	char checkForData3()
+	{
+		for(int i = 0; i < 500; i++)
+		{
+			if ((UCSR3A & (1<<RXC3)))
+     c1a:	a0 e3       	ldi	r26, 0x30	; 48
+     c1c:	b1 e0       	ldi	r27, 0x01	; 1
+     c1e:	8c 91       	ld	r24, X
+     c20:	88 23       	and	r24, r24
+     c22:	0c f0       	brlt	.+2      	; 0xc26 <main+0x238>
+     c24:	7b c3       	rjmp	.+1782   	; 0x131c <main+0x92e>
+     c26:	ef cf       	rjmp	.-34     	; 0xc06 <main+0x218>
+     c28:	a0 e3       	ldi	r26, 0x30	; 48
+     c2a:	b1 e0       	ldi	r27, 0x01	; 1
+     c2c:	2c 91       	ld	r18, X
+     c2e:	22 23       	and	r18, r18
+     c30:	54 f3       	brlt	.-44     	; 0xc06 <main+0x218>
+     c32:	a7 e5       	ldi	r26, 0x57	; 87
+     c34:	b2 e0       	ldi	r27, 0x02	; 2
+     c36:	11 97       	sbiw	r26, 0x01	; 1
+     c38:	f1 f7       	brne	.-4      	; 0xc36 <main+0x248>
+     c3a:	00 c0       	rjmp	.+0      	; 0xc3c <main+0x24e>
+     c3c:	00 00       	nop
+     c3e:	01 97       	sbiw	r24, 0x01	; 1
+	{
+		return UDR0;
+	}
+	char checkForData3()
+	{
+		for(int i = 0; i < 500; i++)
+     c40:	99 f7       	brne	.-26     	; 0xc28 <main+0x23a>
+     c42:	0d c3       	rjmp	.+1562   	; 0x125e <main+0x870>
+     c44:	99 27       	eor	r25, r25
+		return 0;
+	}
+	bool compWordInArr(const char *arr,const char *word, char wordSize, char arrMaxSize) const
+	{
+		bool status = true;
+		for(int i = 0; i < arrMaxSize; i++)
+     c46:	18 16       	cp	r1, r24
+     c48:	19 06       	cpc	r1, r25
+     c4a:	d4 f4       	brge	.+52     	; 0xc80 <main+0x292>
+     c4c:	41 e0       	ldi	r20, 0x01	; 1
+     c4e:	20 e0       	ldi	r18, 0x00	; 0
+     c50:	30 e0       	ldi	r19, 0x00	; 0
+		{
+			if (arr[i] == *word)
+			{
+				for (int j = 0; j < wordSize; j++,i++)
+				{
+					if (!(arr[i] == word[j]))
+     c52:	50 e0       	ldi	r21, 0x00	; 0
+	bool compWordInArr(const char *arr,const char *word, char wordSize, char arrMaxSize) const
+	{
+		bool status = true;
+		for(int i = 0; i < arrMaxSize; i++)
+		{
+			if (arr[i] == *word)
+     c54:	f9 01       	movw	r30, r18
+     c56:	e4 51       	subi	r30, 0x14	; 20
+     c58:	fa 4f       	sbci	r31, 0xFA	; 250
+     c5a:	60 81       	ld	r22, Z
+     c5c:	6f 34       	cpi	r22, 0x4F	; 79
+     c5e:	59 f4       	brne	.+22     	; 0xc76 <main+0x288>
+			{
+				for (int j = 0; j < wordSize; j++,i++)
+				{
+					if (!(arr[i] == word[j]))
+     c60:	f9 01       	movw	r30, r18
+     c62:	e3 51       	subi	r30, 0x13	; 19
+     c64:	fa 4f       	sbci	r31, 0xFA	; 250
+     c66:	60 81       	ld	r22, Z
+     c68:	6b 34       	cpi	r22, 0x4B	; 75
+     c6a:	09 f0       	breq	.+2      	; 0xc6e <main+0x280>
+     c6c:	60 c3       	rjmp	.+1728   	; 0x132e <main+0x940>
+     c6e:	2e 5f       	subi	r18, 0xFE	; 254
+     c70:	3f 4f       	sbci	r19, 0xFF	; 255
+					{
+						status = false;
+					}
+				}
+				if (status)
+     c72:	41 11       	cpse	r20, r1
+     c74:	05 c0       	rjmp	.+10     	; 0xc80 <main+0x292>
+		return 0;
+	}
+	bool compWordInArr(const char *arr,const char *word, char wordSize, char arrMaxSize) const
+	{
+		bool status = true;
+		for(int i = 0; i < arrMaxSize; i++)
+     c76:	2f 5f       	subi	r18, 0xFF	; 255
+     c78:	3f 4f       	sbci	r19, 0xFF	; 255
+     c7a:	28 17       	cp	r18, r24
+     c7c:	39 07       	cpc	r19, r25
+     c7e:	54 f3       	brlt	.-44     	; 0xc54 <main+0x266>
+		_sendPacket[23] = 0;										//close number with <">, run over the dummy char
+		
+		sendCommand(_sendPacket,true);
+		
+		massageSize = strlen(ptr);									//SMS size
+		strcpy(_sendPacket,ptr);									//copy massage from ptr
+     c80:	8c e6       	ldi	r24, 0x6C	; 108
+     c82:	e2 e8       	ldi	r30, 0x82	; 130
+     c84:	f2 e0       	ldi	r31, 0x02	; 2
+     c86:	a8 ef       	ldi	r26, 0xF8	; 248
+     c88:	b3 e0       	ldi	r27, 0x03	; 3
+     c8a:	01 90       	ld	r0, Z+
+     c8c:	0d 92       	st	X+, r0
+     c8e:	8a 95       	dec	r24
+     c90:	e1 f7       	brne	.-8      	; 0xc8a <main+0x29c>
+		_sendPacket[massageSize+1] = 0;								//put end of string
+     c92:	10 92 64 04 	sts	0x0464, r1	; 0x800464 <__data_end+0xee>
+	{
+		if (space)
+		{
+			UARTsend3((const char)*" ");
+		}
+		while(*StringPtr != 0)
+     c96:	80 91 f8 03 	lds	r24, 0x03F8	; 0x8003f8 <__data_end+0x82>
+     c9a:	88 23       	and	r24, r24
+     c9c:	71 f0       	breq	.+28     	; 0xcba <main+0x2cc>
+     c9e:	e9 ef       	ldi	r30, 0xF9	; 249
+     ca0:	f3 e0       	ldi	r31, 0x03	; 3
+		return UDR3;
+	}
+	void UARTsend3( unsigned char data)
+	{
+		while(!(UCSR3A & (1<<UDRE3)));
+		UDR3 = data;
+     ca2:	26 e3       	ldi	r18, 0x36	; 54
+     ca4:	31 e0       	ldi	r19, 0x01	; 1
+	{
+		return UDR3;
+	}
+	void UARTsend3( unsigned char data)
+	{
+		while(!(UCSR3A & (1<<UDRE3)));
+     ca6:	a0 e3       	ldi	r26, 0x30	; 48
+     ca8:	b1 e0       	ldi	r27, 0x01	; 1
+     caa:	9c 91       	ld	r25, X
+     cac:	95 ff       	sbrs	r25, 5
+     cae:	fb cf       	rjmp	.-10     	; 0xca6 <main+0x2b8>
+		UDR3 = data;
+     cb0:	d9 01       	movw	r26, r18
+     cb2:	8c 93       	st	X, r24
+	{
+		if (space)
+		{
+			UARTsend3((const char)*" ");
+		}
+		while(*StringPtr != 0)
+     cb4:	81 91       	ld	r24, Z+
+     cb6:	81 11       	cpse	r24, r1
+     cb8:	f6 cf       	rjmp	.-20     	; 0xca6 <main+0x2b8>
+	{
+		return UDR3;
+	}
+	void UARTsend3( unsigned char data)
+	{
+		while(!(UCSR3A & (1<<UDRE3)));
+     cba:	e0 e3       	ldi	r30, 0x30	; 48
+     cbc:	f1 e0       	ldi	r31, 0x01	; 1
+     cbe:	80 81       	ld	r24, Z
+     cc0:	85 ff       	sbrs	r24, 5
+     cc2:	fb cf       	rjmp	.-10     	; 0xcba <main+0x2cc>
+		UDR3 = data;
+     cc4:	8d e0       	ldi	r24, 0x0D	; 13
+     cc6:	80 93 36 01 	sts	0x0136, r24	; 0x800136 <__TEXT_REGION_LENGTH__+0x700136>
+		
+		massageSize = strlen(ptr);									//SMS size
+		strcpy(_sendPacket,ptr);									//copy massage from ptr
+		_sendPacket[massageSize+1] = 0;								//put end of string
+		sendCommand(_sendPacket);									//send the massage
+		_sendPacket[0] = 26;										//put CTRL-Z
+     cca:	e8 ef       	ldi	r30, 0xF8	; 248
+     ccc:	f3 e0       	ldi	r31, 0x03	; 3
+     cce:	8a e1       	ldi	r24, 0x1A	; 26
+     cd0:	80 83       	st	Z, r24
+		_sendPacket[1] = 0;											//put end of string
+     cd2:	10 92 f9 03 	sts	0x03F9, r1	; 0x8003f9 <__data_end+0x83>
+		sei();
+     cd6:	78 94       	sei
+	{
+		if (space)
+		{
+			UARTsend3((const char)*" ");
+		}
+		while(*StringPtr != 0)
+     cd8:	80 81       	ld	r24, Z
+     cda:	88 23       	and	r24, r24
+     cdc:	71 f0       	breq	.+28     	; 0xcfa <main+0x30c>
+     cde:	e9 ef       	ldi	r30, 0xF9	; 249
+     ce0:	f3 e0       	ldi	r31, 0x03	; 3
+		return UDR3;
+	}
+	void UARTsend3( unsigned char data)
+	{
+		while(!(UCSR3A & (1<<UDRE3)));
+		UDR3 = data;
+     ce2:	26 e3       	ldi	r18, 0x36	; 54
+     ce4:	31 e0       	ldi	r19, 0x01	; 1
+	{
+		return UDR3;
+	}
+	void UARTsend3( unsigned char data)
+	{
+		while(!(UCSR3A & (1<<UDRE3)));
+     ce6:	a0 e3       	ldi	r26, 0x30	; 48
+     ce8:	b1 e0       	ldi	r27, 0x01	; 1
+     cea:	9c 91       	ld	r25, X
+     cec:	95 ff       	sbrs	r25, 5
+     cee:	fb cf       	rjmp	.-10     	; 0xce6 <main+0x2f8>
+		UDR3 = data;
+     cf0:	d9 01       	movw	r26, r18
+     cf2:	8c 93       	st	X, r24
+	{
+		if (space)
+		{
+			UARTsend3((const char)*" ");
+		}
+		while(*StringPtr != 0)
+     cf4:	81 91       	ld	r24, Z+
+     cf6:	81 11       	cpse	r24, r1
+     cf8:	f6 cf       	rjmp	.-20     	; 0xce6 <main+0x2f8>
+	{
+		return UDR3;
+	}
+	void UARTsend3( unsigned char data)
+	{
+		while(!(UCSR3A & (1<<UDRE3)));
+     cfa:	e0 e3       	ldi	r30, 0x30	; 48
+     cfc:	f1 e0       	ldi	r31, 0x01	; 1
+     cfe:	80 81       	ld	r24, Z
+     d00:	85 ff       	sbrs	r24, 5
+     d02:	fb cf       	rjmp	.-10     	; 0xcfa <main+0x30c>
+		UDR3 = data;
+     d04:	8d e0       	ldi	r24, 0x0D	; 13
+     d06:	80 93 36 01 	sts	0x0136, r24	; 0x800136 <__TEXT_REGION_LENGTH__+0x700136>
+     d0a:	0f 2e       	mov	r0, r31
+     d0c:	f6 e3       	ldi	r31, 0x36	; 54
+     d0e:	cf 2e       	mov	r12, r31
+     d10:	dd 24       	eor	r13, r13
+     d12:	d3 94       	inc	r13
+     d14:	f0 2d       	mov	r31, r0
+     d16:	3a c0       	rjmp	.+116    	; 0xd8c <main+0x39e>
+		_Str[i] = 0;
+		return _Str;
+	}
+	void UARTsend( unsigned char data)
+	{
+		while(!(UCSR0A & (1<<UDRE0)));
+     d18:	d7 01       	movw	r26, r14
+     d1a:	8c 91       	ld	r24, X
+     d1c:	85 ff       	sbrs	r24, 5
+     d1e:	fc cf       	rjmp	.-8      	; 0xd18 <main+0x32a>
+		UDR0 = data;
+     d20:	80 e2       	ldi	r24, 0x20	; 32
+     d22:	80 93 c6 00 	sts	0x00C6, r24	; 0x8000c6 <__TEXT_REGION_LENGTH__+0x7000c6>
+     d26:	ef ee       	ldi	r30, 0xEF	; 239
+     d28:	f2 e0       	ldi	r31, 0x02	; 2
+     d2a:	83 e5       	ldi	r24, 0x53	; 83
+     d2c:	26 ec       	ldi	r18, 0xC6	; 198
+     d2e:	30 e0       	ldi	r19, 0x00	; 0
+		_Str[i] = 0;
+		return _Str;
+	}
+	void UARTsend( unsigned char data)
+	{
+		while(!(UCSR0A & (1<<UDRE0)));
+     d30:	d7 01       	movw	r26, r14
+     d32:	9c 91       	ld	r25, X
+     d34:	95 ff       	sbrs	r25, 5
+     d36:	fc cf       	rjmp	.-8      	; 0xd30 <main+0x342>
+		UDR0 = data;
+     d38:	d9 01       	movw	r26, r18
+     d3a:	8c 93       	st	X, r24
+	{
+		if (space)
+		{
+			UARTsend((const char)*" ");
+		}
+		while(*StringPtr != 0)
+     d3c:	81 91       	ld	r24, Z+
+     d3e:	81 11       	cpse	r24, r1
+     d40:	f7 cf       	rjmp	.-18     	; 0xd30 <main+0x342>
+		_Str[i] = 0;
+		return _Str;
+	}
+	void UARTsend( unsigned char data)
+	{
+		while(!(UCSR0A & (1<<UDRE0)));
+     d42:	f7 01       	movw	r30, r14
+     d44:	80 81       	ld	r24, Z
+     d46:	85 ff       	sbrs	r24, 5
+     d48:	fc cf       	rjmp	.-8      	; 0xd42 <main+0x354>
+		UDR0 = data;
+     d4a:	80 e2       	ldi	r24, 0x20	; 32
+     d4c:	80 93 c6 00 	sts	0x00C6, r24	; 0x8000c6 <__TEXT_REGION_LENGTH__+0x7000c6>
+     d50:	dc cf       	rjmp	.-72     	; 0xd0a <main+0x31c>
+		_Str[i] = 0;
+		return _Str;
+	}
+	void UARTsend( unsigned char data)
+	{
+		while(!(UCSR0A & (1<<UDRE0)));
+     d52:	d7 01       	movw	r26, r14
+     d54:	8c 91       	ld	r24, X
+     d56:	85 ff       	sbrs	r24, 5
+     d58:	fc cf       	rjmp	.-8      	; 0xd52 <main+0x364>
+		UDR0 = data;
+     d5a:	80 e2       	ldi	r24, 0x20	; 32
+     d5c:	80 93 c6 00 	sts	0x00C6, r24	; 0x8000c6 <__TEXT_REGION_LENGTH__+0x7000c6>
+     d60:	ec ef       	ldi	r30, 0xFC	; 252
+     d62:	f2 e0       	ldi	r31, 0x02	; 2
+     d64:	84 e6       	ldi	r24, 0x64	; 100
+     d66:	26 ec       	ldi	r18, 0xC6	; 198
+     d68:	30 e0       	ldi	r19, 0x00	; 0
+		_Str[i] = 0;
+		return _Str;
+	}
+	void UARTsend( unsigned char data)
+	{
+		while(!(UCSR0A & (1<<UDRE0)));
+     d6a:	d7 01       	movw	r26, r14
+     d6c:	9c 91       	ld	r25, X
+     d6e:	95 ff       	sbrs	r25, 5
+     d70:	fc cf       	rjmp	.-8      	; 0xd6a <main+0x37c>
+		UDR0 = data;
+     d72:	d9 01       	movw	r26, r18
+     d74:	8c 93       	st	X, r24
+	{
+		if (space)
+		{
+			UARTsend((const char)*" ");
+		}
+		while(*StringPtr != 0)
+     d76:	81 91       	ld	r24, Z+
+     d78:	81 11       	cpse	r24, r1
+     d7a:	f7 cf       	rjmp	.-18     	; 0xd6a <main+0x37c>
+		_Str[i] = 0;
+		return _Str;
+	}
+	void UARTsend( unsigned char data)
+	{
+		while(!(UCSR0A & (1<<UDRE0)));
+     d7c:	f7 01       	movw	r30, r14
+     d7e:	80 81       	ld	r24, Z
+     d80:	85 ff       	sbrs	r24, 5
+     d82:	fc cf       	rjmp	.-8      	; 0xd7c <main+0x38e>
+		UDR0 = data;
+     d84:	80 e2       	ldi	r24, 0x20	; 32
+     d86:	80 93 c6 00 	sts	0x00C6, r24	; 0x8000c6 <__TEXT_REGION_LENGTH__+0x7000c6>
+     d8a:	bf cf       	rjmp	.-130    	; 0xd0a <main+0x31c>
+		}
+		return 0;
+	}
+	char getData()
+	{
+		return UDR0;
+     d8c:	0f 2e       	mov	r0, r31
+     d8e:	f6 ec       	ldi	r31, 0xC6	; 198
+     d90:	af 2e       	mov	r10, r31
+     d92:	b1 2c       	mov	r11, r1
+     d94:	f0 2d       	mov	r31, r0
+	}
+	char *readSMS(){
+		int indexNum = 13, indexData = 0, indexOk = 0;
+		cli();
+		strcpy(_sendPacket,"AT+CMGR=");
+		_sendPacket[8]= _SMSindex > 9? _SMSindex/10+'0' : _SMSindex+'0';
+     d96:	0f 2e       	mov	r0, r31
+     d98:	f0 ee       	ldi	r31, 0xE0	; 224
+     d9a:	2f 2e       	mov	r2, r31
+     d9c:	f7 e0       	ldi	r31, 0x07	; 7
+     d9e:	3f 2e       	mov	r3, r31
+     da0:	f0 2d       	mov	r31, r0
+		_sendPacket[9]= _SMSindex > 9? _SMSindex%10+'0' : 0;
+     da2:	0f 2e       	mov	r0, r31
+     da4:	f1 e0       	ldi	r31, 0x01	; 1
+     da6:	4f 2e       	mov	r4, r31
+     da8:	f4 e0       	ldi	r31, 0x04	; 4
+     daa:	5f 2e       	mov	r5, r31
+     dac:	f0 2d       	mov	r31, r0
+		_sendPacket[10] = 0;
+     dae:	0f 2e       	mov	r0, r31
+     db0:	f2 e0       	ldi	r31, 0x02	; 2
+     db2:	6f 2e       	mov	r6, r31
+     db4:	f4 e0       	ldi	r31, 0x04	; 4
+     db6:	7f 2e       	mov	r7, r31
+     db8:	f0 2d       	mov	r31, r0
+	}
+	char checkForData()
+	{
+		for(int i = 0; i < 500; i++)
+		{
+			if ((UCSR0A & (1<<RXC0)))
+     dba:	d7 01       	movw	r26, r14
+     dbc:	8c 91       	ld	r24, X
+     dbe:	88 23       	and	r24, r24
+     dc0:	0c f0       	brlt	.+2      	; 0xdc4 <main+0x3d6>
+     dc2:	a3 c2       	rjmp	.+1350   	; 0x130a <main+0x91c>
+     dc4:	5a c2       	rjmp	.+1204   	; 0x127a <main+0x88c>
+     dc6:	f7 01       	movw	r30, r14
+     dc8:	20 81       	ld	r18, Z
+     dca:	22 23       	and	r18, r18
+     dcc:	0c f4       	brge	.+2      	; 0xdd0 <main+0x3e2>
+     dce:	55 c2       	rjmp	.+1194   	; 0x127a <main+0x88c>
+     dd0:	a7 e5       	ldi	r26, 0x57	; 87
+     dd2:	b2 e0       	ldi	r27, 0x02	; 2
+     dd4:	11 97       	sbiw	r26, 0x01	; 1
+     dd6:	f1 f7       	brne	.-4      	; 0xdd4 <main+0x3e6>
+     dd8:	00 c0       	rjmp	.+0      	; 0xdda <main+0x3ec>
+     dda:	00 00       	nop
+     ddc:	01 97       	sbiw	r24, 0x01	; 1
+		UCSR3C = (3<<UCSZ00);
+		/******************************************************/
+	}
+	char checkForData()
+	{
+		for(int i = 0; i < 500; i++)
+     dde:	99 f7       	brne	.-26     	; 0xdc6 <main+0x3d8>
+     de0:	7f ce       	rjmp	.-770    	; 0xae0 <main+0xf2>
+		sendCommand(ptr,true);
+		return sendCommand("AT+CMGF=1",true);
+	}
+	bool sendSMS(const char *ptr,int index){
+		int massageSize = 0;
+		cli();
+     de2:	f8 94       	cli
+		strcpy(_sendPacket,"AT+CMGS=");								//copy command
+     de4:	89 e0       	ldi	r24, 0x09	; 9
+     de6:	e4 e7       	ldi	r30, 0x74	; 116
+     de8:	f2 e0       	ldi	r31, 0x02	; 2
+     dea:	a8 ef       	ldi	r26, 0xF8	; 248
+     dec:	b3 e0       	ldi	r27, 0x03	; 3
+     dee:	01 90       	ld	r0, Z+
+     df0:	0d 92       	st	X+, r0
+     df2:	8a 95       	dec	r24
+     df4:	e1 f7       	brne	.-8      	; 0xdee <main+0x400>
+		_sendPacket[8] ='"';										//set <"> for phone number
+     df6:	12 e2       	ldi	r17, 0x22	; 34
+     df8:	10 93 00 04 	sts	0x0400, r17	; 0x800400 <__data_end+0x8a>
+		strcpy(_sendPacket+9,"+972");								//copy state code
+     dfc:	85 e0       	ldi	r24, 0x05	; 5
+     dfe:	ed e7       	ldi	r30, 0x7D	; 125
+     e00:	f2 e0       	ldi	r31, 0x02	; 2
+     e02:	d2 01       	movw	r26, r4
+     e04:	01 90       	ld	r0, Z+
+     e06:	0d 92       	st	X+, r0
+     e08:	8a 95       	dec	r24
+     e0a:	e1 f7       	brne	.-8      	; 0xe04 <main+0x416>
+		strcpy(_sendPacket+13,_phoneBook[index]+1);					//copy phone number
+     e0c:	61 ea       	ldi	r22, 0xA1	; 161
+     e0e:	73 e0       	ldi	r23, 0x03	; 3
+     e10:	85 e0       	ldi	r24, 0x05	; 5
+     e12:	94 e0       	ldi	r25, 0x04	; 4
+     e14:	cd d2       	rcall	.+1434   	; 0x13b0 <strcpy>
+		_sendPacket[22] ='"';										//put end of string NULL by adding dummy char
+     e16:	10 93 0e 04 	sts	0x040E, r17	; 0x80040e <__data_end+0x98>
+		_sendPacket[23] = 0;										//close number with <">, run over the dummy char
+     e1a:	10 92 0f 04 	sts	0x040F, r1	; 0x80040f <__data_end+0x99>
+	{
+		if (space)
+		{
+			UARTsend3((const char)*" ");
+		}
+		while(*StringPtr != 0)
+     e1e:	90 91 f8 03 	lds	r25, 0x03F8	; 0x8003f8 <__data_end+0x82>
+     e22:	99 23       	and	r25, r25
+     e24:	61 f0       	breq	.+24     	; 0xe3e <main+0x450>
+     e26:	e9 ef       	ldi	r30, 0xF9	; 249
+     e28:	f3 e0       	ldi	r31, 0x03	; 3
+	{
+		return UDR3;
+	}
+	void UARTsend3( unsigned char data)
+	{
+		while(!(UCSR3A & (1<<UDRE3)));
+     e2a:	a0 e3       	ldi	r26, 0x30	; 48
+     e2c:	b1 e0       	ldi	r27, 0x01	; 1
+     e2e:	8c 91       	ld	r24, X
+     e30:	85 ff       	sbrs	r24, 5
+     e32:	fb cf       	rjmp	.-10     	; 0xe2a <main+0x43c>
+		UDR3 = data;
+     e34:	d6 01       	movw	r26, r12
+     e36:	9c 93       	st	X, r25
+	{
+		if (space)
+		{
+			UARTsend3((const char)*" ");
+		}
+		while(*StringPtr != 0)
+     e38:	91 91       	ld	r25, Z+
+     e3a:	91 11       	cpse	r25, r1
+     e3c:	f6 cf       	rjmp	.-20     	; 0xe2a <main+0x43c>
+	{
+		return UDR3;
+	}
+	void UARTsend3( unsigned char data)
+	{
+		while(!(UCSR3A & (1<<UDRE3)));
+     e3e:	e0 e3       	ldi	r30, 0x30	; 48
+     e40:	f1 e0       	ldi	r31, 0x01	; 1
+     e42:	80 81       	ld	r24, Z
+     e44:	85 ff       	sbrs	r24, 5
+     e46:	fb cf       	rjmp	.-10     	; 0xe3e <main+0x450>
+		UDR3 = data;
+     e48:	8d e0       	ldi	r24, 0x0D	; 13
+     e4a:	d6 01       	movw	r26, r12
+     e4c:	8c 93       	st	X, r24
+     e4e:	ec ee       	ldi	r30, 0xEC	; 236
+     e50:	f5 e0       	ldi	r31, 0x05	; 5
+     e52:	40 e0       	ldi	r20, 0x00	; 0
+     e54:	50 e0       	ldi	r21, 0x00	; 0
+	}
+	unsigned char UARTreceive3(void)
+	{
+		while(!(UCSR3A & (1<<RXC3)));
+     e56:	a0 e3       	ldi	r26, 0x30	; 48
+     e58:	b1 e0       	ldi	r27, 0x01	; 1
+     e5a:	8c 91       	ld	r24, X
+     e5c:	88 23       	and	r24, r24
+     e5e:	dc f7       	brge	.-10     	; 0xe56 <main+0x468>
+		return UDR3;
+     e60:	d6 01       	movw	r26, r12
+     e62:	8c 91       	ld	r24, X
+		int i = 0;
+		char data = 0;
+		do 
+		{
+			data = gsmSMS.UARTreceive3();
+			_recievedPack[i++] = data;
+     e64:	4f 5f       	subi	r20, 0xFF	; 255
+     e66:	5f 4f       	sbci	r21, 0xFF	; 255
+     e68:	81 93       	st	Z+, r24
+	}
+	char checkForData3()
+	{
+		for(int i = 0; i < 500; i++)
+		{
+			if ((UCSR3A & (1<<RXC3)))
+     e6a:	a0 e3       	ldi	r26, 0x30	; 48
+     e6c:	b1 e0       	ldi	r27, 0x01	; 1
+     e6e:	8c 91       	ld	r24, X
+     e70:	88 23       	and	r24, r24
+     e72:	0c f0       	brlt	.+2      	; 0xe76 <main+0x488>
+     e74:	38 c2       	rjmp	.+1136   	; 0x12e6 <main+0x8f8>
+     e76:	ef cf       	rjmp	.-34     	; 0xe56 <main+0x468>
+     e78:	a0 e3       	ldi	r26, 0x30	; 48
+     e7a:	b1 e0       	ldi	r27, 0x01	; 1
+     e7c:	2c 91       	ld	r18, X
+     e7e:	22 23       	and	r18, r18
+     e80:	54 f3       	brlt	.-44     	; 0xe56 <main+0x468>
+     e82:	a7 e5       	ldi	r26, 0x57	; 87
+     e84:	b2 e0       	ldi	r27, 0x02	; 2
+     e86:	11 97       	sbiw	r26, 0x01	; 1
+     e88:	f1 f7       	brne	.-4      	; 0xe86 <main+0x498>
+     e8a:	00 c0       	rjmp	.+0      	; 0xe8c <main+0x49e>
+     e8c:	00 00       	nop
+     e8e:	01 97       	sbiw	r24, 0x01	; 1
+	{
+		return UDR0;
+	}
+	char checkForData3()
+	{
+		for(int i = 0; i < 500; i++)
+     e90:	99 f7       	brne	.-26     	; 0xe78 <main+0x48a>
+     e92:	f9 c1       	rjmp	.+1010   	; 0x1286 <main+0x898>
+     e94:	55 27       	eor	r21, r21
+		return 0;
+	}
+	bool compWordInArr(const char *arr,const char *word, char wordSize, char arrMaxSize) const
+	{
+		bool status = true;
+		for(int i = 0; i < arrMaxSize; i++)
+     e96:	14 16       	cp	r1, r20
+     e98:	15 06       	cpc	r1, r21
+     e9a:	c4 f4       	brge	.+48     	; 0xecc <main+0x4de>
+     e9c:	31 e0       	ldi	r19, 0x01	; 1
+     e9e:	80 e0       	ldi	r24, 0x00	; 0
+     ea0:	90 e0       	ldi	r25, 0x00	; 0
+		{
+			if (arr[i] == *word)
+			{
+				for (int j = 0; j < wordSize; j++,i++)
+				{
+					if (!(arr[i] == word[j]))
+     ea2:	60 e0       	ldi	r22, 0x00	; 0
+	bool compWordInArr(const char *arr,const char *word, char wordSize, char arrMaxSize) const
+	{
+		bool status = true;
+		for(int i = 0; i < arrMaxSize; i++)
+		{
+			if (arr[i] == *word)
+     ea4:	fc 01       	movw	r30, r24
+     ea6:	e4 51       	subi	r30, 0x14	; 20
+     ea8:	fa 4f       	sbci	r31, 0xFA	; 250
+     eaa:	20 81       	ld	r18, Z
+     eac:	2f 34       	cpi	r18, 0x4F	; 79
+     eae:	51 f4       	brne	.+20     	; 0xec4 <main+0x4d6>
+			{
+				for (int j = 0; j < wordSize; j++,i++)
+				{
+					if (!(arr[i] == word[j]))
+     eb0:	fc 01       	movw	r30, r24
+     eb2:	e3 51       	subi	r30, 0x13	; 19
+     eb4:	fa 4f       	sbci	r31, 0xFA	; 250
+     eb6:	20 81       	ld	r18, Z
+     eb8:	2b 34       	cpi	r18, 0x4B	; 75
+     eba:	09 f0       	breq	.+2      	; 0xebe <main+0x4d0>
+     ebc:	3c c2       	rjmp	.+1144   	; 0x1336 <main+0x948>
+     ebe:	02 96       	adiw	r24, 0x02	; 2
+					{
+						status = false;
+					}
+				}
+				if (status)
+     ec0:	31 11       	cpse	r19, r1
+     ec2:	04 c0       	rjmp	.+8      	; 0xecc <main+0x4de>
+		return 0;
+	}
+	bool compWordInArr(const char *arr,const char *word, char wordSize, char arrMaxSize) const
+	{
+		bool status = true;
+		for(int i = 0; i < arrMaxSize; i++)
+     ec4:	01 96       	adiw	r24, 0x01	; 1
+     ec6:	84 17       	cp	r24, r20
+     ec8:	95 07       	cpc	r25, r21
+     eca:	64 f3       	brlt	.-40     	; 0xea4 <main+0x4b6>
+		_sendPacket[23] = 0;										//close number with <">, run over the dummy char
+		
+		sendCommand(_sendPacket,true);
+		
+		massageSize = strlen(ptr);									//SMS size
+		strcpy(_sendPacket,ptr);									//copy massage from ptr
+     ecc:	8e e2       	ldi	r24, 0x2E	; 46
+     ece:	ed e0       	ldi	r30, 0x0D	; 13
+     ed0:	f3 e0       	ldi	r31, 0x03	; 3
+     ed2:	a8 ef       	ldi	r26, 0xF8	; 248
+     ed4:	b3 e0       	ldi	r27, 0x03	; 3
+     ed6:	01 90       	ld	r0, Z+
+     ed8:	0d 92       	st	X+, r0
+     eda:	8a 95       	dec	r24
+     edc:	e1 f7       	brne	.-8      	; 0xed6 <main+0x4e8>
+		_sendPacket[massageSize+1] = 0;								//put end of string
+     ede:	10 92 26 04 	sts	0x0426, r1	; 0x800426 <__data_end+0xb0>
+	{
+		if (space)
+		{
+			UARTsend3((const char)*" ");
+		}
+		while(*StringPtr != 0)
+     ee2:	90 91 f8 03 	lds	r25, 0x03F8	; 0x8003f8 <__data_end+0x82>
+     ee6:	99 23       	and	r25, r25
+     ee8:	61 f0       	breq	.+24     	; 0xf02 <main+0x514>
+     eea:	e9 ef       	ldi	r30, 0xF9	; 249
+     eec:	f3 e0       	ldi	r31, 0x03	; 3
+	{
+		return UDR3;
+	}
+	void UARTsend3( unsigned char data)
+	{
+		while(!(UCSR3A & (1<<UDRE3)));
+     eee:	a0 e3       	ldi	r26, 0x30	; 48
+     ef0:	b1 e0       	ldi	r27, 0x01	; 1
+     ef2:	8c 91       	ld	r24, X
+     ef4:	85 ff       	sbrs	r24, 5
+     ef6:	fb cf       	rjmp	.-10     	; 0xeee <main+0x500>
+		UDR3 = data;
+     ef8:	d6 01       	movw	r26, r12
+     efa:	9c 93       	st	X, r25
+	{
+		if (space)
+		{
+			UARTsend3((const char)*" ");
+		}
+		while(*StringPtr != 0)
+     efc:	91 91       	ld	r25, Z+
+     efe:	91 11       	cpse	r25, r1
+     f00:	f6 cf       	rjmp	.-20     	; 0xeee <main+0x500>
+	{
+		return UDR3;
+	}
+	void UARTsend3( unsigned char data)
+	{
+		while(!(UCSR3A & (1<<UDRE3)));
+     f02:	e0 e3       	ldi	r30, 0x30	; 48
+     f04:	f1 e0       	ldi	r31, 0x01	; 1
+     f06:	80 81       	ld	r24, Z
+     f08:	85 ff       	sbrs	r24, 5
+     f0a:	fb cf       	rjmp	.-10     	; 0xf02 <main+0x514>
+		UDR3 = data;
+     f0c:	8d e0       	ldi	r24, 0x0D	; 13
+     f0e:	d6 01       	movw	r26, r12
+     f10:	8c 93       	st	X, r24
+		
+		massageSize = strlen(ptr);									//SMS size
+		strcpy(_sendPacket,ptr);									//copy massage from ptr
+		_sendPacket[massageSize+1] = 0;								//put end of string
+		sendCommand(_sendPacket);									//send the massage
+		_sendPacket[0] = 26;										//put CTRL-Z
+     f12:	e8 ef       	ldi	r30, 0xF8	; 248
+     f14:	f3 e0       	ldi	r31, 0x03	; 3
+     f16:	8a e1       	ldi	r24, 0x1A	; 26
+     f18:	80 83       	st	Z, r24
+		_sendPacket[1] = 0;											//put end of string
+     f1a:	10 92 f9 03 	sts	0x03F9, r1	; 0x8003f9 <__data_end+0x83>
+		sei();
+     f1e:	78 94       	sei
+	{
+		if (space)
+		{
+			UARTsend3((const char)*" ");
+		}
+		while(*StringPtr != 0)
+     f20:	90 81       	ld	r25, Z
+     f22:	99 23       	and	r25, r25
+     f24:	61 f0       	breq	.+24     	; 0xf3e <main+0x550>
+     f26:	e9 ef       	ldi	r30, 0xF9	; 249
+     f28:	f3 e0       	ldi	r31, 0x03	; 3
+	{
+		return UDR3;
+	}
+	void UARTsend3( unsigned char data)
+	{
+		while(!(UCSR3A & (1<<UDRE3)));
+     f2a:	a0 e3       	ldi	r26, 0x30	; 48
+     f2c:	b1 e0       	ldi	r27, 0x01	; 1
+     f2e:	8c 91       	ld	r24, X
+     f30:	85 ff       	sbrs	r24, 5
+     f32:	fb cf       	rjmp	.-10     	; 0xf2a <main+0x53c>
+		UDR3 = data;
+     f34:	d6 01       	movw	r26, r12
+     f36:	9c 93       	st	X, r25
+	{
+		if (space)
+		{
+			UARTsend3((const char)*" ");
+		}
+		while(*StringPtr != 0)
+     f38:	91 91       	ld	r25, Z+
+     f3a:	91 11       	cpse	r25, r1
+     f3c:	f6 cf       	rjmp	.-20     	; 0xf2a <main+0x53c>
+	{
+		return UDR3;
+	}
+	void UARTsend3( unsigned char data)
+	{
+		while(!(UCSR3A & (1<<UDRE3)));
+     f3e:	e0 e3       	ldi	r30, 0x30	; 48
+     f40:	f1 e0       	ldi	r31, 0x01	; 1
+     f42:	80 81       	ld	r24, Z
+     f44:	85 ff       	sbrs	r24, 5
+     f46:	fb cf       	rjmp	.-10     	; 0xf3e <main+0x550>
+		UDR3 = data;
+     f48:	8d e0       	ldi	r24, 0x0D	; 13
+     f4a:	d6 01       	movw	r26, r12
+     f4c:	8c 93       	st	X, r24
+		_Str[i] = 0;
+		return _Str;
+	}
+	void UARTsend( unsigned char data)
+	{
+		while(!(UCSR0A & (1<<UDRE0)));
+     f4e:	f7 01       	movw	r30, r14
+     f50:	80 81       	ld	r24, Z
+     f52:	85 ff       	sbrs	r24, 5
+     f54:	fc cf       	rjmp	.-8      	; 0xf4e <main+0x560>
+		UDR0 = data;
+     f56:	80 e2       	ldi	r24, 0x20	; 32
+     f58:	d5 01       	movw	r26, r10
+     f5a:	8c 93       	st	X, r24
+     f5c:	ef ee       	ldi	r30, 0xEF	; 239
+     f5e:	f2 e0       	ldi	r31, 0x02	; 2
+     f60:	93 e5       	ldi	r25, 0x53	; 83
+		_Str[i] = 0;
+		return _Str;
+	}
+	void UARTsend( unsigned char data)
+	{
+		while(!(UCSR0A & (1<<UDRE0)));
+     f62:	d7 01       	movw	r26, r14
+     f64:	8c 91       	ld	r24, X
+     f66:	85 ff       	sbrs	r24, 5
+     f68:	fc cf       	rjmp	.-8      	; 0xf62 <main+0x574>
+		UDR0 = data;
+     f6a:	d5 01       	movw	r26, r10
+     f6c:	9c 93       	st	X, r25
+	{
+		if (space)
+		{
+			UARTsend((const char)*" ");
+		}
+		while(*StringPtr != 0)
+     f6e:	91 91       	ld	r25, Z+
+     f70:	91 11       	cpse	r25, r1
+     f72:	f7 cf       	rjmp	.-18     	; 0xf62 <main+0x574>
+		_Str[i] = 0;
+		return _Str;
+	}
+	void UARTsend( unsigned char data)
+	{
+		while(!(UCSR0A & (1<<UDRE0)));
+     f74:	f7 01       	movw	r30, r14
+     f76:	80 81       	ld	r24, Z
+     f78:	85 ff       	sbrs	r24, 5
+     f7a:	fc cf       	rjmp	.-8      	; 0xf74 <main+0x586>
+		UDR0 = data;
+     f7c:	80 e2       	ldi	r24, 0x20	; 32
+     f7e:	d5 01       	movw	r26, r10
+     f80:	8c 93       	st	X, r24
+     f82:	1b cf       	rjmp	.-458    	; 0xdba <main+0x3cc>
+				if (test.sendSMS("THIS is a test massage number 34 and counting",2))
+				{
+					check.UARTstring("SMS was sent");
+				}
+			}
+			else if(data == '^')
+     f84:	8e 35       	cpi	r24, 0x5E	; 94
+     f86:	09 f0       	breq	.+2      	; 0xf8a <main+0x59c>
+     f88:	dc c0       	rjmp	.+440    	; 0x1142 <main+0x754>
+			_flagRXC = false;
+		}
+	}
+	char *readSMS(){
+		int indexNum = 13, indexData = 0, indexOk = 0;
+		cli();
+     f8a:	f8 94       	cli
+		strcpy(_sendPacket,"AT+CMGR=");
+     f8c:	89 e0       	ldi	r24, 0x09	; 9
+     f8e:	eb e3       	ldi	r30, 0x3B	; 59
+     f90:	f3 e0       	ldi	r31, 0x03	; 3
+     f92:	a8 ef       	ldi	r26, 0xF8	; 248
+     f94:	b3 e0       	ldi	r27, 0x03	; 3
+     f96:	01 90       	ld	r0, Z+
+     f98:	0d 92       	st	X+, r0
+     f9a:	8a 95       	dec	r24
+     f9c:	e1 f7       	brne	.-8      	; 0xf96 <main+0x5a8>
+		_sendPacket[8]= _SMSindex > 9? _SMSindex/10+'0' : _SMSindex+'0';
+     f9e:	f1 01       	movw	r30, r2
+     fa0:	80 81       	ld	r24, Z
+     fa2:	91 81       	ldd	r25, Z+1	; 0x01
+     fa4:	8a 30       	cpi	r24, 0x0A	; 10
+     fa6:	91 05       	cpc	r25, r1
+     fa8:	44 f0       	brlt	.+16     	; 0xfba <main+0x5cc>
+     faa:	6a e0       	ldi	r22, 0x0A	; 10
+     fac:	70 e0       	ldi	r23, 0x00	; 0
+     fae:	d1 d1       	rcall	.+930    	; 0x1352 <__divmodhi4>
+     fb0:	60 5d       	subi	r22, 0xD0	; 208
+     fb2:	60 93 00 04 	sts	0x0400, r22	; 0x800400 <__data_end+0x8a>
+		_sendPacket[9]= _SMSindex > 9? _SMSindex%10+'0' : 0;
+     fb6:	80 5d       	subi	r24, 0xD0	; 208
+     fb8:	04 c0       	rjmp	.+8      	; 0xfc2 <main+0x5d4>
+	}
+	char *readSMS(){
+		int indexNum = 13, indexData = 0, indexOk = 0;
+		cli();
+		strcpy(_sendPacket,"AT+CMGR=");
+		_sendPacket[8]= _SMSindex > 9? _SMSindex/10+'0' : _SMSindex+'0';
+     fba:	80 5d       	subi	r24, 0xD0	; 208
+     fbc:	80 93 00 04 	sts	0x0400, r24	; 0x800400 <__data_end+0x8a>
+		_sendPacket[9]= _SMSindex > 9? _SMSindex%10+'0' : 0;
+     fc0:	80 e0       	ldi	r24, 0x00	; 0
+     fc2:	d2 01       	movw	r26, r4
+     fc4:	8c 93       	st	X, r24
+		_sendPacket[10] = 0;
+     fc6:	f3 01       	movw	r30, r6
+     fc8:	10 82       	st	Z, r1
+	{
+		if (space)
+		{
+			UARTsend3((const char)*" ");
+		}
+		while(*StringPtr != 0)
+     fca:	90 91 f8 03 	lds	r25, 0x03F8	; 0x8003f8 <__data_end+0x82>
+     fce:	99 23       	and	r25, r25
+     fd0:	61 f0       	breq	.+24     	; 0xfea <main+0x5fc>
+     fd2:	e9 ef       	ldi	r30, 0xF9	; 249
+     fd4:	f3 e0       	ldi	r31, 0x03	; 3
+	{
+		return UDR3;
+	}
+	void UARTsend3( unsigned char data)
+	{
+		while(!(UCSR3A & (1<<UDRE3)));
+     fd6:	a0 e3       	ldi	r26, 0x30	; 48
+     fd8:	b1 e0       	ldi	r27, 0x01	; 1
+     fda:	8c 91       	ld	r24, X
+     fdc:	85 ff       	sbrs	r24, 5
+     fde:	fb cf       	rjmp	.-10     	; 0xfd6 <main+0x5e8>
+		UDR3 = data;
+     fe0:	d6 01       	movw	r26, r12
+     fe2:	9c 93       	st	X, r25
+	{
+		if (space)
+		{
+			UARTsend3((const char)*" ");
+		}
+		while(*StringPtr != 0)
+     fe4:	91 91       	ld	r25, Z+
+     fe6:	91 11       	cpse	r25, r1
+     fe8:	f6 cf       	rjmp	.-20     	; 0xfd6 <main+0x5e8>
+	{
+		return UDR3;
+	}
+	void UARTsend3( unsigned char data)
+	{
+		while(!(UCSR3A & (1<<UDRE3)));
+     fea:	e0 e3       	ldi	r30, 0x30	; 48
+     fec:	f1 e0       	ldi	r31, 0x01	; 1
+     fee:	80 81       	ld	r24, Z
+     ff0:	85 ff       	sbrs	r24, 5
+     ff2:	fb cf       	rjmp	.-10     	; 0xfea <main+0x5fc>
+		UDR3 = data;
+     ff4:	8d e0       	ldi	r24, 0x0D	; 13
+     ff6:	d6 01       	movw	r26, r12
+     ff8:	8c 93       	st	X, r24
+     ffa:	ec ee       	ldi	r30, 0xEC	; 236
+     ffc:	f5 e0       	ldi	r31, 0x05	; 5
+     ffe:	40 e0       	ldi	r20, 0x00	; 0
+    1000:	50 e0       	ldi	r21, 0x00	; 0
+	}
+	unsigned char UARTreceive3(void)
+	{
+		while(!(UCSR3A & (1<<RXC3)));
+    1002:	a0 e3       	ldi	r26, 0x30	; 48
+    1004:	b1 e0       	ldi	r27, 0x01	; 1
+    1006:	8c 91       	ld	r24, X
+    1008:	88 23       	and	r24, r24
+    100a:	dc f7       	brge	.-10     	; 0x1002 <main+0x614>
+		return UDR3;
+    100c:	d6 01       	movw	r26, r12
+    100e:	8c 91       	ld	r24, X
+		int i = 0;
+		char data = 0;
+		do 
+		{
+			data = gsmSMS.UARTreceive3();
+			_recievedPack[i++] = data;
+    1010:	4f 5f       	subi	r20, 0xFF	; 255
+    1012:	5f 4f       	sbci	r21, 0xFF	; 255
+    1014:	81 93       	st	Z+, r24
+	}
+	char checkForData3()
+	{
+		for(int i = 0; i < 500; i++)
+		{
+			if ((UCSR3A & (1<<RXC3)))
+    1016:	a0 e3       	ldi	r26, 0x30	; 48
+    1018:	b1 e0       	ldi	r27, 0x01	; 1
+    101a:	8c 91       	ld	r24, X
+    101c:	88 23       	and	r24, r24
+    101e:	0c f0       	brlt	.+2      	; 0x1022 <main+0x634>
+    1020:	6b c1       	rjmp	.+726    	; 0x12f8 <main+0x90a>
+    1022:	ef cf       	rjmp	.-34     	; 0x1002 <main+0x614>
+    1024:	a0 e3       	ldi	r26, 0x30	; 48
+    1026:	b1 e0       	ldi	r27, 0x01	; 1
+    1028:	2c 91       	ld	r18, X
+    102a:	22 23       	and	r18, r18
+    102c:	54 f3       	brlt	.-44     	; 0x1002 <main+0x614>
+    102e:	a7 e5       	ldi	r26, 0x57	; 87
+    1030:	b2 e0       	ldi	r27, 0x02	; 2
+    1032:	11 97       	sbiw	r26, 0x01	; 1
+    1034:	f1 f7       	brne	.-4      	; 0x1032 <main+0x644>
+    1036:	00 c0       	rjmp	.+0      	; 0x1038 <main+0x64a>
+    1038:	00 00       	nop
+    103a:	01 97       	sbiw	r24, 0x01	; 1
+	{
+		return UDR0;
+	}
+	char checkForData3()
+	{
+		for(int i = 0; i < 500; i++)
+    103c:	99 f7       	brne	.-26     	; 0x1024 <main+0x636>
+    103e:	30 c1       	rjmp	.+608    	; 0x12a0 <main+0x8b2>
+    1040:	55 27       	eor	r21, r21
+		return 0;
+	}
+	bool compWordInArr(const char *arr,const char *word, char wordSize, char arrMaxSize) const
+	{
+		bool status = true;
+		for(int i = 0; i < arrMaxSize; i++)
+    1042:	14 16       	cp	r1, r20
+    1044:	15 06       	cpc	r1, r21
+    1046:	0c f0       	brlt	.+2      	; 0x104a <main+0x65c>
+    1048:	68 c0       	rjmp	.+208    	; 0x111a <main+0x72c>
+    104a:	31 e0       	ldi	r19, 0x01	; 1
+    104c:	80 e0       	ldi	r24, 0x00	; 0
+    104e:	90 e0       	ldi	r25, 0x00	; 0
+		{
+			if (arr[i] == *word)
+			{
+				for (int j = 0; j < wordSize; j++,i++)
+				{
+					if (!(arr[i] == word[j]))
+    1050:	60 e0       	ldi	r22, 0x00	; 0
+	bool compWordInArr(const char *arr,const char *word, char wordSize, char arrMaxSize) const
+	{
+		bool status = true;
+		for(int i = 0; i < arrMaxSize; i++)
+		{
+			if (arr[i] == *word)
+    1052:	fc 01       	movw	r30, r24
+    1054:	e4 51       	subi	r30, 0x14	; 20
+    1056:	fa 4f       	sbci	r31, 0xFA	; 250
+    1058:	20 81       	ld	r18, Z
+    105a:	2f 34       	cpi	r18, 0x4F	; 79
+    105c:	51 f4       	brne	.+20     	; 0x1072 <main+0x684>
+			{
+				for (int j = 0; j < wordSize; j++,i++)
+				{
+					if (!(arr[i] == word[j]))
+    105e:	fc 01       	movw	r30, r24
+    1060:	e3 51       	subi	r30, 0x13	; 19
+    1062:	fa 4f       	sbci	r31, 0xFA	; 250
+    1064:	20 81       	ld	r18, Z
+    1066:	2b 34       	cpi	r18, 0x4B	; 75
+    1068:	09 f0       	breq	.+2      	; 0x106c <main+0x67e>
+    106a:	68 c1       	rjmp	.+720    	; 0x133c <main+0x94e>
+    106c:	02 96       	adiw	r24, 0x02	; 2
+					{
+						status = false;
+					}
+				}
+				if (status)
+    106e:	31 11       	cpse	r19, r1
+    1070:	0c c0       	rjmp	.+24     	; 0x108a <main+0x69c>
+		return 0;
+	}
+	bool compWordInArr(const char *arr,const char *word, char wordSize, char arrMaxSize) const
+	{
+		bool status = true;
+		for(int i = 0; i < arrMaxSize; i++)
+    1072:	01 96       	adiw	r24, 0x01	; 1
+    1074:	84 17       	cp	r24, r20
+    1076:	95 07       	cpc	r25, r21
+    1078:	64 f3       	brlt	.-40     	; 0x1052 <main+0x664>
+    107a:	52 c0       	rjmp	.+164    	; 0x1120 <main+0x732>
+		cli();
+		strcpy(_sendPacket,"AT+CMGR=");
+		_sendPacket[8]= _SMSindex > 9? _SMSindex/10+'0' : _SMSindex+'0';
+		_sendPacket[9]= _SMSindex > 9? _SMSindex%10+'0' : 0;
+		_sendPacket[10] = 0;
+		if (sendCommand(_sendPacket,true))
+    107c:	45 2b       	or	r20, r21
+    107e:	41 f4       	brne	.+16     	; 0x1090 <main+0x6a2>
+			strcpy(_recievedPack+11,_recievedPack+indexData); //copy data
+			
+			sei();
+			return _recievedPack;
+		}
+		return 0;
+    1080:	e0 e0       	ldi	r30, 0x00	; 0
+    1082:	f0 e0       	ldi	r31, 0x00	; 0
+    1084:	4f c0       	rjmp	.+158    	; 0x1124 <main+0x736>
+		cli();
+		strcpy(_sendPacket,"AT+CMGR=");
+		_sendPacket[8]= _SMSindex > 9? _SMSindex/10+'0' : _SMSindex+'0';
+		_sendPacket[9]= _SMSindex > 9? _SMSindex%10+'0' : 0;
+		_sendPacket[10] = 0;
+		if (sendCommand(_sendPacket,true))
+    1086:	c8 01       	movw	r24, r16
+    1088:	05 c0       	rjmp	.+10     	; 0x1094 <main+0x6a6>
+					if (!(arr[i] == word[j]))
+					{
+						status = false;
+					}
+				}
+				if (status)
+    108a:	8d e0       	ldi	r24, 0x0D	; 13
+    108c:	90 e0       	ldi	r25, 0x00	; 0
+    108e:	02 c0       	rjmp	.+4      	; 0x1094 <main+0x6a6>
+		cli();
+		strcpy(_sendPacket,"AT+CMGR=");
+		_sendPacket[8]= _SMSindex > 9? _SMSindex/10+'0' : _SMSindex+'0';
+		_sendPacket[9]= _SMSindex > 9? _SMSindex%10+'0' : 0;
+		_sendPacket[10] = 0;
+		if (sendCommand(_sendPacket,true))
+    1090:	8d e0       	ldi	r24, 0x0D	; 13
+    1092:	90 e0       	ldi	r25, 0x00	; 0
+		{
+			//get phone index number
+			while(!(_recievedPack[++indexNum] == '"' && _recievedPack[++indexNum] == '+'));
+    1094:	8c 01       	movw	r16, r24
+    1096:	0f 5f       	subi	r16, 0xFF	; 255
+    1098:	1f 4f       	sbci	r17, 0xFF	; 255
+    109a:	f8 01       	movw	r30, r16
+    109c:	e4 51       	subi	r30, 0x14	; 20
+    109e:	fa 4f       	sbci	r31, 0xFA	; 250
+    10a0:	20 81       	ld	r18, Z
+    10a2:	22 32       	cpi	r18, 0x22	; 34
+    10a4:	81 f7       	brne	.-32     	; 0x1086 <main+0x698>
+    10a6:	0f 5f       	subi	r16, 0xFF	; 255
+    10a8:	1f 4f       	sbci	r17, 0xFF	; 255
+    10aa:	f8 01       	movw	r30, r16
+    10ac:	e4 51       	subi	r30, 0x14	; 20
+    10ae:	fa 4f       	sbci	r31, 0xFA	; 250
+    10b0:	20 81       	ld	r18, Z
+    10b2:	2b 32       	cpi	r18, 0x2B	; 43
+    10b4:	41 f7       	brne	.-48     	; 0x1086 <main+0x698>
+    10b6:	98 01       	movw	r18, r16
+    10b8:	f8 01       	movw	r30, r16
+    10ba:	e4 51       	subi	r30, 0x14	; 20
+    10bc:	fa 4f       	sbci	r31, 0xFA	; 250
+			indexData = indexNum;	//data mast be after number
+			
+			//get data, index number.
+			while(_recievedPack[indexData++] != '\n');
+    10be:	0f 5f       	subi	r16, 0xFF	; 255
+    10c0:	1f 4f       	sbci	r17, 0xFF	; 255
+    10c2:	41 91       	ld	r20, Z+
+    10c4:	4a 30       	cpi	r20, 0x0A	; 10
+    10c6:	d9 f7       	brne	.-10     	; 0x10be <main+0x6d0>
+    10c8:	1a 83       	std	Y+2, r17	; 0x02
+    10ca:	09 83       	std	Y+1, r16	; 0x01
+    10cc:	f8 01       	movw	r30, r16
+    10ce:	e4 51       	subi	r30, 0x14	; 20
+    10d0:	fa 4f       	sbci	r31, 0xFA	; 250
+			indexOk = indexData;	//OK must be after data
+			
+			//get end of data index number (it will get down a line and send OK)
+			while(_recievedPack[indexOk++] != '\n');
+    10d2:	0f 5f       	subi	r16, 0xFF	; 255
+    10d4:	1f 4f       	sbci	r17, 0xFF	; 255
+    10d6:	41 91       	ld	r20, Z+
+    10d8:	4a 30       	cpi	r20, 0x0A	; 10
+    10da:	d9 f7       	brne	.-10     	; 0x10d2 <main+0x6e4>
+			_recievedPack[indexNum+13] = 0;		//set end of string for strcpy()
+    10dc:	fc 01       	movw	r30, r24
+    10de:	e5 50       	subi	r30, 0x05	; 5
+    10e0:	fa 4f       	sbci	r31, 0xFA	; 250
+    10e2:	10 82       	st	Z, r1
+			
+			//copy the phone number
+			strcpy(_recievedPack,_recievedPack+indexNum+3);
+    10e4:	b9 01       	movw	r22, r18
+    10e6:	61 51       	subi	r22, 0x11	; 17
+    10e8:	7a 4f       	sbci	r23, 0xFA	; 250
+    10ea:	8c ee       	ldi	r24, 0xEC	; 236
+    10ec:	95 e0       	ldi	r25, 0x05	; 5
+    10ee:	60 d1       	rcall	.+704    	; 0x13b0 <strcpy>
+			
+			//set phone start number, always 0
+			_recievedPack[0] = '0';
+    10f0:	80 e3       	ldi	r24, 0x30	; 48
+    10f2:	80 93 ec 05 	sts	0x05EC, r24	; 0x8005ec <__data_end+0x276>
+			
+			_recievedPack[10] = '\n';	//get down a line and put data received
+    10f6:	8a e0       	ldi	r24, 0x0A	; 10
+    10f8:	80 93 f6 05 	sts	0x05F6, r24	; 0x8005f6 <__data_end+0x280>
+			
+			_recievedPack[indexOk] = 0;	//put end of string after the end of data
+    10fc:	f8 01       	movw	r30, r16
+    10fe:	e4 51       	subi	r30, 0x14	; 20
+    1100:	fa 4f       	sbci	r31, 0xFA	; 250
+    1102:	10 82       	st	Z, r1
+			strcpy(_recievedPack+11,_recievedPack+indexData); //copy data
+    1104:	69 81       	ldd	r22, Y+1	; 0x01
+    1106:	7a 81       	ldd	r23, Y+2	; 0x02
+    1108:	64 51       	subi	r22, 0x14	; 20
+    110a:	7a 4f       	sbci	r23, 0xFA	; 250
+    110c:	87 ef       	ldi	r24, 0xF7	; 247
+    110e:	95 e0       	ldi	r25, 0x05	; 5
+    1110:	4f d1       	rcall	.+670    	; 0x13b0 <strcpy>
+			
+			sei();
+    1112:	78 94       	sei
+			return _recievedPack;
+    1114:	ec ee       	ldi	r30, 0xEC	; 236
+    1116:	f5 e0       	ldi	r31, 0x05	; 5
+    1118:	05 c0       	rjmp	.+10     	; 0x1124 <main+0x736>
+		}
+		return 0;
+    111a:	e0 e0       	ldi	r30, 0x00	; 0
+    111c:	f0 e0       	ldi	r31, 0x00	; 0
+    111e:	02 c0       	rjmp	.+4      	; 0x1124 <main+0x736>
+    1120:	e0 e0       	ldi	r30, 0x00	; 0
+    1122:	f0 e0       	ldi	r31, 0x00	; 0
+	{
+		if (space)
+		{
+			UARTsend((const char)*" ");
+		}
+		while(*StringPtr != 0)
+    1124:	90 81       	ld	r25, Z
+    1126:	99 23       	and	r25, r25
+    1128:	09 f4       	brne	.+2      	; 0x112c <main+0x73e>
+    112a:	47 ce       	rjmp	.-882    	; 0xdba <main+0x3cc>
+    112c:	31 96       	adiw	r30, 0x01	; 1
+		_Str[i] = 0;
+		return _Str;
+	}
+	void UARTsend( unsigned char data)
+	{
+		while(!(UCSR0A & (1<<UDRE0)));
+    112e:	d7 01       	movw	r26, r14
+    1130:	8c 91       	ld	r24, X
+    1132:	85 ff       	sbrs	r24, 5
+    1134:	fc cf       	rjmp	.-8      	; 0x112e <main+0x740>
+		UDR0 = data;
+    1136:	d5 01       	movw	r26, r10
+    1138:	9c 93       	st	X, r25
+	{
+		if (space)
+		{
+			UARTsend((const char)*" ");
+		}
+		while(*StringPtr != 0)
+    113a:	91 91       	ld	r25, Z+
+    113c:	91 11       	cpse	r25, r1
+    113e:	f7 cf       	rjmp	.-18     	; 0x112e <main+0x740>
+    1140:	3c ce       	rjmp	.-904    	; 0xdba <main+0x3cc>
+			}
+			else if(data == '^')
+			{
+				check.UARTstring(test.readSMS(),0);
+			}
+			if(data == '%')
+    1142:	85 32       	cpi	r24, 0x25	; 37
+    1144:	09 f0       	breq	.+2      	; 0x1148 <main+0x75a>
+    1146:	39 ce       	rjmp	.-910    	; 0xdba <main+0x3cc>
+		return 0;
+	}
+	bool deleteSMS(char SMSindex = 1){
+		if (SMSindex < 10)
+		{
+			strcpy(_sendPacket,"AT+CMGD= ");
+    1148:	8a e0       	ldi	r24, 0x0A	; 10
+    114a:	ec e2       	ldi	r30, 0x2C	; 44
+    114c:	f2 e0       	ldi	r31, 0x02	; 2
+    114e:	a8 ef       	ldi	r26, 0xF8	; 248
+    1150:	b3 e0       	ldi	r27, 0x03	; 3
+    1152:	01 90       	ld	r0, Z+
+    1154:	0d 92       	st	X+, r0
+    1156:	8a 95       	dec	r24
+    1158:	e1 f7       	brne	.-8      	; 0x1152 <main+0x764>
+			_sendPacket[8] = SMSindex+'0';
+    115a:	81 e3       	ldi	r24, 0x31	; 49
+    115c:	80 93 00 04 	sts	0x0400, r24	; 0x800400 <__data_end+0x8a>
+	{
+		if (space)
+		{
+			UARTsend3((const char)*" ");
+		}
+		while(*StringPtr != 0)
+    1160:	90 91 f8 03 	lds	r25, 0x03F8	; 0x8003f8 <__data_end+0x82>
+    1164:	99 23       	and	r25, r25
+    1166:	61 f0       	breq	.+24     	; 0x1180 <main+0x792>
+    1168:	e9 ef       	ldi	r30, 0xF9	; 249
+    116a:	f3 e0       	ldi	r31, 0x03	; 3
+	{
+		return UDR3;
+	}
+	void UARTsend3( unsigned char data)
+	{
+		while(!(UCSR3A & (1<<UDRE3)));
+    116c:	a0 e3       	ldi	r26, 0x30	; 48
+    116e:	b1 e0       	ldi	r27, 0x01	; 1
+    1170:	8c 91       	ld	r24, X
+    1172:	85 ff       	sbrs	r24, 5
+    1174:	fb cf       	rjmp	.-10     	; 0x116c <main+0x77e>
+		UDR3 = data;
+    1176:	d6 01       	movw	r26, r12
+    1178:	9c 93       	st	X, r25
+	{
+		if (space)
+		{
+			UARTsend3((const char)*" ");
+		}
+		while(*StringPtr != 0)
+    117a:	91 91       	ld	r25, Z+
+    117c:	91 11       	cpse	r25, r1
+    117e:	f6 cf       	rjmp	.-20     	; 0x116c <main+0x77e>
+	{
+		return UDR3;
+	}
+	void UARTsend3( unsigned char data)
+	{
+		while(!(UCSR3A & (1<<UDRE3)));
+    1180:	e0 e3       	ldi	r30, 0x30	; 48
+    1182:	f1 e0       	ldi	r31, 0x01	; 1
+    1184:	80 81       	ld	r24, Z
+    1186:	85 ff       	sbrs	r24, 5
+    1188:	fb cf       	rjmp	.-10     	; 0x1180 <main+0x792>
+		UDR3 = data;
+    118a:	8d e0       	ldi	r24, 0x0D	; 13
+    118c:	d6 01       	movw	r26, r12
+    118e:	8c 93       	st	X, r24
+    1190:	ec ee       	ldi	r30, 0xEC	; 236
+    1192:	f5 e0       	ldi	r31, 0x05	; 5
+    1194:	40 e0       	ldi	r20, 0x00	; 0
+    1196:	50 e0       	ldi	r21, 0x00	; 0
+	}
+	unsigned char UARTreceive3(void)
+	{
+		while(!(UCSR3A & (1<<RXC3)));
+    1198:	a0 e3       	ldi	r26, 0x30	; 48
+    119a:	b1 e0       	ldi	r27, 0x01	; 1
+    119c:	8c 91       	ld	r24, X
+    119e:	88 23       	and	r24, r24
+    11a0:	dc f7       	brge	.-10     	; 0x1198 <main+0x7aa>
+		return UDR3;
+    11a2:	d6 01       	movw	r26, r12
+    11a4:	8c 91       	ld	r24, X
+		int i = 0;
+		char data = 0;
+		do 
+		{
+			data = gsmSMS.UARTreceive3();
+			_recievedPack[i++] = data;
+    11a6:	4f 5f       	subi	r20, 0xFF	; 255
+    11a8:	5f 4f       	sbci	r21, 0xFF	; 255
+    11aa:	81 93       	st	Z+, r24
+	}
+	char checkForData3()
+	{
+		for(int i = 0; i < 500; i++)
+		{
+			if ((UCSR3A & (1<<RXC3)))
+    11ac:	a0 e3       	ldi	r26, 0x30	; 48
+    11ae:	b1 e0       	ldi	r27, 0x01	; 1
+    11b0:	8c 91       	ld	r24, X
+    11b2:	88 23       	and	r24, r24
+    11b4:	0c f0       	brlt	.+2      	; 0x11b8 <main+0x7ca>
+    11b6:	8e c0       	rjmp	.+284    	; 0x12d4 <main+0x8e6>
+    11b8:	ef cf       	rjmp	.-34     	; 0x1198 <main+0x7aa>
+    11ba:	a0 e3       	ldi	r26, 0x30	; 48
+    11bc:	b1 e0       	ldi	r27, 0x01	; 1
+    11be:	2c 91       	ld	r18, X
+    11c0:	22 23       	and	r18, r18
+    11c2:	54 f3       	brlt	.-44     	; 0x1198 <main+0x7aa>
+    11c4:	a7 e5       	ldi	r26, 0x57	; 87
+    11c6:	b2 e0       	ldi	r27, 0x02	; 2
+    11c8:	11 97       	sbiw	r26, 0x01	; 1
+    11ca:	f1 f7       	brne	.-4      	; 0x11c8 <main+0x7da>
+    11cc:	00 c0       	rjmp	.+0      	; 0x11ce <main+0x7e0>
+    11ce:	00 00       	nop
+    11d0:	01 97       	sbiw	r24, 0x01	; 1
+	{
+		return UDR0;
+	}
+	char checkForData3()
+	{
+		for(int i = 0; i < 500; i++)
+    11d2:	99 f7       	brne	.-26     	; 0x11ba <main+0x7cc>
+    11d4:	72 c0       	rjmp	.+228    	; 0x12ba <main+0x8cc>
+    11d6:	55 27       	eor	r21, r21
+		return 0;
+	}
+	bool compWordInArr(const char *arr,const char *word, char wordSize, char arrMaxSize) const
+	{
+		bool status = true;
+		for(int i = 0; i < arrMaxSize; i++)
+    11d8:	14 16       	cp	r1, r20
+    11da:	15 06       	cpc	r1, r21
+    11dc:	0c f0       	brlt	.+2      	; 0x11e0 <main+0x7f2>
+    11de:	db cd       	rjmp	.-1098   	; 0xd96 <main+0x3a8>
+    11e0:	31 e0       	ldi	r19, 0x01	; 1
+    11e2:	80 e0       	ldi	r24, 0x00	; 0
+    11e4:	90 e0       	ldi	r25, 0x00	; 0
+		{
+			if (arr[i] == *word)
+			{
+				for (int j = 0; j < wordSize; j++,i++)
+				{
+					if (!(arr[i] == word[j]))
+    11e6:	60 e0       	ldi	r22, 0x00	; 0
+	bool compWordInArr(const char *arr,const char *word, char wordSize, char arrMaxSize) const
+	{
+		bool status = true;
+		for(int i = 0; i < arrMaxSize; i++)
+		{
+			if (arr[i] == *word)
+    11e8:	fc 01       	movw	r30, r24
+    11ea:	e4 51       	subi	r30, 0x14	; 20
+    11ec:	fa 4f       	sbci	r31, 0xFA	; 250
+    11ee:	20 81       	ld	r18, Z
+    11f0:	2f 34       	cpi	r18, 0x4F	; 79
+    11f2:	51 f4       	brne	.+20     	; 0x1208 <main+0x81a>
+			{
+				for (int j = 0; j < wordSize; j++,i++)
+				{
+					if (!(arr[i] == word[j]))
+    11f4:	fc 01       	movw	r30, r24
+    11f6:	e3 51       	subi	r30, 0x13	; 19
+    11f8:	fa 4f       	sbci	r31, 0xFA	; 250
+    11fa:	20 81       	ld	r18, Z
+    11fc:	2b 34       	cpi	r18, 0x4B	; 75
+    11fe:	09 f0       	breq	.+2      	; 0x1202 <main+0x814>
+    1200:	a0 c0       	rjmp	.+320    	; 0x1342 <main+0x954>
+    1202:	02 96       	adiw	r24, 0x02	; 2
+					{
+						status = false;
+					}
+				}
+				if (status)
+    1204:	31 11       	cpse	r19, r1
+    1206:	0a c0       	rjmp	.+20     	; 0x121c <main+0x82e>
+		return 0;
+	}
+	bool compWordInArr(const char *arr,const char *word, char wordSize, char arrMaxSize) const
+	{
+		bool status = true;
+		for(int i = 0; i < arrMaxSize; i++)
+    1208:	01 96       	adiw	r24, 0x01	; 1
+    120a:	84 17       	cp	r24, r20
+    120c:	95 07       	cpc	r25, r21
+    120e:	64 f3       	brlt	.-40     	; 0x11e8 <main+0x7fa>
+    1210:	c2 cd       	rjmp	.-1148   	; 0xd96 <main+0x3a8>
+		gsmSMS.UARTstring3(_sendPacket,0);
+		gsmSMS.UARTsend3(13);
+		if (state)
+		{
+			condition = checkForACkPacket();
+			return (condition > 0) ? compWordInArr(_recievedPack,"OK",2,condition): condition;
+    1212:	81 e0       	ldi	r24, 0x01	; 1
+    1214:	45 2b       	or	r20, r21
+    1216:	19 f4       	brne	.+6      	; 0x121e <main+0x830>
+    1218:	80 e0       	ldi	r24, 0x00	; 0
+    121a:	01 c0       	rjmp	.+2      	; 0x121e <main+0x830>
+					if (!(arr[i] == word[j]))
+					{
+						status = false;
+					}
+				}
+				if (status)
+    121c:	81 e0       	ldi	r24, 0x01	; 1
+			{
+				check.UARTstring(test.readSMS(),0);
+			}
+			if(data == '%')
+			{
+				if (test.deleteSMS(1))
+    121e:	88 23       	and	r24, r24
+    1220:	09 f4       	brne	.+2      	; 0x1224 <main+0x836>
+    1222:	b9 cd       	rjmp	.-1166   	; 0xd96 <main+0x3a8>
+		_Str[i] = 0;
+		return _Str;
+	}
+	void UARTsend( unsigned char data)
+	{
+		while(!(UCSR0A & (1<<UDRE0)));
+    1224:	f7 01       	movw	r30, r14
+    1226:	80 81       	ld	r24, Z
+    1228:	85 ff       	sbrs	r24, 5
+    122a:	fc cf       	rjmp	.-8      	; 0x1224 <main+0x836>
+		UDR0 = data;
+    122c:	80 e2       	ldi	r24, 0x20	; 32
+    122e:	80 93 c6 00 	sts	0x00C6, r24	; 0x8000c6 <__TEXT_REGION_LENGTH__+0x7000c6>
+    1232:	e5 e4       	ldi	r30, 0x45	; 69
+    1234:	f3 e0       	ldi	r31, 0x03	; 3
+    1236:	83 e5       	ldi	r24, 0x53	; 83
+    1238:	26 ec       	ldi	r18, 0xC6	; 198
+    123a:	30 e0       	ldi	r19, 0x00	; 0
+		_Str[i] = 0;
+		return _Str;
+	}
+	void UARTsend( unsigned char data)
+	{
+		while(!(UCSR0A & (1<<UDRE0)));
+    123c:	d7 01       	movw	r26, r14
+    123e:	9c 91       	ld	r25, X
+    1240:	95 ff       	sbrs	r25, 5
+    1242:	fc cf       	rjmp	.-8      	; 0x123c <main+0x84e>
+		UDR0 = data;
+    1244:	d9 01       	movw	r26, r18
+    1246:	8c 93       	st	X, r24
+	{
+		if (space)
+		{
+			UARTsend((const char)*" ");
+		}
+		while(*StringPtr != 0)
+    1248:	81 91       	ld	r24, Z+
+    124a:	81 11       	cpse	r24, r1
+    124c:	f7 cf       	rjmp	.-18     	; 0x123c <main+0x84e>
+		_Str[i] = 0;
+		return _Str;
+	}
+	void UARTsend( unsigned char data)
+	{
+		while(!(UCSR0A & (1<<UDRE0)));
+    124e:	f7 01       	movw	r30, r14
+    1250:	80 81       	ld	r24, Z
+    1252:	85 ff       	sbrs	r24, 5
+    1254:	fc cf       	rjmp	.-8      	; 0x124e <main+0x860>
+		UDR0 = data;
+    1256:	80 e2       	ldi	r24, 0x20	; 32
+    1258:	80 93 c6 00 	sts	0x00C6, r24	; 0x8000c6 <__TEXT_REGION_LENGTH__+0x7000c6>
+    125c:	97 cd       	rjmp	.-1234   	; 0xd8c <main+0x39e>
+		{
+			data = gsmSMS.UARTreceive3();
+			_recievedPack[i++] = data;
+		}while(gsmSMS.checkForData3());
+		
+		_recievedPack[i] = 0;
+    125e:	fa 01       	movw	r30, r20
+    1260:	e4 51       	subi	r30, 0x14	; 20
+    1262:	fa 4f       	sbci	r31, 0xFA	; 250
+    1264:	10 82       	st	Z, r1
+		return i > 0 ? i: 0;
+    1266:	ca 01       	movw	r24, r20
+    1268:	99 23       	and	r25, r25
+    126a:	14 f4       	brge	.+4      	; 0x1270 <main+0x882>
+    126c:	80 e0       	ldi	r24, 0x00	; 0
+    126e:	90 e0       	ldi	r25, 0x00	; 0
+		gsmSMS.UARTstring3(_sendPacket,0);
+		gsmSMS.UARTsend3(13);
+		if (state)
+		{
+			condition = checkForACkPacket();
+			return (condition > 0) ? compWordInArr(_recievedPack,"OK",2,condition): condition;
+    1270:	18 16       	cp	r1, r24
+    1272:	19 06       	cpc	r1, r25
+    1274:	0c f4       	brge	.+2      	; 0x1278 <main+0x88a>
+    1276:	e6 cc       	rjmp	.-1588   	; 0xc44 <main+0x256>
+    1278:	03 cd       	rjmp	.-1530   	; 0xc80 <main+0x292>
+		}
+		return 0;
+	}
+	char getData()
+	{
+		return UDR0;
+    127a:	d5 01       	movw	r26, r10
+    127c:	8c 91       	ld	r24, X
+				{
+					arr[i++] = data;
+				}
+			}
+			
+			if (data == '&')
+    127e:	86 32       	cpi	r24, 0x26	; 38
+    1280:	09 f0       	breq	.+2      	; 0x1284 <main+0x896>
+    1282:	80 ce       	rjmp	.-768    	; 0xf84 <main+0x596>
+    1284:	ae cd       	rjmp	.-1188   	; 0xde2 <main+0x3f4>
+		{
+			data = gsmSMS.UARTreceive3();
+			_recievedPack[i++] = data;
+		}while(gsmSMS.checkForData3());
+		
+		_recievedPack[i] = 0;
+    1286:	fa 01       	movw	r30, r20
+    1288:	e4 51       	subi	r30, 0x14	; 20
+    128a:	fa 4f       	sbci	r31, 0xFA	; 250
+    128c:	10 82       	st	Z, r1
+		return i > 0 ? i: 0;
+    128e:	55 23       	and	r21, r21
+    1290:	14 f4       	brge	.+4      	; 0x1296 <main+0x8a8>
+    1292:	40 e0       	ldi	r20, 0x00	; 0
+    1294:	50 e0       	ldi	r21, 0x00	; 0
+		gsmSMS.UARTstring3(_sendPacket,0);
+		gsmSMS.UARTsend3(13);
+		if (state)
+		{
+			condition = checkForACkPacket();
+			return (condition > 0) ? compWordInArr(_recievedPack,"OK",2,condition): condition;
+    1296:	14 16       	cp	r1, r20
+    1298:	15 06       	cpc	r1, r21
+    129a:	0c f4       	brge	.+2      	; 0x129e <main+0x8b0>
+    129c:	fb cd       	rjmp	.-1034   	; 0xe94 <main+0x4a6>
+    129e:	16 ce       	rjmp	.-980    	; 0xecc <main+0x4de>
+		{
+			data = gsmSMS.UARTreceive3();
+			_recievedPack[i++] = data;
+		}while(gsmSMS.checkForData3());
+		
+		_recievedPack[i] = 0;
+    12a0:	fa 01       	movw	r30, r20
+    12a2:	e4 51       	subi	r30, 0x14	; 20
+    12a4:	fa 4f       	sbci	r31, 0xFA	; 250
+    12a6:	10 82       	st	Z, r1
+		return i > 0 ? i: 0;
+    12a8:	55 23       	and	r21, r21
+    12aa:	14 f4       	brge	.+4      	; 0x12b0 <main+0x8c2>
+    12ac:	40 e0       	ldi	r20, 0x00	; 0
+    12ae:	50 e0       	ldi	r21, 0x00	; 0
+		gsmSMS.UARTstring3(_sendPacket,0);
+		gsmSMS.UARTsend3(13);
+		if (state)
+		{
+			condition = checkForACkPacket();
+			return (condition > 0) ? compWordInArr(_recievedPack,"OK",2,condition): condition;
+    12b0:	14 16       	cp	r1, r20
+    12b2:	15 06       	cpc	r1, r21
+    12b4:	0c f4       	brge	.+2      	; 0x12b8 <main+0x8ca>
+    12b6:	c4 ce       	rjmp	.-632    	; 0x1040 <main+0x652>
+    12b8:	e1 ce       	rjmp	.-574    	; 0x107c <main+0x68e>
+		{
+			data = gsmSMS.UARTreceive3();
+			_recievedPack[i++] = data;
+		}while(gsmSMS.checkForData3());
+		
+		_recievedPack[i] = 0;
+    12ba:	fa 01       	movw	r30, r20
+    12bc:	e4 51       	subi	r30, 0x14	; 20
+    12be:	fa 4f       	sbci	r31, 0xFA	; 250
+    12c0:	10 82       	st	Z, r1
+		return i > 0 ? i: 0;
+    12c2:	55 23       	and	r21, r21
+    12c4:	14 f4       	brge	.+4      	; 0x12ca <main+0x8dc>
+    12c6:	40 e0       	ldi	r20, 0x00	; 0
+    12c8:	50 e0       	ldi	r21, 0x00	; 0
+		gsmSMS.UARTstring3(_sendPacket,0);
+		gsmSMS.UARTsend3(13);
+		if (state)
+		{
+			condition = checkForACkPacket();
+			return (condition > 0) ? compWordInArr(_recievedPack,"OK",2,condition): condition;
+    12ca:	14 16       	cp	r1, r20
+    12cc:	15 06       	cpc	r1, r21
+    12ce:	0c f4       	brge	.+2      	; 0x12d2 <main+0x8e4>
+    12d0:	82 cf       	rjmp	.-252    	; 0x11d6 <main+0x7e8>
+    12d2:	9f cf       	rjmp	.-194    	; 0x1212 <main+0x824>
+    12d4:	87 e5       	ldi	r24, 0x57	; 87
+    12d6:	92 e0       	ldi	r25, 0x02	; 2
+    12d8:	01 97       	sbiw	r24, 0x01	; 1
+    12da:	f1 f7       	brne	.-4      	; 0x12d8 <main+0x8ea>
+    12dc:	00 c0       	rjmp	.+0      	; 0x12de <main+0x8f0>
+    12de:	00 00       	nop
+    12e0:	83 ef       	ldi	r24, 0xF3	; 243
+    12e2:	91 e0       	ldi	r25, 0x01	; 1
+    12e4:	6a cf       	rjmp	.-300    	; 0x11ba <main+0x7cc>
+    12e6:	a7 e5       	ldi	r26, 0x57	; 87
+    12e8:	b2 e0       	ldi	r27, 0x02	; 2
+    12ea:	11 97       	sbiw	r26, 0x01	; 1
+    12ec:	f1 f7       	brne	.-4      	; 0x12ea <main+0x8fc>
+    12ee:	00 c0       	rjmp	.+0      	; 0x12f0 <main+0x902>
+    12f0:	00 00       	nop
+    12f2:	83 ef       	ldi	r24, 0xF3	; 243
+    12f4:	91 e0       	ldi	r25, 0x01	; 1
+    12f6:	c0 cd       	rjmp	.-1152   	; 0xe78 <main+0x48a>
+    12f8:	87 e5       	ldi	r24, 0x57	; 87
+    12fa:	92 e0       	ldi	r25, 0x02	; 2
+    12fc:	01 97       	sbiw	r24, 0x01	; 1
+    12fe:	f1 f7       	brne	.-4      	; 0x12fc <main+0x90e>
+    1300:	00 c0       	rjmp	.+0      	; 0x1302 <main+0x914>
+    1302:	00 00       	nop
+    1304:	83 ef       	ldi	r24, 0xF3	; 243
+    1306:	91 e0       	ldi	r25, 0x01	; 1
+    1308:	8d ce       	rjmp	.-742    	; 0x1024 <main+0x636>
+    130a:	a7 e5       	ldi	r26, 0x57	; 87
+    130c:	b2 e0       	ldi	r27, 0x02	; 2
+    130e:	11 97       	sbiw	r26, 0x01	; 1
+    1310:	f1 f7       	brne	.-4      	; 0x130e <main+0x920>
+    1312:	00 c0       	rjmp	.+0      	; 0x1314 <main+0x926>
+    1314:	00 00       	nop
+    1316:	83 ef       	ldi	r24, 0xF3	; 243
+    1318:	91 e0       	ldi	r25, 0x01	; 1
+    131a:	55 cd       	rjmp	.-1366   	; 0xdc6 <main+0x3d8>
+    131c:	87 e5       	ldi	r24, 0x57	; 87
+    131e:	92 e0       	ldi	r25, 0x02	; 2
+    1320:	01 97       	sbiw	r24, 0x01	; 1
+    1322:	f1 f7       	brne	.-4      	; 0x1320 <main+0x932>
+    1324:	00 c0       	rjmp	.+0      	; 0x1326 <main+0x938>
+    1326:	00 00       	nop
+    1328:	83 ef       	ldi	r24, 0xF3	; 243
+    132a:	91 e0       	ldi	r25, 0x01	; 1
+    132c:	7d cc       	rjmp	.-1798   	; 0xc28 <main+0x23a>
+    132e:	2e 5f       	subi	r18, 0xFE	; 254
+    1330:	3f 4f       	sbci	r19, 0xFF	; 255
+		{
+			if (arr[i] == *word)
+			{
+				for (int j = 0; j < wordSize; j++,i++)
+				{
+					if (!(arr[i] == word[j]))
+    1332:	45 2f       	mov	r20, r21
+    1334:	a0 cc       	rjmp	.-1728   	; 0xc76 <main+0x288>
+    1336:	02 96       	adiw	r24, 0x02	; 2
+    1338:	36 2f       	mov	r19, r22
+    133a:	c4 cd       	rjmp	.-1144   	; 0xec4 <main+0x4d6>
+    133c:	02 96       	adiw	r24, 0x02	; 2
+    133e:	36 2f       	mov	r19, r22
+    1340:	98 ce       	rjmp	.-720    	; 0x1072 <main+0x684>
+    1342:	02 96       	adiw	r24, 0x02	; 2
+    1344:	36 2f       	mov	r19, r22
+    1346:	60 cf       	rjmp	.-320    	; 0x1208 <main+0x81a>
+
+00001348 <_GLOBAL__sub_I_test>:
+	bool hangUpCall(){
+		return sendCommand("ATH");
+	}
+};
+
+SMS test;
+    1348:	86 e7       	ldi	r24, 0x76	; 118
+    134a:	93 e0       	ldi	r25, 0x03	; 3
+    134c:	0c 94 a4 00 	jmp	0x148	; 0x148 <_ZN3SMSC1Ev>
+    1350:	08 95       	ret
+
+00001352 <__divmodhi4>:
+    1352:	97 fb       	bst	r25, 7
+    1354:	07 2e       	mov	r0, r23
+    1356:	16 f4       	brtc	.+4      	; 0x135c <__divmodhi4+0xa>
+    1358:	00 94       	com	r0
+    135a:	06 d0       	rcall	.+12     	; 0x1368 <__divmodhi4_neg1>
+    135c:	77 fd       	sbrc	r23, 7
+    135e:	08 d0       	rcall	.+16     	; 0x1370 <__divmodhi4_neg2>
+    1360:	0b d0       	rcall	.+22     	; 0x1378 <__udivmodhi4>
+    1362:	07 fc       	sbrc	r0, 7
+    1364:	05 d0       	rcall	.+10     	; 0x1370 <__divmodhi4_neg2>
+    1366:	3e f4       	brtc	.+14     	; 0x1376 <__divmodhi4_exit>
+
+00001368 <__divmodhi4_neg1>:
+    1368:	90 95       	com	r25
+    136a:	81 95       	neg	r24
+    136c:	9f 4f       	sbci	r25, 0xFF	; 255
+    136e:	08 95       	ret
+
+00001370 <__divmodhi4_neg2>:
+    1370:	70 95       	com	r23
+    1372:	61 95       	neg	r22
+    1374:	7f 4f       	sbci	r23, 0xFF	; 255
+
+00001376 <__divmodhi4_exit>:
+    1376:	08 95       	ret
+
+00001378 <__udivmodhi4>:
+    1378:	aa 1b       	sub	r26, r26
+    137a:	bb 1b       	sub	r27, r27
+    137c:	51 e1       	ldi	r21, 0x11	; 17
+    137e:	07 c0       	rjmp	.+14     	; 0x138e <__udivmodhi4_ep>
+
+00001380 <__udivmodhi4_loop>:
+    1380:	aa 1f       	adc	r26, r26
+    1382:	bb 1f       	adc	r27, r27
+    1384:	a6 17       	cp	r26, r22
+    1386:	b7 07       	cpc	r27, r23
+    1388:	10 f0       	brcs	.+4      	; 0x138e <__udivmodhi4_ep>
+    138a:	a6 1b       	sub	r26, r22
+    138c:	b7 0b       	sbc	r27, r23
+
+0000138e <__udivmodhi4_ep>:
+    138e:	88 1f       	adc	r24, r24
+    1390:	99 1f       	adc	r25, r25
+    1392:	5a 95       	dec	r21
+    1394:	a9 f7       	brne	.-22     	; 0x1380 <__udivmodhi4_loop>
+    1396:	80 95       	com	r24
+    1398:	90 95       	com	r25
+    139a:	bc 01       	movw	r22, r24
+    139c:	cd 01       	movw	r24, r26
+    139e:	08 95       	ret
+
+000013a0 <__tablejump2__>:
+    13a0:	ee 0f       	add	r30, r30
+    13a2:	ff 1f       	adc	r31, r31
+    13a4:	88 1f       	adc	r24, r24
+    13a6:	8b bf       	out	0x3b, r24	; 59
+    13a8:	07 90       	elpm	r0, Z+
+    13aa:	f6 91       	elpm	r31, Z
+    13ac:	e0 2d       	mov	r30, r0
+    13ae:	19 94       	eijmp
+
+000013b0 <strcpy>:
+    13b0:	fb 01       	movw	r30, r22
+    13b2:	dc 01       	movw	r26, r24
+    13b4:	01 90       	ld	r0, Z+
+    13b6:	0d 92       	st	X+, r0
+    13b8:	00 20       	and	r0, r0
+    13ba:	e1 f7       	brne	.-8      	; 0x13b4 <strcpy+0x4>
+    13bc:	08 95       	ret
+
+000013be <_exit>:
+    13be:	f8 94       	cli
+
+000013c0 <__stop_program>:
+    13c0:	ff cf       	rjmp	.-2      	; 0x13c0 <__stop_program>
